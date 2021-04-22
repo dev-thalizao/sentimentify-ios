@@ -10,6 +10,8 @@
 		2B467DB92630B13D003849CB /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; };
 		2B467DBE2630B13D003849CB /* SentimentifyEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467DBD2630B13D003849CB /* SentimentifyEngineTests.swift */; };
 		2B467DC02630B13D003849CB /* SentimentifyEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B467DB22630B13D003849CB /* SentimentifyEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B6BF40C2630FBC5006A05FE /* SearchLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF40B2630FBC5006A05FE /* SearchLoader.swift */; };
+		2B6BF4102630FBDE006A05FE /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF40F2630FBDE006A05FE /* SearchItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		2B467DB82630B13D003849CB /* SentimentifyEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467DBD2630B13D003849CB /* SentimentifyEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentifyEngineTests.swift; sourceTree = "<group>"; };
 		2B467DBF2630B13D003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B6BF40B2630FBC5006A05FE /* SearchLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLoader.swift; sourceTree = "<group>"; };
+		2B6BF40F2630FBDE006A05FE /* SearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		2B467DB12630B13D003849CB /* SentimentifyEngine */ = {
 			isa = PBXGroup;
 			children = (
+				2B6BF40A2630FBA3006A05FE /* Search */,
 				2B467DB22630B13D003849CB /* SentimentifyEngine.h */,
 				2B467DB32630B13D003849CB /* Info.plist */,
 			);
@@ -84,6 +89,15 @@
 				2B467DBF2630B13D003849CB /* Info.plist */,
 			);
 			path = SentimentifyEngineTests;
+			sourceTree = "<group>";
+		};
+		2B6BF40A2630FBA3006A05FE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2B6BF40B2630FBC5006A05FE /* SearchLoader.swift */,
+				2B6BF40F2630FBDE006A05FE /* SearchItem.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +161,7 @@
 				TargetAttributes = {
 					2B467DAE2630B13D003849CB = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					2B467DB72630B13D003849CB = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,6 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6BF4102630FBDE006A05FE /* SearchItem.swift in Sources */,
+				2B6BF40C2630FBC5006A05FE /* SearchLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +357,7 @@
 		2B467DC42630B13D003849CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -356,6 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -363,6 +382,7 @@
 		2B467DC52630B13D003849CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -386,6 +406,7 @@
 		2B467DC72630B13D003849CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SentimentifyEngineTests/Info.plist;
@@ -403,6 +424,7 @@
 		2B467DC82630B13D003849CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SentimentifyEngineTests/Info.plist;
