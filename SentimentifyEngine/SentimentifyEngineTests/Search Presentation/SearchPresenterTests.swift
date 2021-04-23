@@ -9,6 +9,11 @@ import XCTest
 @testable import SentimentifyEngine
 
 final class SearchPresenterTests: XCTestCase {
+    
+    func testPresenterInitDontEmitAnyMessages() {
+        let (_, view) = makeSUT()
+        XCTAssertEqual(view.messages, [])
+    }
 
     func testPresenterTriggerLoadingAndRemoveError() {
         let (sut, view) = makeSUT()
