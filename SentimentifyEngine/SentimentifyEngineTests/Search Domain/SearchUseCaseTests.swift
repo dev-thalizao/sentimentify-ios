@@ -51,7 +51,7 @@ final class SearchUseCaseTests: XCTestCase {
     }
     
     private func makeSUT(
-        stub: @escaping (SearchTerm) -> SearchLoader.Result
+        stub: @escaping (SearchInput) -> SearchLoader.Result
     ) -> (sut: SearchUseCase, output: SearchUseCaseOutputSpy) {
         let output = SearchUseCaseOutputSpy()
         let loader = SearchLoaderStub(stub: stub)
@@ -103,13 +103,13 @@ private enum SearchUseCaseOutputMessage: Equatable {
 
 private final class SearchLoaderStub: SearchLoader {
 
-    private let stub: (SearchTerm) -> SearchLoader.Result
+    private let stub: (SearchInput) -> SearchLoader.Result
     
-    init(stub: @escaping (SearchTerm) -> SearchLoader.Result) {
+    init(stub: @escaping (SearchInput) -> SearchLoader.Result) {
         self.stub = stub
     }
     
-    func search(using term: SearchTerm, completion: @escaping (SearchLoader.Result) -> Void) {
+    func search(using term: SearchInput, completion: @escaping (SearchLoader.Result) -> Void) {
         completion(stub(term))
     }
 }

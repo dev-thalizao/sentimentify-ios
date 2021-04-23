@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SearchTerm {
+public struct SearchInput {
     
     public let term: String
     

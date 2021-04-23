@@ -23,7 +23,7 @@ public final class SearchUseCase {
         self.loader = loader
     }
     
-    public func search(using term: SearchTerm) {
+    public func search(using term: SearchInput) {
         output.didStartSearching()
         
         loader.search(using: term) { [output] (result) in
