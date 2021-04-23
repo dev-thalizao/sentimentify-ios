@@ -55,17 +55,3 @@ func neutralAnalyzeScore() -> AnalyzeScore {
 func happyAnalyzeScore() -> AnalyzeScore {
     return .init(score: 0.5)
 }
-
-private final class AnalyzeClassifierFake: AnalyzeClassifier {
-    
-    func classify(score: AnalyzeScore) -> AnalyzeResult {
-        switch score.value {
-        case _ where score.value < -0.2:
-            return sadAnalyzeResult()
-        case _ where score.value < 0.5:
-            return neutralAnalyzeResult()
-        default:
-            return happyAnalyzeResult()
-        }
-    }
-}
