@@ -10,7 +10,7 @@ import XCTest
 
 final class SearchUseCaseTests: XCTestCase {
     
-    func testUseCaseInitDontEmitMessage() {
+    func testUseCaseInitDontEmitAnyMessages() {
         let (_, output) = makeSUT { _ in .success(anySearchResults()) }
         XCTAssertEqual(output.messages, [])
     }

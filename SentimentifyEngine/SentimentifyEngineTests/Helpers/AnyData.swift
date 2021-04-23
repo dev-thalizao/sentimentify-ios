@@ -31,3 +31,41 @@ func anySearchResults(_ items: Int = 1) -> [SearchResult] {
 func anyError() -> Error {
     return NSError(domain: "unknown", code: -1, userInfo: nil)
 }
+
+func happyAnalyzeResult() -> AnalyzeResult {
+    return .init(emotion: "🤩")
+}
+
+func neutralAnalyzeResult() -> AnalyzeResult {
+    return .init(emotion: "😐")
+}
+
+func sadAnalyzeResult() -> AnalyzeResult {
+    return .init(emotion: "😞")
+}
+
+func sadAnalyzeScore() -> AnalyzeScore {
+    return .init(score: -0.3)
+}
+
+func neutralAnalyzeScore() -> AnalyzeScore {
+    return .init(score: 0.4)
+}
+
+func happyAnalyzeScore() -> AnalyzeScore {
+    return .init(score: 0.5)
+}
+
+private final class AnalyzeClassifierFake: AnalyzeClassifier {
+    
+    func classify(score: AnalyzeScore) -> AnalyzeResult {
+        switch score.value {
+        case _ where score.value < -0.2:
+            return sadAnalyzeResult()
+        case _ where score.value < 0.5:
+            return neutralAnalyzeResult()
+        default:
+            return happyAnalyzeResult()
+        }
+    }
+}
