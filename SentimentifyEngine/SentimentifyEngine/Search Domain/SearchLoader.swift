@@ -8,5 +8,7 @@
 import Foundation
 
 public protocol SearchLoader {
-    func search(using term: String, completion: @escaping (Result<SearchItem, Error>) -> Void)
+    typealias Result = Swift.Result<[SearchResult], Error>
+    
+    func search(using term: SearchTerm, completion: @escaping (Result) -> Void)
 }
