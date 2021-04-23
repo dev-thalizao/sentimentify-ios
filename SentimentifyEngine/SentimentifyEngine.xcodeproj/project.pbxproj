@@ -29,6 +29,11 @@
 		2BC5134B26334DE80067FDD3 /* AnalyzeScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5134A26334DE80067FDD3 /* AnalyzeScore.swift */; };
 		2BC5135A2633503E0067FDD3 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC513592633503E0067FDD3 /* SearchPresenter.swift */; };
 		2BC51360263350540067FDD3 /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5135F263350540067FDD3 /* SearchPresenterTests.swift */; };
+		2BC5136526335D820067FDD3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5136426335D820067FDD3 /* LoadingView.swift */; };
+		2BC5136B26335D8A0067FDD3 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5136A26335D8A0067FDD3 /* ErrorView.swift */; };
+		2BC5136F26335D930067FDD3 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5136E26335D930067FDD3 /* LoadingViewModel.swift */; };
+		2BC5137326335D9F0067FDD3 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5137226335D9F0067FDD3 /* ErrorViewModel.swift */; };
+		2BC5137726335DD90067FDD3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5137626335DD90067FDD3 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		2BC5134A26334DE80067FDD3 /* AnalyzeScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeScore.swift; sourceTree = "<group>"; };
 		2BC513592633503E0067FDD3 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		2BC5135F263350540067FDD3 /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
+		2BC5136426335D820067FDD3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		2BC5136A26335D8A0067FDD3 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		2BC5136E26335D930067FDD3 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		2BC5137226335D9F0067FDD3 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		2BC5137626335DD90067FDD3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,7 @@
 				2B467DB32630B13D003849CB /* Info.plist */,
 				2B6BF43E2631A29C006A05FE /* Foundation */,
 				2BC512E526325B160067FDD3 /* Infrastructure */,
+				2BC5136326335D6A0067FDD3 /* Shared Presentation */,
 				2B6BF40A2630FBA3006A05FE /* Search Domain */,
 				2BC5135126334FFF0067FDD3 /* Search Presentation */,
 				2BC51328263323A90067FDD3 /* Analyze Domain */,
@@ -219,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				2BC513592633503E0067FDD3 /* SearchPresenter.swift */,
+				2BC5137626335DD90067FDD3 /* SearchViewModel.swift */,
 			);
 			path = "Search Presentation";
 			sourceTree = "<group>";
@@ -229,6 +241,17 @@
 				2BC5135F263350540067FDD3 /* SearchPresenterTests.swift */,
 			);
 			path = "Search Presentation";
+			sourceTree = "<group>";
+		};
+		2BC5136326335D6A0067FDD3 /* Shared Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2BC5136426335D820067FDD3 /* LoadingView.swift */,
+				2BC5136A26335D8A0067FDD3 /* ErrorView.swift */,
+				2BC5136E26335D930067FDD3 /* LoadingViewModel.swift */,
+				2BC5137226335D9F0067FDD3 /* ErrorViewModel.swift */,
+			);
+			path = "Shared Presentation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,10 +367,15 @@
 				2BC5133F263340180067FDD3 /* AnalyzeInput.swift in Sources */,
 				2B6BF40C2630FBC5006A05FE /* SearchLoader.swift in Sources */,
 				2BC5133726333FEF0067FDD3 /* AnalyzeUseCase.swift in Sources */,
+				2BC5136526335D820067FDD3 /* LoadingView.swift in Sources */,
+				2BC5137726335DD90067FDD3 /* SearchViewModel.swift in Sources */,
 				2BC5134B26334DE80067FDD3 /* AnalyzeScore.swift in Sources */,
 				2B6BF4402631A2B2006A05FE /* HTTPClient.swift in Sources */,
 				2B6BF4352631A1BF006A05FE /* SearchInput.swift in Sources */,
+				2BC5137326335D9F0067FDD3 /* ErrorViewModel.swift in Sources */,
 				2BC512E726325B270067FDD3 /* URLSessionHTTPClient.swift in Sources */,
+				2BC5136B26335D8A0067FDD3 /* ErrorView.swift in Sources */,
+				2BC5136F26335D930067FDD3 /* LoadingViewModel.swift in Sources */,
 				2BC5135A2633503E0067FDD3 /* SearchPresenter.swift in Sources */,
 				2BC513182633139B0067FDD3 /* SearchUseCase.swift in Sources */,
 				2BC5134726334DD60067FDD3 /* AnalyzeClassifier.swift in Sources */,

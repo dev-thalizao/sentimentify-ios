@@ -11,8 +11,7 @@ import XCTest
 final class SearchPresenterTests: XCTestCase {
 
     func testPresenterTriggerLoadingAndRemoveError() {
-        let view = ViewSpy()
-        let sut = SearchPresenter(loadingView: view, errorView: view, searchView: view)
+        let (sut, view) = makeSUT()
         
         sut.didStartSearching()
         
@@ -23,8 +22,7 @@ final class SearchPresenterTests: XCTestCase {
     }
     
     func testPresenterRemoveLoadingAndPresentError() {
-        let view = ViewSpy()
-        let sut = SearchPresenter(loadingView: view, errorView: view, searchView: view)
+        let (sut, view) = makeSUT()
         
         sut.didFinishSearch(with: NSError(domain: "offline", code: -222))
         
@@ -38,52 +36,51 @@ final class SearchPresenterTests: XCTestCase {
     }
     
     func testPresenterRemoveLoadingAndPresentResult() {
-        let view = ViewSpy()
-        let sut = SearchPresenter(loadingView: view, errorView: view, searchView: view)
-    
+        let (sut, view) = makeSUT()
+        
         sut.didFinishSearch(with: anySearchResults())
         
         XCTAssertEqual(
             view.messages,
             [
                 .loading(.init(isLoading: false)),
-                .search(SearchViewModel.map(anySearchResults()))
+                .search(.map(anySearchResults()))
             ]
         )
     }
+    
+    private func makeSUT() -> (sut: SearchPresenter, view: SearchViewSpy) {
+        let view = SearchViewSpy()
+        let sut = SearchPresenter(loadingView: view, errorView: view, searchView: view)
+        trackForMemoryLeaks(view)
+        trackForMemoryLeaks(sut)
+        return (sut, view)
+    }
 }
 
-private final class ViewSpy {
-    private(set) var messages = [SearchPresenterViewMessages]()
-}
-
-extension ViewSpy: LoadingView {
+private final class SearchViewSpy: SearchView, LoadingView, ErrorView {
+    
+    private(set) var messages = [SearchPresenterMessage]()
     
     func display(viewModel: LoadingViewModel) {
         messages.append(.loading(viewModel))
     }
-}
-
-extension ViewSpy: ErrorView {
     
     func display(viewModel: ErrorViewModel) {
         messages.append(.error(viewModel))
     }
-}
-
-extension ViewSpy: SearchView {
     
     func display(viewModel: SearchViewModel) {
         messages.append(.search(viewModel))
     }
 }
 
-enum SearchPresenterViewMessages: Equatable {
+private enum SearchPresenterMessage: Equatable {
     case loading(LoadingViewModel)
     case error(ErrorViewModel)
     case search(SearchViewModel)
     
-    static func == (lhs: SearchPresenterViewMessages, rhs: SearchPresenterViewMessages) -> Bool {
+    static func == (lhs: SearchPresenterMessage, rhs: SearchPresenterMessage) -> Bool {
         switch (lhs, rhs) {
         case (let .loading(lhsViewModel), let .loading(rhsViewModel)):
             return lhsViewModel == rhsViewModel
