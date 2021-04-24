@@ -1,5 +1,5 @@
 //
-//  Error+Equatable.swift
+//  Error+Extensions.swift
 //  SentimentifyTestExtensions
 //
 //  Created by Thales Frigo on 24/04/21.

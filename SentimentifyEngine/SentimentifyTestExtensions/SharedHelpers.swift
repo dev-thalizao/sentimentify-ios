@@ -1,8 +1,8 @@
 //
-//  AnyData.swift
-//  SentimentifyEngineTests
+//  SharedHelpers.swift
+//  SentimentifyTestExtensions
 //
-//  Created by Thales Frigo on 23/04/21.
+//  Created by Thales Frigo on 24/04/21.
 //
 
 import Foundation
@@ -12,12 +12,16 @@ func anyCreatedAt() -> Date {
     return .distantPast
 }
 
+func anyURL() -> URL {
+    return URL(string: "http://valid-url.com")!
+}
+
 func anyContent() -> SearchResult.Content {
     return .init(id: "any id", text: "any text", createdAt: anyCreatedAt())
 }
 
 func anyAuthor() -> SearchResult.Author {
-    return .init(name: "any name", username: "any username", photo: nil)
+    return .init(name: "any name", username: "any username", photo: anyURL())
 }
 
 func anySearchResult() -> SearchResult {
