@@ -10,7 +10,6 @@
 		2B467DB92630B13D003849CB /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; };
 		2B6BF40C2630FBC5006A05FE /* SearchLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF40B2630FBC5006A05FE /* SearchLoader.swift */; };
 		2B6BF4102630FBDE006A05FE /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF40F2630FBDE006A05FE /* SearchResult.swift */; };
-		2B6BF42726310E2F006A05FE /* XCTestCase+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF42626310E2F006A05FE /* XCTestCase+Tests.swift */; };
 		2B6BF4352631A1BF006A05FE /* SearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF4342631A1BF006A05FE /* SearchInput.swift */; };
 		2B6BF4402631A2B2006A05FE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF43F2631A2B2006A05FE /* HTTPClient.swift */; };
 		2B6BF45E2631A679006A05FE /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF45D2631A679006A05FE /* HTTPClientStub.swift */; };
@@ -18,7 +17,6 @@
 		2BC512EC26325B450067FDD3 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC512EB26325B450067FDD3 /* URLSessionHTTPClientTests.swift */; };
 		2BC513122633133B0067FDD3 /* SearchUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC513112633133B0067FDD3 /* SearchUseCaseTests.swift */; };
 		2BC513182633139B0067FDD3 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC513172633139B0067FDD3 /* SearchUseCase.swift */; };
-		2BC5131F26331B190067FDD3 /* Error+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5131E26331B190067FDD3 /* Error+Tests.swift */; };
 		2BC5132326331D6E0067FDD3 /* AnyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5132226331D6E0067FDD3 /* AnyData.swift */; };
 		2BC51333263324150067FDD3 /* AnalyzeUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC51332263324150067FDD3 /* AnalyzeUseCaseTests.swift */; };
 		2BC5133726333FEF0067FDD3 /* AnalyzeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5133626333FEF0067FDD3 /* AnalyzeUseCase.swift */; };
@@ -45,6 +43,15 @@
 		2BC513EA263453C60067FDD3 /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; };
 		2BC513F5263453CE0067FDD3 /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; };
 		2BC5140F26345DD30067FDD3 /* AnalyzeSentimentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5140E26345DD30067FDD3 /* AnalyzeSentimentRequest.swift */; };
+		2BC5141D263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5141C263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift */; };
+		2BC51425263463860067FDD3 /* NaturalLanguageAnalyzeLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC51424263463860067FDD3 /* NaturalLanguageAnalyzeLoaderTests.swift */; };
+		2BC5146C263468960067FDD3 /* XCTest+MemoryLeaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5146B263468960067FDD3 /* XCTest+MemoryLeaks.swift */; };
+		2BC5147C263468F80067FDD3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5147B263468F80067FDD3 /* XCTest.framework */; };
+		2BC51485263469250067FDD3 /* XCTest+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC51484263469250067FDD3 /* XCTest+Result.swift */; };
+		2BC514952634694C0067FDD3 /* Error+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC514942634694C0067FDD3 /* Error+Equatable.swift */; };
+		2BC514D826346A6B0067FDD3 /* libSentimentifyTestExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */; };
+		2BC5154026346C4D0067FDD3 /* libSentimentifyTestExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */; };
+		2BC5154A26346C730067FDD3 /* libSentimentifyTestExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +90,27 @@
 			remoteGlobalIDString = 2B467DAE2630B13D003849CB;
 			remoteInfo = SentimentifyEngine;
 		};
+		2BC514D626346A670067FDD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B467DA62630B13D003849CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC5145A2634686C0067FDD3;
+			remoteInfo = SentimentifyTestExtensions;
+		};
+		2BC5153E26346C4A0067FDD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B467DA62630B13D003849CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC5145A2634686C0067FDD3;
+			remoteInfo = SentimentifyTestExtensions;
+		};
+		2BC5154826346C6F0067FDD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B467DA62630B13D003849CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC5145A2634686C0067FDD3;
+			remoteInfo = SentimentifyTestExtensions;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -92,7 +120,6 @@
 		2B467DBF2630B13D003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B6BF40B2630FBC5006A05FE /* SearchLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLoader.swift; sourceTree = "<group>"; };
 		2B6BF40F2630FBDE006A05FE /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		2B6BF42626310E2F006A05FE /* XCTestCase+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Tests.swift"; sourceTree = "<group>"; };
 		2B6BF4342631A1BF006A05FE /* SearchInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInput.swift; sourceTree = "<group>"; };
 		2B6BF43F2631A2B2006A05FE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		2B6BF45D2631A679006A05FE /* HTTPClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientStub.swift; sourceTree = "<group>"; };
@@ -100,7 +127,6 @@
 		2BC512EB26325B450067FDD3 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		2BC513112633133B0067FDD3 /* SearchUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseTests.swift; sourceTree = "<group>"; };
 		2BC513172633139B0067FDD3 /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
-		2BC5131E26331B190067FDD3 /* Error+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Tests.swift"; sourceTree = "<group>"; };
 		2BC5132226331D6E0067FDD3 /* AnyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyData.swift; sourceTree = "<group>"; };
 		2BC51332263324150067FDD3 /* AnalyzeUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeUseCaseTests.swift; sourceTree = "<group>"; };
 		2BC5133626333FEF0067FDD3 /* AnalyzeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeUseCase.swift; sourceTree = "<group>"; };
@@ -131,6 +157,13 @@
 		2BC513CD263449870067FDD3 /* NaturalLanguageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAPI.swift; sourceTree = "<group>"; };
 		2BC513D5263449AB0067FDD3 /* NaturalLanguageAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAPITests.swift; sourceTree = "<group>"; };
 		2BC5140E26345DD30067FDD3 /* AnalyzeSentimentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentimentRequest.swift; sourceTree = "<group>"; };
+		2BC5141C263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAnalyzeLoader.swift; sourceTree = "<group>"; };
+		2BC51424263463860067FDD3 /* NaturalLanguageAnalyzeLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAnalyzeLoaderTests.swift; sourceTree = "<group>"; };
+		2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSentimentifyTestExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC5146B263468960067FDD3 /* XCTest+MemoryLeaks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+MemoryLeaks.swift"; sourceTree = "<group>"; };
+		2BC5147B263468F80067FDD3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2BC51484263469250067FDD3 /* XCTest+Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Result.swift"; sourceTree = "<group>"; };
+		2BC514942634694C0067FDD3 /* Error+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Equatable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC514D826346A6B0067FDD3 /* libSentimentifyTestExtensions.a in Frameworks */,
 				2B467DB92630B13D003849CB /* SentimentifyEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC5154A26346C730067FDD3 /* libSentimentifyTestExtensions.a in Frameworks */,
 				2BC513992634468A0067FDD3 /* TwitterSearchInfrastructure.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,7 +212,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC5154026346C4D0067FDD3 /* libSentimentifyTestExtensions.a in Frameworks */,
 				2BC513B9263448270067FDD3 /* GoogleAnalyzeInfrastructure.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC514592634686C0067FDD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC5147C263468F80067FDD3 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +237,7 @@
 				2BC5139C2634468A0067FDD3 /* TwitterSearchInfrastructureTests */,
 				2BC513B1263448260067FDD3 /* GoogleAnalyzeInfrastructure */,
 				2BC513BC263448270067FDD3 /* GoogleAnalyzeInfrastructureTests */,
+				2BC5145C2634686C0067FDD3 /* SentimentifyTestExtensions */,
 				2B467DB02630B13D003849CB /* Products */,
 				2BC513E9263453C60067FDD3 /* Frameworks */,
 			);
@@ -207,6 +252,7 @@
 				2BC513982634468A0067FDD3 /* TwitterSearchInfrastructureTests.xctest */,
 				2BC513B0263448260067FDD3 /* GoogleAnalyzeInfrastructure.framework */,
 				2BC513B8263448270067FDD3 /* GoogleAnalyzeInfrastructureTests.xctest */,
+				2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				2B467DBF2630B13D003849CB /* Info.plist */,
-				2B6BF42526310E1F006A05FE /* Extensions */,
 				2B6BF45C2631A66B006A05FE /* Helpers */,
 				2BC512EA26325B2E0067FDD3 /* Infrastructure */,
 				2BC513102633131E0067FDD3 /* Search Domain */,
@@ -250,15 +295,6 @@
 				2B6BF40F2630FBDE006A05FE /* SearchResult.swift */,
 			);
 			path = "Search Domain";
-			sourceTree = "<group>";
-		};
-		2B6BF42526310E1F006A05FE /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2B6BF42626310E2F006A05FE /* XCTestCase+Tests.swift */,
-				2BC5131E26331B190067FDD3 /* Error+Tests.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2B6BF43E2631A29C006A05FE /* Foundation */ = {
@@ -406,6 +442,7 @@
 		2BC513E9263453C60067FDD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2BC5147B263468F80067FDD3 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -415,6 +452,7 @@
 			children = (
 				2BC513CD263449870067FDD3 /* NaturalLanguageAPI.swift */,
 				2BC5140E26345DD30067FDD3 /* AnalyzeSentimentRequest.swift */,
+				2BC5141C263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift */,
 			);
 			path = "Natural Language";
 			sourceTree = "<group>";
@@ -423,8 +461,19 @@
 			isa = PBXGroup;
 			children = (
 				2BC513D5263449AB0067FDD3 /* NaturalLanguageAPITests.swift */,
+				2BC51424263463860067FDD3 /* NaturalLanguageAnalyzeLoaderTests.swift */,
 			);
 			path = "Natural Language";
+			sourceTree = "<group>";
+		};
+		2BC5145C2634686C0067FDD3 /* SentimentifyTestExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				2BC5146B263468960067FDD3 /* XCTest+MemoryLeaks.swift */,
+				2BC51484263469250067FDD3 /* XCTest+Result.swift */,
+				2BC514942634694C0067FDD3 /* Error+Equatable.swift */,
+			);
+			path = SentimentifyTestExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +495,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2BC513AB263448260067FDD3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC514572634686C0067FDD3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -484,6 +540,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2BC514D726346A670067FDD3 /* PBXTargetDependency */,
 				2B467DBB2630B13D003849CB /* PBXTargetDependency */,
 			);
 			name = SentimentifyEngineTests;
@@ -521,6 +578,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2BC5154926346C6F0067FDD3 /* PBXTargetDependency */,
 				2BC5139B2634468A0067FDD3 /* PBXTargetDependency */,
 			);
 			name = TwitterSearchInfrastructureTests;
@@ -558,12 +616,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				2BC5153F26346C4A0067FDD3 /* PBXTargetDependency */,
 				2BC513BB263448270067FDD3 /* PBXTargetDependency */,
 			);
 			name = GoogleAnalyzeInfrastructureTests;
 			productName = GoogleAnalyzeInfrastructureTests;
 			productReference = 2BC513B8263448270067FDD3 /* GoogleAnalyzeInfrastructureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BC5145A2634686C0067FDD3 /* SentimentifyTestExtensions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC514612634686C0067FDD3 /* Build configuration list for PBXNativeTarget "SentimentifyTestExtensions" */;
+			buildPhases = (
+				2BC514572634686C0067FDD3 /* Headers */,
+				2BC514582634686C0067FDD3 /* Sources */,
+				2BC514592634686C0067FDD3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SentimentifyTestExtensions;
+			productName = SentimentifyTestExtensions;
+			productReference = 2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -594,6 +670,10 @@
 					2BC513B7263448270067FDD3 = {
 						CreatedOnToolsVersion = 12.4;
 					};
+					2BC5145A2634686C0067FDD3 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
 				};
 			};
 			buildConfigurationList = 2B467DA92630B13D003849CB /* Build configuration list for PBXProject "SentimentifyEngine" */;
@@ -615,6 +695,7 @@
 				2BC513972634468A0067FDD3 /* TwitterSearchInfrastructureTests */,
 				2BC513AF263448260067FDD3 /* GoogleAnalyzeInfrastructure */,
 				2BC513B7263448270067FDD3 /* GoogleAnalyzeInfrastructureTests */,
+				2BC5145A2634686C0067FDD3 /* SentimentifyTestExtensions */,
 			);
 		};
 /* End PBXProject section */
@@ -698,11 +779,9 @@
 				2B6BF45E2631A679006A05FE /* HTTPClientStub.swift in Sources */,
 				2BC513122633133B0067FDD3 /* SearchUseCaseTests.swift in Sources */,
 				2BC512EC26325B450067FDD3 /* URLSessionHTTPClientTests.swift in Sources */,
-				2BC5131F26331B190067FDD3 /* Error+Tests.swift in Sources */,
 				2BC5132326331D6E0067FDD3 /* AnyData.swift in Sources */,
 				2BC51333263324150067FDD3 /* AnalyzeUseCaseTests.swift in Sources */,
 				2BC51360263350540067FDD3 /* SearchPresenterTests.swift in Sources */,
-				2B6BF42726310E2F006A05FE /* XCTestCase+Tests.swift in Sources */,
 				2BC5138026335F490067FDD3 /* AnalyzePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -727,6 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC5140F26345DD30067FDD3 /* AnalyzeSentimentRequest.swift in Sources */,
+				2BC5141D263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift in Sources */,
 				2BC513CE263449870067FDD3 /* NaturalLanguageAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -736,6 +816,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC513D6263449AB0067FDD3 /* NaturalLanguageAPITests.swift in Sources */,
+				2BC51425263463860067FDD3 /* NaturalLanguageAnalyzeLoaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC514582634686C0067FDD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC5146C263468960067FDD3 /* XCTest+MemoryLeaks.swift in Sources */,
+				2BC51485263469250067FDD3 /* XCTest+Result.swift in Sources */,
+				2BC514952634694C0067FDD3 /* Error+Equatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,6 +857,21 @@
 			isa = PBXTargetDependency;
 			target = 2B467DAE2630B13D003849CB /* SentimentifyEngine */;
 			targetProxy = 2BC513F7263453CE0067FDD3 /* PBXContainerItemProxy */;
+		};
+		2BC514D726346A670067FDD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC5145A2634686C0067FDD3 /* SentimentifyTestExtensions */;
+			targetProxy = 2BC514D626346A670067FDD3 /* PBXContainerItemProxy */;
+		};
+		2BC5153F26346C4A0067FDD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC5145A2634686C0067FDD3 /* SentimentifyTestExtensions */;
+			targetProxy = 2BC5153E26346C4A0067FDD3 /* PBXContainerItemProxy */;
+		};
+		2BC5154926346C6F0067FDD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC5145A2634686C0067FDD3 /* SentimentifyTestExtensions */;
+			targetProxy = 2BC5154826346C6F0067FDD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -911,6 +1017,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -936,6 +1043,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -954,6 +1062,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -972,6 +1081,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -995,6 +1105,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.TwitterSearchInfrastructure;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1018,6 +1129,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.TwitterSearchInfrastructure;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1035,6 +1147,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.TwitterSearchInfrastructureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1052,6 +1165,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.TwitterSearchInfrastructureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1076,6 +1190,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.GoogleAnalyzeInfrastructure;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1101,6 +1216,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.GoogleAnalyzeInfrastructure;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1119,6 +1235,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.GoogleAnalyzeInfrastructureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1137,6 +1254,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.GoogleAnalyzeInfrastructureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2BC514622634686C0067FDD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2BC514632634686C0067FDD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1203,6 +1358,15 @@
 			buildConfigurations = (
 				2BC513C5263448270067FDD3 /* Debug */,
 				2BC513C6263448270067FDD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC514612634686C0067FDD3 /* Build configuration list for PBXNativeTarget "SentimentifyTestExtensions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC514622634686C0067FDD3 /* Debug */,
+				2BC514632634686C0067FDD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

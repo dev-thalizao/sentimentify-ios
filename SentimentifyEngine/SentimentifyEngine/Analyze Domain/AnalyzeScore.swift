@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AnalyzeScore {
+public struct AnalyzeScore: Equatable {
     public let value: Double
     
     public init(score: Double) {

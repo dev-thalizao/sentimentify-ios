@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import SentimentifyTestExtensions
 @testable import SentimentifyEngine
 
 final class AnalyzeUseCaseTests: XCTestCase {

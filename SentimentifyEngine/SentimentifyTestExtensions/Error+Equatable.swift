@@ -1,13 +1,13 @@
 //
-//  Error+Tests.swift
-//  SentimentifyEngineTests
+//  Error+Equatable.swift
+//  SentimentifyTestExtensions
 //
-//  Created by Thales Frigo on 23/04/21.
+//  Created by Thales Frigo on 24/04/21.
 //
 
 import Foundation
 
-extension Error {
+public extension Error {
     
     var identifier: String {
         return String(describing: self)
@@ -25,4 +25,3 @@ extension Error {
         return nsError.isEqual(other.nsError)
     }
 }
-
