@@ -36,6 +36,12 @@
 		2BC5137726335DD90067FDD3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5137626335DD90067FDD3 /* SearchViewModel.swift */; };
 		2BC5138026335F490067FDD3 /* AnalyzePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5137F26335F490067FDD3 /* AnalyzePresenterTests.swift */; };
 		2BC5138626335F580067FDD3 /* AnalyzePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5138526335F580067FDD3 /* AnalyzePresenter.swift */; };
+		2BC513992634468A0067FDD3 /* TwitterSearchInfrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC513902634468A0067FDD3 /* TwitterSearchInfrastructure.framework */; };
+		2BC5139E2634468A0067FDD3 /* TwitterSearchInfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5139D2634468A0067FDD3 /* TwitterSearchInfrastructureTests.swift */; };
+		2BC513A02634468A0067FDD3 /* TwitterSearchInfrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC513922634468A0067FDD3 /* TwitterSearchInfrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BC513B9263448270067FDD3 /* GoogleAnalyzeInfrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC513B0263448260067FDD3 /* GoogleAnalyzeInfrastructure.framework */; };
+		2BC513BE263448270067FDD3 /* GoogleAnalyzeInfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC513BD263448270067FDD3 /* GoogleAnalyzeInfrastructureTests.swift */; };
+		2BC513C0263448270067FDD3 /* GoogleAnalyzeInfrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC513B2263448260067FDD3 /* GoogleAnalyzeInfrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2B467DAE2630B13D003849CB;
 			remoteInfo = SentimentifyEngine;
+		};
+		2BC5139A2634468A0067FDD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B467DA62630B13D003849CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC5138F2634468A0067FDD3;
+			remoteInfo = TwitterSearchInfrastructure;
+		};
+		2BC513BA263448270067FDD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B467DA62630B13D003849CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC513AF263448260067FDD3;
+			remoteInfo = GoogleAnalyzeInfrastructure;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -81,6 +101,18 @@
 		2BC5137626335DD90067FDD3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		2BC5137F26335F490067FDD3 /* AnalyzePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzePresenterTests.swift; sourceTree = "<group>"; };
 		2BC5138526335F580067FDD3 /* AnalyzePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzePresenter.swift; sourceTree = "<group>"; };
+		2BC513902634468A0067FDD3 /* TwitterSearchInfrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TwitterSearchInfrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC513922634468A0067FDD3 /* TwitterSearchInfrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwitterSearchInfrastructure.h; sourceTree = "<group>"; };
+		2BC513932634468A0067FDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC513982634468A0067FDD3 /* TwitterSearchInfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterSearchInfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC5139D2634468A0067FDD3 /* TwitterSearchInfrastructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterSearchInfrastructureTests.swift; sourceTree = "<group>"; };
+		2BC5139F2634468A0067FDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC513B0263448260067FDD3 /* GoogleAnalyzeInfrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleAnalyzeInfrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC513B2263448260067FDD3 /* GoogleAnalyzeInfrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleAnalyzeInfrastructure.h; sourceTree = "<group>"; };
+		2BC513B3263448260067FDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC513B8263448270067FDD3 /* GoogleAnalyzeInfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleAnalyzeInfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC513BD263448270067FDD3 /* GoogleAnalyzeInfrastructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAnalyzeInfrastructureTests.swift; sourceTree = "<group>"; };
+		2BC513BF263448270067FDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +131,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2BC5138D2634468A0067FDD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC513952634468A0067FDD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC513992634468A0067FDD3 /* TwitterSearchInfrastructure.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC513AD263448260067FDD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC513B5263448270067FDD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC513B9263448270067FDD3 /* GoogleAnalyzeInfrastructure.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,6 +169,10 @@
 			children = (
 				2B467DB12630B13D003849CB /* SentimentifyEngine */,
 				2B467DBC2630B13D003849CB /* SentimentifyEngineTests */,
+				2BC513912634468A0067FDD3 /* TwitterSearchInfrastructure */,
+				2BC5139C2634468A0067FDD3 /* TwitterSearchInfrastructureTests */,
+				2BC513B1263448260067FDD3 /* GoogleAnalyzeInfrastructure */,
+				2BC513BC263448270067FDD3 /* GoogleAnalyzeInfrastructureTests */,
 				2B467DB02630B13D003849CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +182,10 @@
 			children = (
 				2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */,
 				2B467DB82630B13D003849CB /* SentimentifyEngineTests.xctest */,
+				2BC513902634468A0067FDD3 /* TwitterSearchInfrastructure.framework */,
+				2BC513982634468A0067FDD3 /* TwitterSearchInfrastructureTests.xctest */,
+				2BC513B0263448260067FDD3 /* GoogleAnalyzeInfrastructure.framework */,
+				2BC513B8263448270067FDD3 /* GoogleAnalyzeInfrastructureTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,8 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				2BC5136426335D820067FDD3 /* LoadingView.swift */,
-				2BC5136A26335D8A0067FDD3 /* ErrorView.swift */,
 				2BC5136E26335D930067FDD3 /* LoadingViewModel.swift */,
+				2BC5136A26335D8A0067FDD3 /* ErrorView.swift */,
 				2BC5137226335D9F0067FDD3 /* ErrorViewModel.swift */,
 			);
 			path = "Shared Presentation";
@@ -276,6 +346,42 @@
 			path = "Analyze Presentation";
 			sourceTree = "<group>";
 		};
+		2BC513912634468A0067FDD3 /* TwitterSearchInfrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				2BC513922634468A0067FDD3 /* TwitterSearchInfrastructure.h */,
+				2BC513932634468A0067FDD3 /* Info.plist */,
+			);
+			path = TwitterSearchInfrastructure;
+			sourceTree = "<group>";
+		};
+		2BC5139C2634468A0067FDD3 /* TwitterSearchInfrastructureTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BC5139D2634468A0067FDD3 /* TwitterSearchInfrastructureTests.swift */,
+				2BC5139F2634468A0067FDD3 /* Info.plist */,
+			);
+			path = TwitterSearchInfrastructureTests;
+			sourceTree = "<group>";
+		};
+		2BC513B1263448260067FDD3 /* GoogleAnalyzeInfrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				2BC513B2263448260067FDD3 /* GoogleAnalyzeInfrastructure.h */,
+				2BC513B3263448260067FDD3 /* Info.plist */,
+			);
+			path = GoogleAnalyzeInfrastructure;
+			sourceTree = "<group>";
+		};
+		2BC513BC263448270067FDD3 /* GoogleAnalyzeInfrastructureTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BC513BD263448270067FDD3 /* GoogleAnalyzeInfrastructureTests.swift */,
+				2BC513BF263448270067FDD3 /* Info.plist */,
+			);
+			path = GoogleAnalyzeInfrastructureTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -283,6 +389,22 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC5138B2634468A0067FDD3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC513A02634468A0067FDD3 /* TwitterSearchInfrastructure.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC513AB263448260067FDD3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC513C0263448270067FDD3 /* GoogleAnalyzeInfrastructure.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +447,78 @@
 			productReference = 2B467DB82630B13D003849CB /* SentimentifyEngineTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		2BC5138F2634468A0067FDD3 /* TwitterSearchInfrastructure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC513A12634468A0067FDD3 /* Build configuration list for PBXNativeTarget "TwitterSearchInfrastructure" */;
+			buildPhases = (
+				2BC5138B2634468A0067FDD3 /* Headers */,
+				2BC5138C2634468A0067FDD3 /* Sources */,
+				2BC5138D2634468A0067FDD3 /* Frameworks */,
+				2BC5138E2634468A0067FDD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwitterSearchInfrastructure;
+			productName = TwitterSearchInfrastructure;
+			productReference = 2BC513902634468A0067FDD3 /* TwitterSearchInfrastructure.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2BC513972634468A0067FDD3 /* TwitterSearchInfrastructureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC513A42634468A0067FDD3 /* Build configuration list for PBXNativeTarget "TwitterSearchInfrastructureTests" */;
+			buildPhases = (
+				2BC513942634468A0067FDD3 /* Sources */,
+				2BC513952634468A0067FDD3 /* Frameworks */,
+				2BC513962634468A0067FDD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BC5139B2634468A0067FDD3 /* PBXTargetDependency */,
+			);
+			name = TwitterSearchInfrastructureTests;
+			productName = TwitterSearchInfrastructureTests;
+			productReference = 2BC513982634468A0067FDD3 /* TwitterSearchInfrastructureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BC513AF263448260067FDD3 /* GoogleAnalyzeInfrastructure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC513C1263448270067FDD3 /* Build configuration list for PBXNativeTarget "GoogleAnalyzeInfrastructure" */;
+			buildPhases = (
+				2BC513AB263448260067FDD3 /* Headers */,
+				2BC513AC263448260067FDD3 /* Sources */,
+				2BC513AD263448260067FDD3 /* Frameworks */,
+				2BC513AE263448260067FDD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleAnalyzeInfrastructure;
+			productName = GoogleAnalyzeInfrastructure;
+			productReference = 2BC513B0263448260067FDD3 /* GoogleAnalyzeInfrastructure.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2BC513B7263448270067FDD3 /* GoogleAnalyzeInfrastructureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC513C4263448270067FDD3 /* Build configuration list for PBXNativeTarget "GoogleAnalyzeInfrastructureTests" */;
+			buildPhases = (
+				2BC513B4263448270067FDD3 /* Sources */,
+				2BC513B5263448270067FDD3 /* Frameworks */,
+				2BC513B6263448270067FDD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BC513BB263448270067FDD3 /* PBXTargetDependency */,
+			);
+			name = GoogleAnalyzeInfrastructureTests;
+			productName = GoogleAnalyzeInfrastructureTests;
+			productReference = 2BC513B8263448270067FDD3 /* GoogleAnalyzeInfrastructureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -339,6 +533,18 @@
 						LastSwiftMigration = 1240;
 					};
 					2B467DB72630B13D003849CB = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					2BC5138F2634468A0067FDD3 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					2BC513972634468A0067FDD3 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					2BC513AF263448260067FDD3 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					2BC513B7263448270067FDD3 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -358,6 +564,10 @@
 			targets = (
 				2B467DAE2630B13D003849CB /* SentimentifyEngine */,
 				2B467DB72630B13D003849CB /* SentimentifyEngineTests */,
+				2BC5138F2634468A0067FDD3 /* TwitterSearchInfrastructure */,
+				2BC513972634468A0067FDD3 /* TwitterSearchInfrastructureTests */,
+				2BC513AF263448260067FDD3 /* GoogleAnalyzeInfrastructure */,
+				2BC513B7263448270067FDD3 /* GoogleAnalyzeInfrastructureTests */,
 			);
 		};
 /* End PBXProject section */
@@ -371,6 +581,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2B467DB62630B13D003849CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC5138E2634468A0067FDD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC513962634468A0067FDD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC513AE263448260067FDD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC513B6263448270067FDD3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -422,6 +660,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2BC5138C2634468A0067FDD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC513942634468A0067FDD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC5139E2634468A0067FDD3 /* TwitterSearchInfrastructureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC513AC263448260067FDD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC513B4263448270067FDD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC513BE263448270067FDD3 /* GoogleAnalyzeInfrastructureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -429,6 +697,16 @@
 			isa = PBXTargetDependency;
 			target = 2B467DAE2630B13D003849CB /* SentimentifyEngine */;
 			targetProxy = 2B467DBA2630B13D003849CB /* PBXContainerItemProxy */;
+		};
+		2BC5139B2634468A0067FDD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC5138F2634468A0067FDD3 /* TwitterSearchInfrastructure */;
+			targetProxy = 2BC5139A2634468A0067FDD3 /* PBXContainerItemProxy */;
+		};
+		2BC513BB263448270067FDD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC513AF263448260067FDD3 /* GoogleAnalyzeInfrastructure */;
+			targetProxy = 2BC513BA263448270067FDD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -639,6 +917,166 @@
 			};
 			name = Release;
 		};
+		2BC513A22634468A0067FDD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TwitterSearchInfrastructure/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TwitterSearchInfrastructure;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2BC513A32634468A0067FDD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TwitterSearchInfrastructure/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TwitterSearchInfrastructure;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2BC513A52634468A0067FDD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TwitterSearchInfrastructureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TwitterSearchInfrastructureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2BC513A62634468A0067FDD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TwitterSearchInfrastructureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.TwitterSearchInfrastructureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2BC513C2263448270067FDD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GoogleAnalyzeInfrastructure/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.GoogleAnalyzeInfrastructure;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2BC513C3263448270067FDD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GoogleAnalyzeInfrastructure/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.GoogleAnalyzeInfrastructure;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2BC513C5263448270067FDD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GoogleAnalyzeInfrastructureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.GoogleAnalyzeInfrastructureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2BC513C6263448270067FDD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GoogleAnalyzeInfrastructureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.GoogleAnalyzeInfrastructureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -665,6 +1103,42 @@
 			buildConfigurations = (
 				2B467DC72630B13D003849CB /* Debug */,
 				2B467DC82630B13D003849CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC513A12634468A0067FDD3 /* Build configuration list for PBXNativeTarget "TwitterSearchInfrastructure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC513A22634468A0067FDD3 /* Debug */,
+				2BC513A32634468A0067FDD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC513A42634468A0067FDD3 /* Build configuration list for PBXNativeTarget "TwitterSearchInfrastructureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC513A52634468A0067FDD3 /* Debug */,
+				2BC513A62634468A0067FDD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC513C1263448270067FDD3 /* Build configuration list for PBXNativeTarget "GoogleAnalyzeInfrastructure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC513C2263448270067FDD3 /* Debug */,
+				2BC513C3263448270067FDD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC513C4263448270067FDD3 /* Build configuration list for PBXNativeTarget "GoogleAnalyzeInfrastructureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC513C5263448270067FDD3 /* Debug */,
+				2BC513C6263448270067FDD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -50,6 +50,28 @@
                ReferencedContainer = "container:../SentimentifyEngine/SentimentifyEngine.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2BC513972634468A0067FDD3"
+               BuildableName = "TwitterSearchInfrastructureTests.xctest"
+               BlueprintName = "TwitterSearchInfrastructureTests"
+               ReferencedContainer = "container:../SentimentifyEngine/SentimentifyEngine.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2BC513B7263448270067FDD3"
+               BuildableName = "GoogleAnalyzeInfrastructureTests.xctest"
+               BlueprintName = "GoogleAnalyzeInfrastructureTests"
+               ReferencedContainer = "container:../SentimentifyEngine/SentimentifyEngine.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
