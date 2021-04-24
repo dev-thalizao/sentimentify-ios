@@ -116,6 +116,13 @@
 			remoteGlobalIDString = 2BC5145A2634686C0067FDD3;
 			remoteInfo = SentimentifyTestExtensions;
 		};
+		2BC515FB2634874D0067FDD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B467DA62630B13D003849CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B467DAE2630B13D003849CB;
+			remoteInfo = SentimentifyEngine;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -642,6 +649,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2BC515FC2634874D0067FDD3 /* PBXTargetDependency */,
 			);
 			name = SentimentifyTestExtensions;
 			productName = SentimentifyTestExtensions;
@@ -884,6 +892,11 @@
 			isa = PBXTargetDependency;
 			target = 2BC5145A2634686C0067FDD3 /* SentimentifyTestExtensions */;
 			targetProxy = 2BC5154826346C6F0067FDD3 /* PBXContainerItemProxy */;
+		};
+		2BC515FC2634874D0067FDD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B467DAE2630B13D003849CB /* SentimentifyEngine */;
+			targetProxy = 2BC515FB2634874D0067FDD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
