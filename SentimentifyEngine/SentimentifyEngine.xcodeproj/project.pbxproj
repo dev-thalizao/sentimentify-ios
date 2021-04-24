@@ -55,6 +55,8 @@
 		2BC5156E26346F620067FDD3 /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5156D26346F620067FDD3 /* HTTPURLResponse+Extensions.swift */; };
 		2BC515A026346FDD0067FDD3 /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF45D2631A679006A05FE /* HTTPClientStub.swift */; };
 		2BC515BE26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */; };
+		2BC515DC2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC515DB2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift */; };
+		2BC515E5263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC515E4263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +172,8 @@
 		2BC5156426346F490067FDD3 /* SharedHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHelpers.swift; sourceTree = "<group>"; };
 		2BC5156D26346F620067FDD3 /* HTTPURLResponse+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extensions.swift"; sourceTree = "<group>"; };
 		2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentimentRequestTests.swift; sourceTree = "<group>"; };
+		2BC515DB2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAnalyzeClassifierTests.swift; sourceTree = "<group>"; };
+		2BC515E4263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAnalyzeClassifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				2BC5141C263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift */,
+				2BC515E4263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift */,
 				2BC513CD263449870067FDD3 /* NaturalLanguageAPI.swift */,
 				2BC5140E26345DD30067FDD3 /* AnalyzeSentimentRequest.swift */,
 				2BC5155226346D580067FDD3 /* AnalyzeSentimentResponse.swift */,
@@ -458,6 +463,7 @@
 			isa = PBXGroup;
 			children = (
 				2BC51424263463860067FDD3 /* NaturalLanguageAnalyzeLoaderTests.swift */,
+				2BC515DB2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift */,
 				2BC513D5263449AB0067FDD3 /* NaturalLanguageAPITests.swift */,
 				2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */,
 				2BC5155B26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift */,
@@ -805,6 +811,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC5140F26345DD30067FDD3 /* AnalyzeSentimentRequest.swift in Sources */,
+				2BC515E5263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift in Sources */,
 				2BC5141D263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift in Sources */,
 				2BC513CE263449870067FDD3 /* NaturalLanguageAPI.swift in Sources */,
 				2BC5155326346D580067FDD3 /* AnalyzeSentimentResponse.swift in Sources */,
@@ -817,6 +824,7 @@
 			files = (
 				2BC515BE26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift in Sources */,
 				2BC513D6263449AB0067FDD3 /* NaturalLanguageAPITests.swift in Sources */,
+				2BC515DC2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift in Sources */,
 				2BC51425263463860067FDD3 /* NaturalLanguageAnalyzeLoaderTests.swift in Sources */,
 				2BC5155C26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift in Sources */,
 			);
