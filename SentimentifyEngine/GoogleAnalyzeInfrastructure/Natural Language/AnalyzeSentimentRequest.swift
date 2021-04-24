@@ -6,23 +6,36 @@
 //
 
 import Foundation
+import SentimentifyEngine
 
-struct AnalyzeSentimentRequest: Codable, Equatable {
-    let document: Document
-    let encondingType: String
+final class AnalyzeSentimentRequest {
     
-    static func basic(_ content: String) -> AnalyzeSentimentRequest {
-        return .init(
-            document: .init(content: content, type: "PLAIN_TEXT"),
-            encondingType: "UTF8"
-        )
+    private init() {}
+    
+    static func map(input: AnalyzeInput) throws -> Data {
+        return try JSONEncoder().encode(Root(content: input.content))
     }
 }
 
 extension AnalyzeSentimentRequest {
     
-    struct Document: Codable, Equatable {
+    private struct Root: Encodable {
+        
         let content: String
-        let type: String
+        
+        private enum CodingKeys: String, CodingKey {
+            case document
+            case encodingType
+            case content
+            case type
+        }
+        
+        func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            var request = container.nestedContainer(keyedBy: CodingKeys.self, forKey: .document)
+            try request.encode(content, forKey: .content)
+            try request.encode("PLAIN_TEXT", forKey: .type)
+            try container.encode("UTF8", forKey: .encodingType)
+        }
     }
 }

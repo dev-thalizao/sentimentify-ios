@@ -29,7 +29,7 @@ enum NaturalLanguageAPI {
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
             request.httpMethod = "POST"
-            request.httpBody = try? JSONEncoder().encode(AnalyzeSentimentRequest.basic(input.content))
+            request.httpBody = try? AnalyzeSentimentRequest.map(input: input)
             return request
         }
     }

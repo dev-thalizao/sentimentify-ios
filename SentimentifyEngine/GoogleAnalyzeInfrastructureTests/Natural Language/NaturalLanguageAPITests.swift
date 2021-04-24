@@ -34,19 +34,20 @@ final class NaturalLanguageAPITests: XCTestCase {
     }
     
     func testEndpointHasValidJsonBody() throws {
-        let request = try JSONDecoder().decode(AnalyzeSentimentRequest.self, from: makeSUT().httpBody!)
+        let json = try JSONSerialization.jsonObject(
+            with: makeSUT().httpBody!,
+            options: []
+        ) as! Dictionary<String, Any>
         
-        XCTAssertEqual(
-            request,
-            AnalyzeSentimentRequest.basic("Any happy content")
-        )
+        XCTAssertTrue(JSONSerialization.isValidJSONObject(json))
     }
     
-    private func makeSUT() -> URLRequest {
+    private func makeSUT(
+        content: String = "Any happy content",
+        apiKey: String = "API_KEY"
+    ) -> URLRequest {
         return NaturalLanguageAPI
-            .analyzeSentiment(input: .init(content: "Any happy content"))
-            .request(apiKey: "API_KEY")
+            .analyzeSentiment(input: .init(content: content))
+            .request(apiKey: apiKey)
     }
 }
-
-

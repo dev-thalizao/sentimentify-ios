@@ -49,11 +49,12 @@
 		2BC514D826346A6B0067FDD3 /* libSentimentifyTestExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */; };
 		2BC5154026346C4D0067FDD3 /* libSentimentifyTestExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */; };
 		2BC5154A26346C730067FDD3 /* libSentimentifyTestExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */; };
-		2BC5155326346D580067FDD3 /* AnalyzeSentimentMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5155226346D580067FDD3 /* AnalyzeSentimentMapper.swift */; };
-		2BC5155C26346DA70067FDD3 /* AnalyzeSentimentMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5155B26346DA70067FDD3 /* AnalyzeSentimentMapperTests.swift */; };
+		2BC5155326346D580067FDD3 /* AnalyzeSentimentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5155226346D580067FDD3 /* AnalyzeSentimentResponse.swift */; };
+		2BC5155C26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5155B26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift */; };
 		2BC5156526346F490067FDD3 /* SharedHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5156426346F490067FDD3 /* SharedHelpers.swift */; };
 		2BC5156E26346F620067FDD3 /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5156D26346F620067FDD3 /* HTTPURLResponse+Extensions.swift */; };
 		2BC515A026346FDD0067FDD3 /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF45D2631A679006A05FE /* HTTPClientStub.swift */; };
+		2BC515BE26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,10 +165,11 @@
 		2BC5147B263468F80067FDD3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2BC51484263469250067FDD3 /* XCTest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Extensions.swift"; sourceTree = "<group>"; };
 		2BC514942634694C0067FDD3 /* Error+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extensions.swift"; sourceTree = "<group>"; };
-		2BC5155226346D580067FDD3 /* AnalyzeSentimentMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentimentMapper.swift; sourceTree = "<group>"; };
-		2BC5155B26346DA70067FDD3 /* AnalyzeSentimentMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentimentMapperTests.swift; sourceTree = "<group>"; };
+		2BC5155226346D580067FDD3 /* AnalyzeSentimentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentimentResponse.swift; sourceTree = "<group>"; };
+		2BC5155B26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentimentResponseTests.swift; sourceTree = "<group>"; };
 		2BC5156426346F490067FDD3 /* SharedHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHelpers.swift; sourceTree = "<group>"; };
 		2BC5156D26346F620067FDD3 /* HTTPURLResponse+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extensions.swift"; sourceTree = "<group>"; };
+		2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentimentRequestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -444,10 +446,10 @@
 		2BC5140C26345D8B0067FDD3 /* Natural Language */ = {
 			isa = PBXGroup;
 			children = (
+				2BC5141C263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift */,
 				2BC513CD263449870067FDD3 /* NaturalLanguageAPI.swift */,
 				2BC5140E26345DD30067FDD3 /* AnalyzeSentimentRequest.swift */,
-				2BC5141C263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift */,
-				2BC5155226346D580067FDD3 /* AnalyzeSentimentMapper.swift */,
+				2BC5155226346D580067FDD3 /* AnalyzeSentimentResponse.swift */,
 			);
 			path = "Natural Language";
 			sourceTree = "<group>";
@@ -455,9 +457,10 @@
 		2BC5140D26345DA40067FDD3 /* Natural Language */ = {
 			isa = PBXGroup;
 			children = (
-				2BC513D5263449AB0067FDD3 /* NaturalLanguageAPITests.swift */,
 				2BC51424263463860067FDD3 /* NaturalLanguageAnalyzeLoaderTests.swift */,
-				2BC5155B26346DA70067FDD3 /* AnalyzeSentimentMapperTests.swift */,
+				2BC513D5263449AB0067FDD3 /* NaturalLanguageAPITests.swift */,
+				2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */,
+				2BC5155B26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift */,
 			);
 			path = "Natural Language";
 			sourceTree = "<group>";
@@ -804,7 +807,7 @@
 				2BC5140F26345DD30067FDD3 /* AnalyzeSentimentRequest.swift in Sources */,
 				2BC5141D263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift in Sources */,
 				2BC513CE263449870067FDD3 /* NaturalLanguageAPI.swift in Sources */,
-				2BC5155326346D580067FDD3 /* AnalyzeSentimentMapper.swift in Sources */,
+				2BC5155326346D580067FDD3 /* AnalyzeSentimentResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,9 +815,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC515BE26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift in Sources */,
 				2BC513D6263449AB0067FDD3 /* NaturalLanguageAPITests.swift in Sources */,
 				2BC51425263463860067FDD3 /* NaturalLanguageAnalyzeLoaderTests.swift in Sources */,
-				2BC5155C26346DA70067FDD3 /* AnalyzeSentimentMapperTests.swift in Sources */,
+				2BC5155C26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

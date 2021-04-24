@@ -12,13 +12,13 @@ import SentimentifyTestExtensions
 
 final class NaturalLanguageAnalyzeLoaderTests: XCTestCase {
 
-    func test() throws {
-        let sut = NaturalLanguageAnalyzeLoader()
-        var receivedResult: AnalyzeLoader.Result?
-        let expectedResult = AnalyzeLoader.Result { .init(score: 0.5) }
-
-        sut.analyze(using: .init(content: "Any happy content")) { receivedResult = $0 }
-
-        assertResult(receivedResult: try XCTUnwrap(receivedResult), expectedResult: expectedResult)
-    }
+//    func test() throws {
+//        let sut = NaturalLanguageAnalyzeLoader()
+//        var receivedResult: AnalyzeLoader.Result?
+//        let expectedResult = AnalyzeLoader.Result { .init(score: 0.5) }
+//
+//        sut.analyze(using: .init(content: "Any happy content")) { receivedResult = $0 }
+//
+//        assertResult(receivedResult: try XCTUnwrap(receivedResult), expectedResult: expectedResult)
+//    }
 }

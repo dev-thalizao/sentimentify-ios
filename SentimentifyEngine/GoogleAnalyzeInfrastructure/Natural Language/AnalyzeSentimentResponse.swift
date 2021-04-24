@@ -8,12 +8,23 @@
 import Foundation
 import SentimentifyEngine
 
-final class AnalyzeSentimentMapper {
+final class AnalyzeSentimentResponse {
     
     private init() {}
     
+    static func map(_ data: Data) throws -> AnalyzeScore {
+        return try JSONDecoder().decode(Root.self, from: data).domain
+    }
+}
+
+extension AnalyzeSentimentResponse {
+    
     private struct Root: Decodable {
         let score: Double
+        
+        var domain: AnalyzeScore {
+            return .init(score: score)
+        }
         
         private enum CodingKeys: String, CodingKey {
             case documentSentiment
@@ -25,10 +36,5 @@ final class AnalyzeSentimentMapper {
             let response = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .documentSentiment)
             self.score = try response.decode(Double.self, forKey: .score)
         }
-    }
-    
-    static func map(_ data: Data, response: HTTPURLResponse) throws -> AnalyzeScore {
-        let response = try JSONDecoder().decode(Root.self, from: data)
-        return .init(score: response.score)
     }
 }
