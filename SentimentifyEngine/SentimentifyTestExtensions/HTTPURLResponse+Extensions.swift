@@ -12,4 +12,8 @@ public extension HTTPURLResponse {
     convenience init(statusCode: Int) {
         self.init(url: anyURL(), statusCode: statusCode, httpVersion: nil, headerFields: nil)!
     }
+    
+    class var OK: HTTPURLResponse {
+        return .init(statusCode: 200)
+    }
 }

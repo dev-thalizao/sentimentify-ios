@@ -8,54 +8,54 @@
 import Foundation
 import SentimentifyEngine
 
-func anyCreatedAt() -> Date {
+public func anyCreatedAt() -> Date {
     return .distantPast
 }
 
-func anyURL() -> URL {
+public func anyURL() -> URL {
     return URL(string: "http://valid-url.com")!
 }
 
-func anyContent() -> SearchResult.Content {
+public func anyContent() -> SearchResult.Content {
     return .init(id: "any id", text: "any text", createdAt: anyCreatedAt())
 }
 
-func anyAuthor() -> SearchResult.Author {
+public func anyAuthor() -> SearchResult.Author {
     return .init(name: "any name", username: "any username", photo: anyURL())
 }
 
-func anySearchResult() -> SearchResult {
+public func anySearchResult() -> SearchResult {
     return .init(content: anyContent(), author: anyAuthor())
 }
 
-func anySearchResults(_ items: Int = 1) -> [SearchResult] {
+public func anySearchResults(_ items: Int = 1) -> [SearchResult] {
     return (0..<items).map { _ in anySearchResult() }
 }
 
-func anyError() -> Error {
+public func anyError() -> Error {
     return NSError(domain: "unknown", code: -1, userInfo: nil)
 }
 
-func happyAnalyzeResult() -> AnalyzeResult {
+public func happyAnalyzeResult() -> AnalyzeResult {
     return .init(emotion: "🤩")
 }
 
-func neutralAnalyzeResult() -> AnalyzeResult {
+public func neutralAnalyzeResult() -> AnalyzeResult {
     return .init(emotion: "😐")
 }
 
-func sadAnalyzeResult() -> AnalyzeResult {
+public func sadAnalyzeResult() -> AnalyzeResult {
     return .init(emotion: "😞")
 }
 
-func sadAnalyzeScore() -> AnalyzeScore {
+public func sadAnalyzeScore() -> AnalyzeScore {
     return .init(score: -0.3)
 }
 
-func neutralAnalyzeScore() -> AnalyzeScore {
+public func neutralAnalyzeScore() -> AnalyzeScore {
     return .init(score: 0.4)
 }
 
-func happyAnalyzeScore() -> AnalyzeScore {
+public func happyAnalyzeScore() -> AnalyzeScore {
     return .init(score: 0.5)
 }
