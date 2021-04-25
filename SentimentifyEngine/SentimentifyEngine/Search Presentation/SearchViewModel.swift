@@ -30,6 +30,7 @@ public struct SearchViewModel {
         return SearchViewModel(
             results: search.results.map({ result in
                 SearchResultViewModel(
+                    id: result.content.id,
                     title: result.author.name,
                     subtitle: result.author.username,
                     content: result.content.text,
@@ -45,7 +46,8 @@ public struct SearchViewModel {
     }
 }
 
-public struct SearchResultViewModel: Equatable {
+public struct SearchResultViewModel: Hashable {
+    public let id: String
     public let title: String
     public let subtitle: String
     public let content: String
