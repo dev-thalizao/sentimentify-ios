@@ -12,7 +12,7 @@ import SentimentifyTestExtensions
 final class TwitterAPITests: XCTestCase {
     
     func testAuthenticationEndpoint() {
-        let credential = TwitterCredential(consumerKey: "username", consumerSecretKey: "password", grantType: "client_credentials")
+        let credential = TwitterCredential(consumerKey: "username", consumerSecretKey: "password")
         let request = TwitterAPI.authentication(credential: credential).request()
 
         let contentType = request.allHTTPHeaderFields?.first(where: { $0.key == "Content-Type" })

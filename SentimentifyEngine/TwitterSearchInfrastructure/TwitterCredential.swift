@@ -11,12 +11,10 @@ public struct TwitterCredential {
     
     public let consumerKey: String
     public let consumerSecretKey: String
-    public let grantType: String
     
-    public init(consumerKey: String, consumerSecretKey: String, grantType: String) {
+    public init(consumerKey: String, consumerSecretKey: String) {
         self.consumerKey = consumerKey
         self.consumerSecretKey = consumerSecretKey
-        self.grantType = grantType
     }
     
     public func encoded() -> String? {

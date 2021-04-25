@@ -8,7 +8,7 @@
 import Foundation
 import SentimentifyEngine
 
-public final class NaturalLanguageHTTPClientDecorator: HTTPClient {
+public final class NaturalLanguageAuthenticatedHTTPClientDecorator: HTTPClient {
     
     private let decoratee: HTTPClient
     private let credential: NaturalLanguageCredential

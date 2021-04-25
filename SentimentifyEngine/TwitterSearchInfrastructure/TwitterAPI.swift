@@ -23,7 +23,7 @@ enum TwitterAPI {
             components.host = Self.baseURL.host
             components.path = Self.baseURL.path + "/oauth2/token"
             components.queryItems = [
-                .init(name: "grant_type", value: credential.grantType)
+                .init(name: "grant_type", value: "client_credentials")
             ]
             
             var request = URLRequest(url: components.url!)

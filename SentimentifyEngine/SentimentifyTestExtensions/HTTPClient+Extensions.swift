@@ -8,12 +8,14 @@
 import Foundation
 import SentimentifyEngine
 
+private class FakeTask: HTTPClientTask {
+    func cancel() {}
+}
+
 public final class HTTPClientStub: HTTPClient {
     
-    private class Task: HTTPClientTask {
-        func cancel() {}
-    }
-    
+    public private(set) var requests = [URLRequest]()
+
     private let stub: (URLRequest) -> HTTPClient.Result
     
     public init(stub: @escaping (URLRequest) -> HTTPClient.Result) {
@@ -21,7 +23,20 @@ public final class HTTPClientStub: HTTPClient {
     }
     
     public func execute(_ request: URLRequest, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
+        requests.append(request)
         completion(stub(request))
-        return Task()
+        return FakeTask()
+    }
+}
+
+public final class HTTPClientSpy: HTTPClient {
+    
+    public private(set) var requests = [URLRequest]()
+    
+    public init() {}
+    
+    public func execute(_ request: URLRequest, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
+        requests.append(request)
+        return FakeTask()
     }
 }

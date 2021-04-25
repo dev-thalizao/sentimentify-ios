@@ -51,16 +51,21 @@
 		2BC5155C26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5155B26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift */; };
 		2BC5156526346F490067FDD3 /* SharedHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5156426346F490067FDD3 /* SharedHelpers.swift */; };
 		2BC5156E26346F620067FDD3 /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5156D26346F620067FDD3 /* HTTPURLResponse+Extensions.swift */; };
-		2BC515A026346FDD0067FDD3 /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF45D2631A679006A05FE /* HTTPClientStub.swift */; };
+		2BC515A026346FDD0067FDD3 /* HTTPClient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF45D2631A679006A05FE /* HTTPClient+Extensions.swift */; };
 		2BC515BE26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */; };
 		2BC515DC2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC515DB2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift */; };
 		2BC515E5263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC515E4263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift */; };
-		2BC516172634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516162634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift */; };
-		2BC516232634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516222634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift */; };
+		2BC516172634DFFE0067FDD3 /* NaturalLanguageAuthenticatedHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516162634DFFE0067FDD3 /* NaturalLanguageAuthenticatedHTTPClientDecorator.swift */; };
+		2BC516232634E00E0067FDD3 /* NaturalLanguageAuthenticatedHTTPClientDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516222634E00E0067FDD3 /* NaturalLanguageAuthenticatedHTTPClientDecoratorTests.swift */; };
 		2BC516422634F6A30067FDD3 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516412634F6A30067FDD3 /* TwitterAPI.swift */; };
 		2BC5164B2634F6CB0067FDD3 /* TwitterAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5164A2634F6CB0067FDD3 /* TwitterAPITests.swift */; };
 		2BC516542634FC920067FDD3 /* TwitterCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516532634FC920067FDD3 /* TwitterCredential.swift */; };
 		2BC5165D2634FCAA0067FDD3 /* NaturalLanguageCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5165C2634FCAA0067FDD3 /* NaturalLanguageCredential.swift */; };
+		2BC51666263500B60067FDD3 /* TwitterAuthenticatedHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC51665263500B60067FDD3 /* TwitterAuthenticatedHTTPClientDecorator.swift */; };
+		2BC5166F263500CB0067FDD3 /* TwitterAuthenticatedHTTPClientDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5166E263500CB0067FDD3 /* TwitterAuthenticatedHTTPClientDecoratorTests.swift */; };
+		2BC5168D263507540067FDD3 /* TwitterAuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5168C263507540067FDD3 /* TwitterAuthenticationResponse.swift */; };
+		2BC5169626350D430067FDD3 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5169526350D430067FDD3 /* URLRequest+Extensions.swift */; };
+		2BC5169F26350E620067FDD3 /* TwitterAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5169E26350E620067FDD3 /* TwitterAccessToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,7 +143,7 @@
 		2B6BF40F2630FBDE006A05FE /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		2B6BF4342631A1BF006A05FE /* SearchInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInput.swift; sourceTree = "<group>"; };
 		2B6BF43F2631A2B2006A05FE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		2B6BF45D2631A679006A05FE /* HTTPClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientStub.swift; sourceTree = "<group>"; };
+		2B6BF45D2631A679006A05FE /* HTTPClient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPClient+Extensions.swift"; sourceTree = "<group>"; };
 		2BC512E626325B270067FDD3 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		2BC512EB26325B450067FDD3 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		2BC513112633133B0067FDD3 /* SearchUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseTests.swift; sourceTree = "<group>"; };
@@ -183,12 +188,17 @@
 		2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentimentRequestTests.swift; sourceTree = "<group>"; };
 		2BC515DB2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAnalyzeClassifierTests.swift; sourceTree = "<group>"; };
 		2BC515E4263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAnalyzeClassifier.swift; sourceTree = "<group>"; };
-		2BC516162634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageHTTPClientDecorator.swift; sourceTree = "<group>"; };
-		2BC516222634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageHTTPClientDecoratorTests.swift; sourceTree = "<group>"; };
+		2BC516162634DFFE0067FDD3 /* NaturalLanguageAuthenticatedHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAuthenticatedHTTPClientDecorator.swift; sourceTree = "<group>"; };
+		2BC516222634E00E0067FDD3 /* NaturalLanguageAuthenticatedHTTPClientDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAuthenticatedHTTPClientDecoratorTests.swift; sourceTree = "<group>"; };
 		2BC516412634F6A30067FDD3 /* TwitterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		2BC5164A2634F6CB0067FDD3 /* TwitterAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPITests.swift; sourceTree = "<group>"; };
 		2BC516532634FC920067FDD3 /* TwitterCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCredential.swift; sourceTree = "<group>"; };
 		2BC5165C2634FCAA0067FDD3 /* NaturalLanguageCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageCredential.swift; sourceTree = "<group>"; };
+		2BC51665263500B60067FDD3 /* TwitterAuthenticatedHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAuthenticatedHTTPClientDecorator.swift; sourceTree = "<group>"; };
+		2BC5166E263500CB0067FDD3 /* TwitterAuthenticatedHTTPClientDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAuthenticatedHTTPClientDecoratorTests.swift; sourceTree = "<group>"; };
+		2BC5168C263507540067FDD3 /* TwitterAuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAuthenticationResponse.swift; sourceTree = "<group>"; };
+		2BC5169526350D430067FDD3 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		2BC5169E26350E620067FDD3 /* TwitterAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAccessToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,6 +434,10 @@
 				2BC513932634468A0067FDD3 /* Info.plist */,
 				2BC516412634F6A30067FDD3 /* TwitterAPI.swift */,
 				2BC516532634FC920067FDD3 /* TwitterCredential.swift */,
+				2BC51665263500B60067FDD3 /* TwitterAuthenticatedHTTPClientDecorator.swift */,
+				2BC5168C263507540067FDD3 /* TwitterAuthenticationResponse.swift */,
+				2BC5169526350D430067FDD3 /* URLRequest+Extensions.swift */,
+				2BC5169E26350E620067FDD3 /* TwitterAccessToken.swift */,
 			);
 			path = TwitterSearchInfrastructure;
 			sourceTree = "<group>";
@@ -433,6 +447,7 @@
 			children = (
 				2BC5139F2634468A0067FDD3 /* Info.plist */,
 				2BC5164A2634F6CB0067FDD3 /* TwitterAPITests.swift */,
+				2BC5166E263500CB0067FDD3 /* TwitterAuthenticatedHTTPClientDecoratorTests.swift */,
 			);
 			path = TwitterSearchInfrastructureTests;
 			sourceTree = "<group>";
@@ -471,7 +486,7 @@
 				2BC513CD263449870067FDD3 /* NaturalLanguageAPI.swift */,
 				2BC5140E26345DD30067FDD3 /* AnalyzeSentimentRequest.swift */,
 				2BC5155226346D580067FDD3 /* AnalyzeSentimentResponse.swift */,
-				2BC516162634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift */,
+				2BC516162634DFFE0067FDD3 /* NaturalLanguageAuthenticatedHTTPClientDecorator.swift */,
 				2BC5165C2634FCAA0067FDD3 /* NaturalLanguageCredential.swift */,
 			);
 			path = "Natural Language";
@@ -485,7 +500,7 @@
 				2BC513D5263449AB0067FDD3 /* NaturalLanguageAPITests.swift */,
 				2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */,
 				2BC5155B26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift */,
-				2BC516222634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift */,
+				2BC516222634E00E0067FDD3 /* NaturalLanguageAuthenticatedHTTPClientDecoratorTests.swift */,
 			);
 			path = "Natural Language";
 			sourceTree = "<group>";
@@ -493,7 +508,7 @@
 		2BC5145C2634686C0067FDD3 /* SentimentifyTestExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				2B6BF45D2631A679006A05FE /* HTTPClientStub.swift */,
+				2B6BF45D2631A679006A05FE /* HTTPClient+Extensions.swift */,
 				2BC51484263469250067FDD3 /* XCTest+Extensions.swift */,
 				2BC514942634694C0067FDD3 /* Error+Extensions.swift */,
 				2BC5156426346F490067FDD3 /* SharedHelpers.swift */,
@@ -816,7 +831,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC5168D263507540067FDD3 /* TwitterAuthenticationResponse.swift in Sources */,
+				2BC5169F26350E620067FDD3 /* TwitterAccessToken.swift in Sources */,
+				2BC51666263500B60067FDD3 /* TwitterAuthenticatedHTTPClientDecorator.swift in Sources */,
 				2BC516542634FC920067FDD3 /* TwitterCredential.swift in Sources */,
+				2BC5169626350D430067FDD3 /* URLRequest+Extensions.swift in Sources */,
 				2BC516422634F6A30067FDD3 /* TwitterAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,6 +844,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC5166F263500CB0067FDD3 /* TwitterAuthenticatedHTTPClientDecoratorTests.swift in Sources */,
 				2BC5164B2634F6CB0067FDD3 /* TwitterAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -837,7 +857,7 @@
 				2BC515E5263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift in Sources */,
 				2BC5141D263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift in Sources */,
 				2BC513CE263449870067FDD3 /* NaturalLanguageAPI.swift in Sources */,
-				2BC516172634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift in Sources */,
+				2BC516172634DFFE0067FDD3 /* NaturalLanguageAuthenticatedHTTPClientDecorator.swift in Sources */,
 				2BC5165D2634FCAA0067FDD3 /* NaturalLanguageCredential.swift in Sources */,
 				2BC5155326346D580067FDD3 /* AnalyzeSentimentResponse.swift in Sources */,
 			);
@@ -851,7 +871,7 @@
 				2BC513D6263449AB0067FDD3 /* NaturalLanguageAPITests.swift in Sources */,
 				2BC515DC2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift in Sources */,
 				2BC51425263463860067FDD3 /* NaturalLanguageAnalyzeLoaderTests.swift in Sources */,
-				2BC516232634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift in Sources */,
+				2BC516232634E00E0067FDD3 /* NaturalLanguageAuthenticatedHTTPClientDecoratorTests.swift in Sources */,
 				2BC5155C26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -863,7 +883,7 @@
 				2BC5156526346F490067FDD3 /* SharedHelpers.swift in Sources */,
 				2BC5156E26346F620067FDD3 /* HTTPURLResponse+Extensions.swift in Sources */,
 				2BC51485263469250067FDD3 /* XCTest+Extensions.swift in Sources */,
-				2BC515A026346FDD0067FDD3 /* HTTPClientStub.swift in Sources */,
+				2BC515A026346FDD0067FDD3 /* HTTPClient+Extensions.swift in Sources */,
 				2BC514952634694C0067FDD3 /* Error+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
