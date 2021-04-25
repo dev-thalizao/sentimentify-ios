@@ -14,14 +14,10 @@ final class NaturalLanguageAPITests: XCTestCase {
         XCTAssertEqual(makeSUT().httpMethod, "POST")
     }
     
-    func testEndpointHasApiKey() {
-        XCTAssertEqual(makeSUT().url?.query, "key=API_KEY")
-    }
-    
     func testEndpointURL() {
         XCTAssertEqual(
             makeSUT().url,
-            URL(string: "https://language.googleapis.com/v1/documents:analyzeSentiment?key=API_KEY")
+            URL(string: "https://language.googleapis.com/v1/documents:analyzeSentiment")
         )
     }
     
@@ -43,11 +39,10 @@ final class NaturalLanguageAPITests: XCTestCase {
     }
     
     private func makeSUT(
-        content: String = "Any happy content",
-        apiKey: String = "API_KEY"
+        content: String = "Any happy content"
     ) -> URLRequest {
         return NaturalLanguageAPI
             .analyzeSentiment(input: .init(content: content))
-            .request(apiKey: apiKey)
+            .request()
     }
 }

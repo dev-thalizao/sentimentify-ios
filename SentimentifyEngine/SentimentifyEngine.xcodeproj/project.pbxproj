@@ -57,6 +57,8 @@
 		2BC515BE26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */; };
 		2BC515DC2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC515DB2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift */; };
 		2BC515E5263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC515E4263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift */; };
+		2BC516172634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516162634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift */; };
+		2BC516232634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516222634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +183,8 @@
 		2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeSentimentRequestTests.swift; sourceTree = "<group>"; };
 		2BC515DB2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAnalyzeClassifierTests.swift; sourceTree = "<group>"; };
 		2BC515E4263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAnalyzeClassifier.swift; sourceTree = "<group>"; };
+		2BC516162634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageHTTPClientDecorator.swift; sourceTree = "<group>"; };
+		2BC516222634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageHTTPClientDecoratorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -462,6 +466,7 @@
 				2BC513CD263449870067FDD3 /* NaturalLanguageAPI.swift */,
 				2BC5140E26345DD30067FDD3 /* AnalyzeSentimentRequest.swift */,
 				2BC5155226346D580067FDD3 /* AnalyzeSentimentResponse.swift */,
+				2BC516162634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift */,
 			);
 			path = "Natural Language";
 			sourceTree = "<group>";
@@ -474,6 +479,7 @@
 				2BC513D5263449AB0067FDD3 /* NaturalLanguageAPITests.swift */,
 				2BC515BD26347D680067FDD3 /* AnalyzeSentimentRequestTests.swift */,
 				2BC5155B26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift */,
+				2BC516222634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift */,
 			);
 			path = "Natural Language";
 			sourceTree = "<group>";
@@ -822,6 +828,7 @@
 				2BC515E5263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift in Sources */,
 				2BC5141D263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift in Sources */,
 				2BC513CE263449870067FDD3 /* NaturalLanguageAPI.swift in Sources */,
+				2BC516172634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift in Sources */,
 				2BC5155326346D580067FDD3 /* AnalyzeSentimentResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -834,6 +841,7 @@
 				2BC513D6263449AB0067FDD3 /* NaturalLanguageAPITests.swift in Sources */,
 				2BC515DC2634807B0067FDD3 /* NaturalLanguageAnalyzeClassifierTests.swift in Sources */,
 				2BC51425263463860067FDD3 /* NaturalLanguageAnalyzeLoaderTests.swift in Sources */,
+				2BC516232634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift in Sources */,
 				2BC5155C26346DA70067FDD3 /* AnalyzeSentimentResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,7 +20,6 @@ final class AnalyzeSentimentRequest {
 extension AnalyzeSentimentRequest {
     
     private struct Root: Encodable {
-        
         let content: String
         
         private enum CodingKeys: String, CodingKey {

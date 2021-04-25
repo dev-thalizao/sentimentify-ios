@@ -59,3 +59,11 @@ public func neutralAnalyzeScore() -> AnalyzeScore {
 public func happyAnalyzeScore() -> AnalyzeScore {
     return .init(score: 0.5)
 }
+
+public func anyAnalyzeInput() -> AnalyzeInput {
+    return .init(content: "any content")
+}
+
+public func anyData() -> Data {
+    return Data()
+}

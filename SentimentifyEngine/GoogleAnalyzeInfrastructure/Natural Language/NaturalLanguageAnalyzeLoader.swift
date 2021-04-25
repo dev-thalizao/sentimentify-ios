@@ -11,16 +11,14 @@ import SentimentifyEngine
 public final class NaturalLanguageAnalyzeLoader: AnalyzeLoader {
     
     private let client: HTTPClient
-    private let apiKey: String
     
     public init(client: HTTPClient, apiKey: String) {
         self.client = client
-        self.apiKey = apiKey
     }
     
     public func analyze(using input: AnalyzeInput, completion: @escaping (AnalyzeLoader.Result) -> Void) {
         let endpoint = NaturalLanguageAPI.analyzeSentiment(input: input)
-        client.execute(endpoint.request(apiKey: apiKey)) { (result) in
+        client.execute(endpoint.request()) { (result) in
             completion(result.flatMap { (data, response) in
                 do {
                     return .success(try AnalyzeSentimentResponse.map(data))

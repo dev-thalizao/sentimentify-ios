@@ -14,17 +14,14 @@ enum NaturalLanguageAPI {
     
     case analyzeSentiment(input: AnalyzeInput)
     
-    func request(apiKey: String) -> URLRequest {
+    func request() -> URLRequest {
         switch self {
         case let .analyzeSentiment(input):
             var components = URLComponents()
             components.scheme = Self.baseURL.scheme
             components.host = Self.baseURL.host
             components.path = Self.baseURL.path + "/v1/documents:analyzeSentiment"
-            components.queryItems = [
-                .init(name: "key", value: apiKey)
-            ]
-            
+
             var request = URLRequest(url: components.url!)
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
