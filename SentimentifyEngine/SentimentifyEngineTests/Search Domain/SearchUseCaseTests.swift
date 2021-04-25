@@ -12,12 +12,12 @@ import SentimentifyTestExtensions
 final class SearchUseCaseTests: XCTestCase {
     
     func testUseCaseInitDontEmitAnyMessages() {
-        let (_, output) = makeSUT { _ in .success(anySearchResults()) }
+        let (_, output) = makeSUT { _ in .success(anySearchResultArray()) }
         XCTAssertEqual(output.messages, [])
     }
 
     func testUseCaseShouldCompleteWithSuccess() {
-        let (sut, output) = makeSUT { _ in .success(anySearchResults()) }
+        let (sut, output) = makeSUT { _ in .success(anySearchResultArray()) }
         
         sut.search(using: .init(term: "thalizao"))
         
@@ -35,7 +35,7 @@ final class SearchUseCaseTests: XCTestCase {
     func testUseCaseShouldFailedAtFirstThenShouldCompleteWithSuccess() {
         let (sut, output) = makeSUT { input in
             input.term == "thalizao"
-                ? .success(anySearchResults())
+                ? .success(anySearchResultArray())
                 : .failure(anyError())
         }
         
@@ -49,6 +49,41 @@ final class SearchUseCaseTests: XCTestCase {
             output.messages,
             [.loading, .failed(anyError()), .loading, .finished(anySearchResults())]
         )
+    }
+    
+    func testUseCaseShouldCompleteWithSuccessAndNextPage() {
+        var isFirstTime: Bool = true
+        
+        let (sut, output) = makeSUT { _ in
+            if isFirstTime {
+                isFirstTime.toggle()
+                return .success(anySearchResultArray(3))
+            } else {
+                return .success(anySearchResultArray(0))
+            }
+        }
+
+        sut.search(using: .init(term: "thalizao"))
+
+        XCTAssertEqual(output.messages, [.loading, .finished(anySearchResults(3))])
+
+        if case let .finished(searchResults) = output.messages.last {
+            XCTAssertNotNil(searchResults.nextResults)
+            searchResults.nextResults?()
+        } else {
+            XCTFail("The last message should be a search result with next page")
+        }
+
+        XCTAssertEqual(
+            output.messages,
+            [.loading, .finished(anySearchResults(3)), .loading, .finished(anySearchResults(0))]
+        )
+        
+        if case let .finished(searchResults) = output.messages.last {
+            XCTAssertNil(searchResults.nextResults)
+        } else {
+            XCTFail("The last message should be a search result without next page")
+        }
     }
     
     private func makeSUT(
@@ -74,7 +109,7 @@ private final class SearchUseCaseOutputSpy: SearchUseCaseOutput {
         messages.append(.loading)
     }
     
-    func didFinishSearch(with results: [SearchResult]) {
+    func didFinishSearch(with results: SearchResults) {
         messages.append(.finished(results))
     }
     
@@ -85,13 +120,13 @@ private final class SearchUseCaseOutputSpy: SearchUseCaseOutput {
 
 private enum SearchUseCaseOutputMessage: Equatable {
     case loading
-    case finished([SearchResult])
+    case finished(SearchResults)
     case failed(Error)
     
     static func == (lhs: SearchUseCaseOutputMessage, rhs: SearchUseCaseOutputMessage) -> Bool {
         switch (lhs, rhs) {
         case (let .finished(lhsResult), let .finished(rhsResult)):
-            return lhsResult == rhsResult
+            return lhsResult.results == rhsResult.results
         case (let .failed(lhsError), let .failed(rhsError)):
             return lhsError.isEqual(other: rhsError)
         case (.loading, .loading):
@@ -110,7 +145,7 @@ private final class SearchLoaderStub: SearchLoader {
         self.stub = stub
     }
     
-    func search(using term: SearchInput, completion: @escaping (SearchLoader.Result) -> Void) {
-        completion(stub(term))
+    func search(using input: SearchInput, completion: @escaping (SearchLoader.Result) -> Void) {
+        completion(stub(input))
     }
 }

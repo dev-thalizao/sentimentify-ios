@@ -93,7 +93,7 @@ private enum SearchPresenterMessage: Equatable {
         case (let .error(lhsViewModel), let .error(rhsViewModel)):
             return lhsViewModel == rhsViewModel
         case (let .search(lhsViewModel), let .search(rhsViewModel)):
-            return lhsViewModel == rhsViewModel
+            return lhsViewModel.results == rhsViewModel.results
         default:
             return false
         }

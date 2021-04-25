@@ -7,6 +7,19 @@
 
 import Foundation
 
+public typealias NextResultsCompletion = () -> Void
+
+public struct SearchResults {
+
+    public let results: [SearchResult]
+    public let nextResults: NextResultsCompletion?
+    
+    public init(results: [SearchResult], nextResults: NextResultsCompletion? = nil) {
+        self.results = results
+        self.nextResults = nextResults
+    }
+}
+
 public struct SearchResult: Equatable {
     public let content: Content
     public let author: Author

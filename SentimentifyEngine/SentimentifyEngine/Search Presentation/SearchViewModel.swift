@@ -7,11 +7,18 @@
 
 import Foundation
 
-public struct SearchViewModel: Equatable {
+public struct SearchViewModel {
+    
     public let results: [SearchResultViewModel]
+    public let nextResults: NextResultsCompletion?
+    
+    public init(results: [SearchResultViewModel], nextResults: NextResultsCompletion? = nil) {
+        self.results = results
+        self.nextResults = nextResults
+    }
     
     public static func map(
-        _ results: [SearchResult],
+        _ search: SearchResults,
         currentDate: Date = .init(),
         calendar: Calendar = .current,
         locale: Locale = .current
@@ -20,18 +27,21 @@ public struct SearchViewModel: Equatable {
         formatter.calendar = calendar
         formatter.locale = locale
         
-        return SearchViewModel(results: results.map({ result in
-            SearchResultViewModel(
-                title: result.author.name,
-                subtitle: result.author.username,
-                content: result.content.text,
-                image: result.author.photo,
-                createdAt: formatter.localizedString(
-                    for: result.content.createdAt,
-                    relativeTo: currentDate
+        return SearchViewModel(
+            results: search.results.map({ result in
+                SearchResultViewModel(
+                    title: result.author.name,
+                    subtitle: result.author.username,
+                    content: result.content.text,
+                    image: result.author.photo,
+                    createdAt: formatter.localizedString(
+                        for: result.content.createdAt,
+                        relativeTo: currentDate
+                    )
                 )
-            )
-        }))
+            }),
+            nextResults: search.nextResults
+        )
     }
 }
 

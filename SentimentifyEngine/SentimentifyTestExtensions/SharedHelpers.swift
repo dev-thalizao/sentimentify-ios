@@ -28,8 +28,12 @@ public func anySearchResult() -> SearchResult {
     return .init(content: anyContent(), author: anyAuthor())
 }
 
-public func anySearchResults(_ items: Int = 1) -> [SearchResult] {
+public func anySearchResultArray(_ items: Int = 1) -> [SearchResult] {
     return (0..<items).map { _ in anySearchResult() }
+}
+
+public func anySearchResults(_ items: Int = 1, next: (() -> Void)? = nil) -> SearchResults {
+    return .init(results: anySearchResultArray(items), nextResults: next)
 }
 
 public func anyError() -> Error {

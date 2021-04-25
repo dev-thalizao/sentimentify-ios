@@ -28,7 +28,7 @@ public final class SearchPresenter: SearchUseCaseOutput {
         errorView.display(viewModel: .init(message: nil))
     }
     
-    public func didFinishSearch(with results: [SearchResult]) {
+    public func didFinishSearch(with results: SearchResults) {
         loadingView.display(viewModel: .init(isLoading: false))
         searchView.display(viewModel: .map(results))
     }
