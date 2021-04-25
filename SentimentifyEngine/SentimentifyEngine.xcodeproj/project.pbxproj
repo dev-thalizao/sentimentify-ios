@@ -3,11 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2B467DB92630B13D003849CB /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; };
+		2B51B12A26359C7100C0695F /* SentimentifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B51B12126359C7100C0695F /* SentimentifyiOS.framework */; };
+		2B51B12F26359C7100C0695F /* SentimentifyiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B51B12E26359C7100C0695F /* SentimentifyiOSTests.swift */; };
+		2B51B13126359C7100C0695F /* SentimentifyiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B51B12326359C7100C0695F /* SentimentifyiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B51B15F26359CC600C0695F /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; platformFilter = ios; };
+		2B51B16026359CC600C0695F /* SentimentifyEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B51B16626359CDF00C0695F /* libSentimentifyTestExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */; };
 		2B6BF40C2630FBC5006A05FE /* SearchLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF40B2630FBC5006A05FE /* SearchLoader.swift */; };
 		2B6BF4102630FBDE006A05FE /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF40F2630FBDE006A05FE /* SearchResult.swift */; };
 		2B6BF4352631A1BF006A05FE /* SearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BF4342631A1BF006A05FE /* SearchInput.swift */; };
@@ -82,6 +88,27 @@
 			remoteGlobalIDString = 2B467DAE2630B13D003849CB;
 			remoteInfo = SentimentifyEngine;
 		};
+		2B51B12B26359C7100C0695F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B467DA62630B13D003849CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B51B12026359C7100C0695F;
+			remoteInfo = SentimentifyiOS;
+		};
+		2B51B16126359CC600C0695F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B467DA62630B13D003849CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B467DAE2630B13D003849CB;
+			remoteInfo = SentimentifyEngine;
+		};
+		2B51B16426359CD800C0695F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B467DA62630B13D003849CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC5145A2634686C0067FDD3;
+			remoteInfo = SentimentifyTestExtensions;
+		};
 		2BC5139A2634468A0067FDD3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2B467DA62630B13D003849CB /* Project object */;
@@ -140,11 +167,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2B51B16326359CC600C0695F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2B51B16026359CC600C0695F /* SentimentifyEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SentimentifyEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467DB32630B13D003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B467DB82630B13D003849CB /* SentimentifyEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467DBF2630B13D003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B51B12126359C7100C0695F /* SentimentifyiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SentimentifyiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B51B12326359C7100C0695F /* SentimentifyiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SentimentifyiOS.h; sourceTree = "<group>"; };
+		2B51B12426359C7100C0695F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B51B12926359C7100C0695F /* SentimentifyiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B51B12E26359C7100C0695F /* SentimentifyiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentifyiOSTests.swift; sourceTree = "<group>"; };
+		2B51B13026359C7100C0695F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B51B14226359C7B00C0695F /* SentimentifyiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SentimentifyiOS.h; sourceTree = "<group>"; };
+		2B51B14326359C7B00C0695F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B6BF40B2630FBC5006A05FE /* SearchLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLoader.swift; sourceTree = "<group>"; };
 		2B6BF40F2630FBDE006A05FE /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		2B6BF4342631A1BF006A05FE /* SearchInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInput.swift; sourceTree = "<group>"; };
@@ -230,6 +279,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B51B11E26359C7100C0695F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B51B15F26359CC600C0695F /* SentimentifyEngine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B51B12626359C7100C0695F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B51B16626359CDF00C0695F /* libSentimentifyTestExtensions.a in Frameworks */,
+				2B51B12A26359C7100C0695F /* SentimentifyiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BC5138D2634468A0067FDD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,11 +346,13 @@
 			children = (
 				2B467DB12630B13D003849CB /* SentimentifyEngine */,
 				2B467DBC2630B13D003849CB /* SentimentifyEngineTests */,
+				2BC5145C2634686C0067FDD3 /* SentimentifyTestExtensions */,
 				2BC513912634468A0067FDD3 /* TwitterSearchInfrastructure */,
 				2BC5139C2634468A0067FDD3 /* TwitterSearchInfrastructureTests */,
 				2BC513B1263448260067FDD3 /* GoogleAnalyzeInfrastructure */,
 				2BC513BC263448270067FDD3 /* GoogleAnalyzeInfrastructureTests */,
-				2BC5145C2634686C0067FDD3 /* SentimentifyTestExtensions */,
+				2B51B12226359C7100C0695F /* SentimentifyiOS */,
+				2B51B12D26359C7100C0695F /* SentimentifyiOSTests */,
 				2B467DB02630B13D003849CB /* Products */,
 				2BC513E9263453C60067FDD3 /* Frameworks */,
 			);
@@ -300,6 +368,8 @@
 				2BC513B0263448260067FDD3 /* GoogleAnalyzeInfrastructure.framework */,
 				2BC513B8263448270067FDD3 /* GoogleAnalyzeInfrastructureTests.xctest */,
 				2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */,
+				2B51B12126359C7100C0695F /* SentimentifyiOS.framework */,
+				2B51B12926359C7100C0695F /* SentimentifyiOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -331,6 +401,33 @@
 			);
 			path = SentimentifyEngineTests;
 			sourceTree = "<group>";
+		};
+		2B51B12226359C7100C0695F /* SentimentifyiOS */ = {
+			isa = PBXGroup;
+			children = (
+				2B51B12326359C7100C0695F /* SentimentifyiOS.h */,
+				2B51B12426359C7100C0695F /* Info.plist */,
+			);
+			path = SentimentifyiOS;
+			sourceTree = "<group>";
+		};
+		2B51B12D26359C7100C0695F /* SentimentifyiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B51B12E26359C7100C0695F /* SentimentifyiOSTests.swift */,
+				2B51B13026359C7100C0695F /* Info.plist */,
+			);
+			path = SentimentifyiOSTests;
+			sourceTree = "<group>";
+		};
+		2B51B14126359C7B00C0695F /* SentimentifyiOS */ = {
+			isa = PBXGroup;
+			children = (
+				2B51B14226359C7B00C0695F /* SentimentifyiOS.h */,
+				2B51B14326359C7B00C0695F /* Info.plist */,
+			);
+			path = SentimentifyiOS;
+			sourceTree = SOURCE_ROOT;
 		};
 		2B6BF40A2630FBA3006A05FE /* Search Domain */ = {
 			isa = PBXGroup;
@@ -526,6 +623,7 @@
 		2BC5145C2634686C0067FDD3 /* SentimentifyTestExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				2B51B14126359C7B00C0695F /* SentimentifyiOS */,
 				2B6BF45D2631A679006A05FE /* HTTPClient+Extensions.swift */,
 				2BC51484263469250067FDD3 /* XCTest+Extensions.swift */,
 				2BC514942634694C0067FDD3 /* Error+Extensions.swift */,
@@ -542,6 +640,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B51B11C26359C7100C0695F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B51B13126359C7100C0695F /* SentimentifyiOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +710,45 @@
 			name = SentimentifyEngineTests;
 			productName = SentimentifyEngineTests;
 			productReference = 2B467DB82630B13D003849CB /* SentimentifyEngineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B51B12026359C7100C0695F /* SentimentifyiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B51B13226359C7100C0695F /* Build configuration list for PBXNativeTarget "SentimentifyiOS" */;
+			buildPhases = (
+				2B51B11C26359C7100C0695F /* Headers */,
+				2B51B11D26359C7100C0695F /* Sources */,
+				2B51B11E26359C7100C0695F /* Frameworks */,
+				2B51B11F26359C7100C0695F /* Resources */,
+				2B51B16326359CC600C0695F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B51B16226359CC600C0695F /* PBXTargetDependency */,
+			);
+			name = SentimentifyiOS;
+			productName = SentimentifyiOS;
+			productReference = 2B51B12126359C7100C0695F /* SentimentifyiOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2B51B12826359C7100C0695F /* SentimentifyiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B51B13526359C7100C0695F /* Build configuration list for PBXNativeTarget "SentimentifyiOSTests" */;
+			buildPhases = (
+				2B51B12526359C7100C0695F /* Sources */,
+				2B51B12626359C7100C0695F /* Frameworks */,
+				2B51B12726359C7100C0695F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B51B16526359CD800C0695F /* PBXTargetDependency */,
+				2B51B12C26359C7100C0695F /* PBXTargetDependency */,
+			);
+			name = SentimentifyiOSTests;
+			productName = SentimentifyiOSTests;
+			productReference = 2B51B12926359C7100C0695F /* SentimentifyiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2BC5138F2634468A0067FDD3 /* TwitterSearchInfrastructure */ = {
@@ -716,6 +861,12 @@
 					2B467DB72630B13D003849CB = {
 						CreatedOnToolsVersion = 12.4;
 					};
+					2B51B12026359C7100C0695F = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					2B51B12826359C7100C0695F = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					2BC5138F2634468A0067FDD3 = {
 						CreatedOnToolsVersion = 12.4;
 						LastSwiftMigration = 1240;
@@ -752,11 +903,13 @@
 			targets = (
 				2B467DAE2630B13D003849CB /* SentimentifyEngine */,
 				2B467DB72630B13D003849CB /* SentimentifyEngineTests */,
+				2BC5145A2634686C0067FDD3 /* SentimentifyTestExtensions */,
 				2BC5138F2634468A0067FDD3 /* TwitterSearchInfrastructure */,
 				2BC513972634468A0067FDD3 /* TwitterSearchInfrastructureTests */,
 				2BC513AF263448260067FDD3 /* GoogleAnalyzeInfrastructure */,
 				2BC513B7263448270067FDD3 /* GoogleAnalyzeInfrastructureTests */,
-				2BC5145A2634686C0067FDD3 /* SentimentifyTestExtensions */,
+				2B51B12026359C7100C0695F /* SentimentifyiOS */,
+				2B51B12826359C7100C0695F /* SentimentifyiOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -770,6 +923,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2B467DB62630B13D003849CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B51B11F26359C7100C0695F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B51B12726359C7100C0695F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -842,6 +1009,21 @@
 				2BC51333263324150067FDD3 /* AnalyzeUseCaseTests.swift in Sources */,
 				2BC51360263350540067FDD3 /* SearchPresenterTests.swift in Sources */,
 				2BC5138026335F490067FDD3 /* AnalyzePresenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B51B11D26359C7100C0695F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B51B12526359C7100C0695F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B51B12F26359C7100C0695F /* SentimentifyiOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,6 +1101,22 @@
 			isa = PBXTargetDependency;
 			target = 2B467DAE2630B13D003849CB /* SentimentifyEngine */;
 			targetProxy = 2B467DBA2630B13D003849CB /* PBXContainerItemProxy */;
+		};
+		2B51B12C26359C7100C0695F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B51B12026359C7100C0695F /* SentimentifyiOS */;
+			targetProxy = 2B51B12B26359C7100C0695F /* PBXContainerItemProxy */;
+		};
+		2B51B16226359CC600C0695F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 2B467DAE2630B13D003849CB /* SentimentifyEngine */;
+			targetProxy = 2B51B16126359CC600C0695F /* PBXContainerItemProxy */;
+		};
+		2B51B16526359CD800C0695F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC5145A2634686C0067FDD3 /* SentimentifyTestExtensions */;
+			targetProxy = 2B51B16426359CD800C0695F /* PBXContainerItemProxy */;
 		};
 		2BC5139B2634468A0067FDD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1173,6 +1371,96 @@
 			};
 			name = Release;
 		};
+		2B51B13326359C7100C0695F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SentimentifyiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyiOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B51B13426359C7100C0695F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SentimentifyiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyiOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B51B13626359C7100C0695F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SentimentifyiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B51B13726359C7100C0695F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SentimentifyiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		2BC513A22634468A0067FDD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1417,6 +1705,24 @@
 			buildConfigurations = (
 				2B467DC72630B13D003849CB /* Debug */,
 				2B467DC82630B13D003849CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B51B13226359C7100C0695F /* Build configuration list for PBXNativeTarget "SentimentifyiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B51B13326359C7100C0695F /* Debug */,
+				2B51B13426359C7100C0695F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B51B13526359C7100C0695F /* Build configuration list for PBXNativeTarget "SentimentifyiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B51B13626359C7100C0695F /* Debug */,
+				2B51B13726359C7100C0695F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
