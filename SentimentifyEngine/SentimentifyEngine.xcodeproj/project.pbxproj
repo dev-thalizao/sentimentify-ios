@@ -33,8 +33,6 @@
 		2BC5138026335F490067FDD3 /* AnalyzePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5137F26335F490067FDD3 /* AnalyzePresenterTests.swift */; };
 		2BC5138626335F580067FDD3 /* AnalyzePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5138526335F580067FDD3 /* AnalyzePresenter.swift */; };
 		2BC513992634468A0067FDD3 /* TwitterSearchInfrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC513902634468A0067FDD3 /* TwitterSearchInfrastructure.framework */; };
-		2BC5139E2634468A0067FDD3 /* TwitterSearchInfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5139D2634468A0067FDD3 /* TwitterSearchInfrastructureTests.swift */; };
-		2BC513A02634468A0067FDD3 /* TwitterSearchInfrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC513922634468A0067FDD3 /* TwitterSearchInfrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BC513B9263448270067FDD3 /* GoogleAnalyzeInfrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC513B0263448260067FDD3 /* GoogleAnalyzeInfrastructure.framework */; };
 		2BC513CE263449870067FDD3 /* NaturalLanguageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC513CD263449870067FDD3 /* NaturalLanguageAPI.swift */; };
 		2BC513D6263449AB0067FDD3 /* NaturalLanguageAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC513D5263449AB0067FDD3 /* NaturalLanguageAPITests.swift */; };
@@ -59,6 +57,10 @@
 		2BC515E5263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC515E4263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift */; };
 		2BC516172634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516162634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift */; };
 		2BC516232634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516222634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift */; };
+		2BC516422634F6A30067FDD3 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516412634F6A30067FDD3 /* TwitterAPI.swift */; };
+		2BC5164B2634F6CB0067FDD3 /* TwitterAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5164A2634F6CB0067FDD3 /* TwitterAPITests.swift */; };
+		2BC516542634FC920067FDD3 /* TwitterCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC516532634FC920067FDD3 /* TwitterCredential.swift */; };
+		2BC5165D2634FCAA0067FDD3 /* NaturalLanguageCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5165C2634FCAA0067FDD3 /* NaturalLanguageCredential.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,10 +160,8 @@
 		2BC5137F26335F490067FDD3 /* AnalyzePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzePresenterTests.swift; sourceTree = "<group>"; };
 		2BC5138526335F580067FDD3 /* AnalyzePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzePresenter.swift; sourceTree = "<group>"; };
 		2BC513902634468A0067FDD3 /* TwitterSearchInfrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TwitterSearchInfrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BC513922634468A0067FDD3 /* TwitterSearchInfrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwitterSearchInfrastructure.h; sourceTree = "<group>"; };
 		2BC513932634468A0067FDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC513982634468A0067FDD3 /* TwitterSearchInfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterSearchInfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BC5139D2634468A0067FDD3 /* TwitterSearchInfrastructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterSearchInfrastructureTests.swift; sourceTree = "<group>"; };
 		2BC5139F2634468A0067FDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC513B0263448260067FDD3 /* GoogleAnalyzeInfrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleAnalyzeInfrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC513B3263448260067FDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,6 +185,10 @@
 		2BC515E4263480BB0067FDD3 /* NaturalLanguageAnalyzeClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageAnalyzeClassifier.swift; sourceTree = "<group>"; };
 		2BC516162634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageHTTPClientDecorator.swift; sourceTree = "<group>"; };
 		2BC516222634E00E0067FDD3 /* NaturalLanguageHTTPClientDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageHTTPClientDecoratorTests.swift; sourceTree = "<group>"; };
+		2BC516412634F6A30067FDD3 /* TwitterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
+		2BC5164A2634F6CB0067FDD3 /* TwitterAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPITests.swift; sourceTree = "<group>"; };
+		2BC516532634FC920067FDD3 /* TwitterCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCredential.swift; sourceTree = "<group>"; };
+		2BC5165C2634FCAA0067FDD3 /* NaturalLanguageCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageCredential.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,8 +421,9 @@
 		2BC513912634468A0067FDD3 /* TwitterSearchInfrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				2BC513922634468A0067FDD3 /* TwitterSearchInfrastructure.h */,
 				2BC513932634468A0067FDD3 /* Info.plist */,
+				2BC516412634F6A30067FDD3 /* TwitterAPI.swift */,
+				2BC516532634FC920067FDD3 /* TwitterCredential.swift */,
 			);
 			path = TwitterSearchInfrastructure;
 			sourceTree = "<group>";
@@ -426,8 +431,8 @@
 		2BC5139C2634468A0067FDD3 /* TwitterSearchInfrastructureTests */ = {
 			isa = PBXGroup;
 			children = (
-				2BC5139D2634468A0067FDD3 /* TwitterSearchInfrastructureTests.swift */,
 				2BC5139F2634468A0067FDD3 /* Info.plist */,
+				2BC5164A2634F6CB0067FDD3 /* TwitterAPITests.swift */,
 			);
 			path = TwitterSearchInfrastructureTests;
 			sourceTree = "<group>";
@@ -467,6 +472,7 @@
 				2BC5140E26345DD30067FDD3 /* AnalyzeSentimentRequest.swift */,
 				2BC5155226346D580067FDD3 /* AnalyzeSentimentResponse.swift */,
 				2BC516162634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift */,
+				2BC5165C2634FCAA0067FDD3 /* NaturalLanguageCredential.swift */,
 			);
 			path = "Natural Language";
 			sourceTree = "<group>";
@@ -510,7 +516,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BC513A02634468A0067FDD3 /* TwitterSearchInfrastructure.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,9 +685,11 @@
 					};
 					2BC5138F2634468A0067FDD3 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					2BC513972634468A0067FDD3 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					2BC513AF263448260067FDD3 = {
 						CreatedOnToolsVersion = 12.4;
@@ -809,6 +816,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC516542634FC920067FDD3 /* TwitterCredential.swift in Sources */,
+				2BC516422634F6A30067FDD3 /* TwitterAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,7 +825,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BC5139E2634468A0067FDD3 /* TwitterSearchInfrastructureTests.swift in Sources */,
+				2BC5164B2634F6CB0067FDD3 /* TwitterAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +838,7 @@
 				2BC5141D263463750067FDD3 /* NaturalLanguageAnalyzeLoader.swift in Sources */,
 				2BC513CE263449870067FDD3 /* NaturalLanguageAPI.swift in Sources */,
 				2BC516172634DFFE0067FDD3 /* NaturalLanguageHTTPClientDecorator.swift in Sources */,
+				2BC5165D2634FCAA0067FDD3 /* NaturalLanguageCredential.swift in Sources */,
 				2BC5155326346D580067FDD3 /* AnalyzeSentimentResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1122,6 +1132,7 @@
 		2BC513A22634468A0067FDD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1139,6 +1150,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1146,6 +1158,7 @@
 		2BC513A32634468A0067FDD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1170,6 +1183,8 @@
 		2BC513A52634468A0067FDD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TwitterSearchInfrastructureTests/Info.plist;
@@ -1181,6 +1196,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.TwitterSearchInfrastructureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1188,6 +1204,8 @@
 		2BC513A62634468A0067FDD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TwitterSearchInfrastructureTests/Info.plist;

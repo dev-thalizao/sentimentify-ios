@@ -8,10 +8,6 @@
 import Foundation
 import SentimentifyEngine
 
-public struct NaturalLanguageCredential {
-    public let apiKey: String
-}
-
 public final class NaturalLanguageHTTPClientDecorator: HTTPClient {
     
     private let decoratee: HTTPClient

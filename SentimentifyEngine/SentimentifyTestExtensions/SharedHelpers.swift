@@ -24,6 +24,10 @@ public func anyAuthor() -> SearchResult.Author {
     return .init(name: "any name", username: "any username", photo: anyURL())
 }
 
+public func anySearchInput(after: String? = nil) -> SearchInput {
+    return .init(term: "any term", after: after)
+}
+
 public func anySearchResult() -> SearchResult {
     return .init(content: anyContent(), author: anyAuthor())
 }
