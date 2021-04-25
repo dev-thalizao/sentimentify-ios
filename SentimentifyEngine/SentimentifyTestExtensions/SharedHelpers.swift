@@ -75,3 +75,20 @@ public func anyAnalyzeInput() -> AnalyzeInput {
 public func anyData() -> Data {
     return Data()
 }
+
+public func makeTwitterSearchResponse() -> Data {
+    let json: [[String: Any]] = [
+        [
+            "created_at": "Fri Dec 07 18:20:12 +0000 2018",
+            "id_str": "1071107120219783168",
+            "text": "I just skipped 19 minutes of simple-minded donkey work by generating 164 lines of #swift with @quicktypeio 🎉😎 https://t.co/hJL5EpUVqG",
+            "user": [
+                "name": "Thales Frigo",
+                "screen_name": "thalesfrigo",
+                "profile_image_url": "http://pbs.twimg.com/profile_images/602296681070239744/7v7JRjlI_normal.jpg"
+            ]
+        ]
+    ]
+    
+    return try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+}
