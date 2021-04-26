@@ -6,12 +6,12 @@
 # Sentimentify,  the app who analyze your tweets :)
 
 The architecture was built using the concepts of Clean Architecture and the SOLID principles. The modularization was composed by:
-- [SentimentifyEngine]((./SentimentifyEngine/SentimentifyEngine)): Domain and presentation of Search and Analyze features plus abstractions of data layer, like HTTP client. 
+- [SentimentifyEngine](./SentimentifyEngine/SentimentifyEngine): Domain and presentation of Search and Analyze features plus abstractions of data layer, like HTTP client. 
 - [SentimentifyiOS](./SentimentifyEngine/SentimentifyiOS): User interface implementation of Search and Analyze features using UIKit.
 - [TwitterSearchInfrastructure](./SentimentifyEngine/TwitterSearchInfrastructure): Infrastructure details of how to do a twitter request, how authenticate and how map the data.
-Implements the SearchLoader protocol and add behaviour of tweets search.
+Implements the [SearchLoader](./SentimentifyEngine/SentimentifyEngine/Search%20Domain/SearchLoader.swift) protocol and add behaviour of tweets search.
 - [GoogleAnalyzeInfrastructure](./SentimentifyEngine/GoogleAnalyzeInfrastructure): Infrastructure details of how to do a natural language request, how authenticate and how map the data.
-Implements both AnalyzeLoader and AnalyzeClassifier protocol, and add behaviour of analyze sentiment and classify the content.
+Implements both [AnalyzeLoader](./SentimentifyEngine/SentimentifyEngine/Analyze%20Domain/AnalyzeLoader.swift) and [AnalyzeClassifier](./SentimentifyEngine/SentimentifyEngine/Analyze%20Domain/AnalyzeClassifier.swift) protocol, and add behaviour of analyze sentiment and classify the content.
 - [SentimentifyTestExtensions](./SentimentifyEngine/SentimentifyTestExtensions): Add extra behaviours specific for unit tests.
 - [SentimentifyApp](./SentimentifyApp/SentimentifyApp): The main module, that create features and inject the dependencies, control the navigation flow, add new behaviours trough decorators and adapters.
 
