@@ -18,10 +18,12 @@
 		2B07B5E72635D1E600F68276 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B5E62635D1E600F68276 /* SearchResultCell.swift */; };
 		2B07B5F12635D1F000F68276 /* NextResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B5F02635D1F000F68276 /* NextResultsCell.swift */; };
 		2B07B60C2635DA2000F68276 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B60B2635DA2000F68276 /* UITableView+Extensions.swift */; };
+		2B07B68C2636095800F68276 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2B07B68B2636095800F68276 /* Kingfisher */; };
+		2B07B69726360A9700F68276 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B07B69626360A9700F68276 /* SearchResultCell.xib */; };
+		2B07B6AB26360FAB00F68276 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6AA26360FAB00F68276 /* EmptyViewController.swift */; };
 		2B467DB92630B13D003849CB /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; };
 		2B51B12A26359C7100C0695F /* SentimentifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B51B12126359C7100C0695F /* SentimentifyiOS.framework */; };
 		2B51B15F26359CC600C0695F /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; platformFilter = ios; };
-		2B51B16026359CC600C0695F /* SentimentifyEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B51B16626359CDF00C0695F /* libSentimentifyTestExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5145B2634686C0067FDD3 /* libSentimentifyTestExtensions.a */; };
 		2B51B17926359D5F00C0695F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B51B17826359D5F00C0695F /* SearchViewController.swift */; };
 		2B51B18C26359DDE00C0695F /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B51B18B26359DDE00C0695F /* SearchViewControllerTests.swift */; };
@@ -182,20 +184,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		2B51B16326359CC600C0695F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2B51B16026359CC600C0695F /* SentimentifyEngine.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		2B07B57C2635AC8200F68276 /* UIControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extensions.swift"; sourceTree = "<group>"; };
 		2B07B5962635B01600F68276 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +196,8 @@
 		2B07B5E62635D1E600F68276 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		2B07B5F02635D1F000F68276 /* NextResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextResultsCell.swift; sourceTree = "<group>"; };
 		2B07B60B2635DA2000F68276 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		2B07B69626360A9700F68276 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		2B07B6AA26360FAB00F68276 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SentimentifyEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467DB32630B13D003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B467DB82630B13D003849CB /* SentimentifyEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,6 +303,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B07B68C2636095800F68276 /* Kingfisher in Frameworks */,
 				2B51B15F26359CC600C0695F /* SentimentifyEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +374,7 @@
 		2B07B5C62635B89D00F68276 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2B07B69626360A9700F68276 /* SearchResultCell.xib */,
 				2B07B5E62635D1E600F68276 /* SearchResultCell.swift */,
 				2B07B5F02635D1F000F68276 /* NextResultsCell.swift */,
 			);
@@ -534,6 +526,7 @@
 				2B07B5962635B01600F68276 /* LoadingViewController.swift */,
 				2B07B5AA2635B4F700F68276 /* SectionController.swift */,
 				2B07B5BC2635B7DB00F68276 /* DiffableTableViewController.swift */,
+				2B07B6AA26360FAB00F68276 /* EmptyViewController.swift */,
 			);
 			path = "Shared UI";
 			sourceTree = "<group>";
@@ -828,7 +821,6 @@
 				2B51B11D26359C7100C0695F /* Sources */,
 				2B51B11E26359C7100C0695F /* Frameworks */,
 				2B51B11F26359C7100C0695F /* Resources */,
-				2B51B16326359CC600C0695F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -836,6 +828,9 @@
 				2B51B16226359CC600C0695F /* PBXTargetDependency */,
 			);
 			name = SentimentifyiOS;
+			packageProductDependencies = (
+				2B07B68B2636095800F68276 /* Kingfisher */,
+			);
 			productName = SentimentifyiOS;
 			productReference = 2B51B12126359C7100C0695F /* SentimentifyiOS.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1006,6 +1001,9 @@
 				Base,
 			);
 			mainGroup = 2B467DA52630B13D003849CB;
+			packageReferences = (
+				2B07B68A2636095800F68276 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 2B467DB02630B13D003849CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1042,6 +1040,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B07B69726360A9700F68276 /* SearchResultCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1136,6 +1135,7 @@
 				2B51B1BE2635A66700C0695F /* UIViewController+Extensions.swift in Sources */,
 				2B07B5F12635D1F000F68276 /* NextResultsCell.swift in Sources */,
 				2B07B5E72635D1E600F68276 /* SearchResultCell.swift in Sources */,
+				2B07B6AB26360FAB00F68276 /* EmptyViewController.swift in Sources */,
 				2B51B1AA2635A38F00C0695F /* UIRefreshControl+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1903,6 +1903,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B07B68A2636095800F68276 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B07B68B2636095800F68276 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B07B68A2636095800F68276 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2B467DA62630B13D003849CB /* Project object */;
 }

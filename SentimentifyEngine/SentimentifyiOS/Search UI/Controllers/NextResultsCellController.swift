@@ -27,9 +27,7 @@ final class NextResultsCellController: NSObject, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, willDisplay: UITableViewCell, forRowAt indexPath: IndexPath) {
-        reloadIfNeeded()
-        
-        offsetObserver = tableView.observe(\.contentOffset, options: .new) { [weak self] (tableView, _) in
+      offsetObserver = tableView.observe(\.contentOffset, options: .new) { [weak self] (tableView, _) in
             guard tableView.isDragging else { return }
             
             self?.reloadIfNeeded()
@@ -48,5 +46,7 @@ final class NextResultsCellController: NSObject, UITableViewDataSource, UITableV
         guard !cell.isLoading else { return }
         
         callback()
+        
+        cell.isLoading = true
     }
 }

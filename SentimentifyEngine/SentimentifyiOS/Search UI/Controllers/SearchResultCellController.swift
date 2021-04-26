@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 import SentimentifyEngine
 
 final class SearchResultCellController: NSObject {
@@ -32,8 +33,12 @@ extension SearchResultCellController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         cell = tableView.dequeueReusableCell()
-        cell?.textLabel?.text = viewModel.title
-        cell?.detailTextLabel?.text = viewModel.subtitle
+        cell?.userImageView.kf.setImage(with: viewModel.image)
+        cell?.userNameLabel.text = viewModel.title
+        cell?.screenNameLabel.text = viewModel.subtitle
+        cell?.contentLabel.text = viewModel.content
+        cell?.createdAtLabel.text = viewModel.createdAt
+        
         return cell!
     }
     

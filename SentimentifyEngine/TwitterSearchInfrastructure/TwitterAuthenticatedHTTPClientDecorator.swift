@@ -23,7 +23,6 @@ public final class TwitterAuthenticatedHTTPClientDecorator: HTTPClient {
     
     @discardableResult
     public func execute(_ request: URLRequest, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
-        
         if let auth = accessToken {
             return decoratee.execute(request.signed(bearer: auth.value), completion: completion)
         } else {

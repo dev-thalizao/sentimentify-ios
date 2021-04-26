@@ -25,7 +25,8 @@ final class DiffableTableViewController: UITableViewController {
     
     private func configureTableView() {
         tableView.dataSource = dataSource
-        tableView.register(SearchResultCell.self)
+        tableView.delegate = self
+        tableView.register(SearchResultCell.nib, forCellReuseIdentifier: SearchResultCell.identifier)
         tableView.register(NextResultsCell.self)
     }
 

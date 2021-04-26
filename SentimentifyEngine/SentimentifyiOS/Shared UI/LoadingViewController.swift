@@ -25,10 +25,7 @@ final class LoadingViewController: UIViewController {
     }
     
     private lazy var spinner: UIActivityIndicatorView = {
-        let spinner = UIActivityIndicatorView(style: .medium)
-        spinner.hidesWhenStopped = true
-        spinner.startAnimating()
-        
+        let spinner = UIActivityIndicatorView(style: .large)
         view.addSubview(spinner)
         
         spinner.translatesAutoresizingMaskIntoConstraints = false

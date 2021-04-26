@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B07B62D2635E71A00F68276 /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B07B62C2635E71A00F68276 /* SentimentifyEngine.framework */; };
+		2B07B62E2635E71A00F68276 /* SentimentifyEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B07B62C2635E71A00F68276 /* SentimentifyEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B07B6332635E71E00F68276 /* SentimentifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B07B6322635E71E00F68276 /* SentimentifyiOS.framework */; };
+		2B07B6342635E71E00F68276 /* SentimentifyiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B07B6322635E71E00F68276 /* SentimentifyiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B07B6382635E72200F68276 /* GoogleAnalyzeInfrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B07B6372635E72200F68276 /* GoogleAnalyzeInfrastructure.framework */; };
+		2B07B6392635E72200F68276 /* GoogleAnalyzeInfrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B07B6372635E72200F68276 /* GoogleAnalyzeInfrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B07B63D2635E72600F68276 /* TwitterSearchInfrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B07B63C2635E72600F68276 /* TwitterSearchInfrastructure.framework */; };
+		2B07B63E2635E72600F68276 /* TwitterSearchInfrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B07B63C2635E72600F68276 /* TwitterSearchInfrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B07B64B2635E77100F68276 /* SearchUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B64A2635E77100F68276 /* SearchUIComposer.swift */; };
+		2B07B6612635EA3800F68276 /* SearchUIComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6602635EA3800F68276 /* SearchUIComposerTests.swift */; };
+		2B07B6652635EB3200F68276 /* libSentimentifyTestExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B07B6642635EB3200F68276 /* libSentimentifyTestExtensions.a */; };
+		2B07B6692635EB7500F68276 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6682635EB7500F68276 /* WeakRefVirtualProxy.swift */; };
+		2B07B6742635F14D00F68276 /* LogHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */; };
+		2B07B6852635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */; };
+		2B07B6F326364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */; };
 		2B467D732630B08B003849CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D722630B08B003849CB /* AppDelegate.swift */; };
 		2B467D752630B08B003849CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D742630B08B003849CB /* SceneDelegate.swift */; };
 		2B467D772630B08B003849CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D762630B08B003849CB /* ViewController.swift */; };
 		2B467D7A2630B08B003849CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D782630B08B003849CB /* Main.storyboard */; };
 		2B467D7C2630B08C003849CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D7B2630B08C003849CB /* Assets.xcassets */; };
 		2B467D7F2630B08C003849CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D7D2630B08C003849CB /* LaunchScreen.storyboard */; };
-		2B467D8A2630B08C003849CB /* SentimentifyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D892630B08C003849CB /* SentimentifyAppTests.swift */; };
 		2B467D952630B08C003849CB /* SentimentifyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D942630B08C003849CB /* SentimentifyAppUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +48,38 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2B07B62F2635E71A00F68276 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2B07B62E2635E71A00F68276 /* SentimentifyEngine.framework in Embed Frameworks */,
+				2B07B6392635E72200F68276 /* GoogleAnalyzeInfrastructure.framework in Embed Frameworks */,
+				2B07B6342635E71E00F68276 /* SentimentifyiOS.framework in Embed Frameworks */,
+				2B07B63E2635E72600F68276 /* TwitterSearchInfrastructure.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2B07B62C2635E71A00F68276 /* SentimentifyEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SentimentifyEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B07B6322635E71E00F68276 /* SentimentifyiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SentimentifyiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B07B6372635E72200F68276 /* GoogleAnalyzeInfrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleAnalyzeInfrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B07B63C2635E72600F68276 /* TwitterSearchInfrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TwitterSearchInfrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B07B64A2635E77100F68276 /* SearchUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIComposer.swift; sourceTree = "<group>"; };
+		2B07B64E2635E9CE00F68276 /* libSentimentifyTestExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSentimentifyTestExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B07B6522635E9E600F68276 /* libSentimentifyTestExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSentimentifyTestExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B07B6542635E9F700F68276 /* libSentimentifyTestExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSentimentifyTestExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B07B6602635EA3800F68276 /* SearchUIComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIComposerTests.swift; sourceTree = "<group>"; };
+		2B07B6642635EB3200F68276 /* libSentimentifyTestExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSentimentifyTestExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B07B6682635EB7500F68276 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
+		2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHTTPClientDecorator.swift; sourceTree = "<group>"; };
+		2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseDispatchAfterAdapter.swift; sourceTree = "<group>"; };
+		2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchHTTPClientDecorator.swift; sourceTree = "<group>"; };
 		2B467D6F2630B08B003849CB /* SentimentifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SentimentifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467D722630B08B003849CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B467D742630B08B003849CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +89,6 @@
 		2B467D7E2630B08C003849CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B467D802630B08C003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B467D852630B08C003849CB /* SentimentifyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B467D892630B08C003849CB /* SentimentifyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentifyAppTests.swift; sourceTree = "<group>"; };
 		2B467D8B2630B08C003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B467D902630B08C003849CB /* SentimentifyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467D942630B08C003849CB /* SentimentifyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentifyAppUITests.swift; sourceTree = "<group>"; };
@@ -56,6 +100,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B07B62D2635E71A00F68276 /* SentimentifyEngine.framework in Frameworks */,
+				2B07B6382635E72200F68276 /* GoogleAnalyzeInfrastructure.framework in Frameworks */,
+				2B07B6332635E71E00F68276 /* SentimentifyiOS.framework in Frameworks */,
+				2B07B63D2635E72600F68276 /* TwitterSearchInfrastructure.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B07B6652635EB3200F68276 /* libSentimentifyTestExtensions.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +125,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B07B62B2635E71900F68276 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B07B6642635EB3200F68276 /* libSentimentifyTestExtensions.a */,
+				2B07B6542635E9F700F68276 /* libSentimentifyTestExtensions.a */,
+				2B07B6522635E9E600F68276 /* libSentimentifyTestExtensions.a */,
+				2B07B64E2635E9CE00F68276 /* libSentimentifyTestExtensions.a */,
+				2B07B63C2635E72600F68276 /* TwitterSearchInfrastructure.framework */,
+				2B07B6372635E72200F68276 /* GoogleAnalyzeInfrastructure.framework */,
+				2B07B6322635E71E00F68276 /* SentimentifyiOS.framework */,
+				2B07B62C2635E71A00F68276 /* SentimentifyEngine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2B467D662630B08B003849CB = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +147,7 @@
 				2B467D882630B08C003849CB /* SentimentifyAppTests */,
 				2B467D932630B08C003849CB /* SentimentifyAppUITests */,
 				2B467D702630B08B003849CB /* Products */,
+				2B07B62B2635E71900F68276 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +171,11 @@
 				2B467D7B2630B08C003849CB /* Assets.xcassets */,
 				2B467D7D2630B08C003849CB /* LaunchScreen.storyboard */,
 				2B467D802630B08C003849CB /* Info.plist */,
+				2B07B64A2635E77100F68276 /* SearchUIComposer.swift */,
+				2B07B6682635EB7500F68276 /* WeakRefVirtualProxy.swift */,
+				2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */,
+				2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */,
+				2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */,
 			);
 			path = SentimentifyApp;
 			sourceTree = "<group>";
@@ -113,8 +183,8 @@
 		2B467D882630B08C003849CB /* SentimentifyAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				2B467D892630B08C003849CB /* SentimentifyAppTests.swift */,
 				2B467D8B2630B08C003849CB /* Info.plist */,
+				2B07B6602635EA3800F68276 /* SearchUIComposerTests.swift */,
 			);
 			path = SentimentifyAppTests;
 			sourceTree = "<group>";
@@ -138,6 +208,7 @@
 				2B467D6B2630B08B003849CB /* Sources */,
 				2B467D6C2630B08B003849CB /* Frameworks */,
 				2B467D6D2630B08B003849CB /* Resources */,
+				2B07B62F2635E71A00F68276 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +269,7 @@
 					};
 					2B467D842630B08C003849CB = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 						TestTargetID = 2B467D6E2630B08B003849CB;
 					};
 					2B467D8F2630B08C003849CB = {
@@ -259,8 +331,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B467D772630B08B003849CB /* ViewController.swift in Sources */,
+				2B07B64B2635E77100F68276 /* SearchUIComposer.swift in Sources */,
+				2B07B6692635EB7500F68276 /* WeakRefVirtualProxy.swift in Sources */,
 				2B467D732630B08B003849CB /* AppDelegate.swift in Sources */,
+				2B07B6852635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift in Sources */,
 				2B467D752630B08B003849CB /* SceneDelegate.swift in Sources */,
+				2B07B6742635F14D00F68276 /* LogHTTPClientDecorator.swift in Sources */,
+				2B07B6F326364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B467D8A2630B08C003849CB /* SentimentifyAppTests.swift in Sources */,
+				2B07B6612635EA3800F68276 /* SearchUIComposerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,12 +514,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87NZGBKV4F;
 				INFOPLIST_FILE = SentimentifyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Sentimentify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,12 +533,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87NZGBKV4F;
 				INFOPLIST_FILE = SentimentifyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Sentimentify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -472,6 +551,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SentimentifyAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
@@ -482,6 +562,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SentimentifyApp.app/SentimentifyApp";
@@ -493,6 +574,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SentimentifyAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;

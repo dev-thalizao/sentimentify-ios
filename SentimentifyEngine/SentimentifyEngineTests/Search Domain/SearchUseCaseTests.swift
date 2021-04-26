@@ -15,6 +15,14 @@ final class SearchUseCaseTests: XCTestCase {
         let (_, output) = makeSUT { _ in .success(anySearchResultArray()) }
         XCTAssertEqual(output.messages, [])
     }
+    
+    func testUseCaseDontEmitAnyMessagesWithInvalidInput() {
+        let (sut, output) = makeSUT { _ in .success(anySearchResultArray()) }
+        
+        sut.search(using: .init(term: ""))
+        
+        XCTAssertEqual(output.messages, [])
+    }
 
     func testUseCaseShouldCompleteWithSuccess() {
         let (sut, output) = makeSUT { _ in .success(anySearchResultArray()) }
@@ -57,15 +65,15 @@ final class SearchUseCaseTests: XCTestCase {
         let (sut, output) = makeSUT { _ in
             if isFirstTime {
                 isFirstTime.toggle()
-                return .success(anySearchResultArray(3))
+                return .success(anySearchResultArray(10))
             } else {
-                return .success(anySearchResultArray(0))
+                return .success(anySearchResultArray(3))
             }
         }
 
         sut.search(using: .init(term: "thalizao"))
 
-        XCTAssertEqual(output.messages, [.loading, .finished(anySearchResults(3))])
+        XCTAssertEqual(output.messages, [.loading, .finished(anySearchResults(10))])
 
         if case let .finished(searchResults) = output.messages.last {
             XCTAssertNotNil(searchResults.nextResults)
@@ -76,7 +84,7 @@ final class SearchUseCaseTests: XCTestCase {
 
         XCTAssertEqual(
             output.messages,
-            [.loading, .finished(anySearchResults(3)), .loading, .finished(anySearchResults(0))]
+            [.loading, .finished(anySearchResults(10)), .loading, .finished(anySearchResults(3))]
         )
         
         if case let .finished(searchResults) = output.messages.last {

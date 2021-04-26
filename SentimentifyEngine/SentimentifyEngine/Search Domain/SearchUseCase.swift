@@ -23,26 +23,35 @@ public final class SearchUseCase {
         self.loader = loader
     }
     
-    public func search(using input: SearchInput) {
+    public func search(using input: SearchInput) -> Void {
+        guard isValidInput(input) else { return }
+        
         output.didStartSearching()
         
         loader.search(using: input) { [weak self] (result) in
+            guard let self = self else { return }
+            
             switch result {
             case let .success(results):
-                let nextInput = SearchInput(term: input.term, after: results.last?.content.id)
-                let nextResults: NextResultsCompletion? = !results.isEmpty
-                    ? { self?.search(using: nextInput) }
-                    : nil
-                
-                let searchResults = SearchResults(
-                    results: results,
-                    nextResults: nextResults
-                )
-                
-                self?.output.didFinishSearch(with: searchResults)
+                // TODO: - Move pagination compose to the loader
+                if results.count < 10 {
+                    self.output.didFinishSearch(with: .init(results: results, nextResults: nil))
+                } else {
+                    let nextInput = SearchInput(term: input.term, after: results.last?.content.id)
+                    let searchResults = SearchResults(
+                        results: results,
+                        nextResults: { [weak self] in self?.search(using: nextInput) }
+                    )
+                    
+                    self.output.didFinishSearch(with: searchResults)
+                }
             case let .failure(error):
-                self?.output.didFinishSearch(with: error)
+                self.output.didFinishSearch(with: error)
             }
         }
+    }
+    
+    private func isValidInput(_ input: SearchInput) -> Bool {
+        return !input.term.isEmpty
     }
 }

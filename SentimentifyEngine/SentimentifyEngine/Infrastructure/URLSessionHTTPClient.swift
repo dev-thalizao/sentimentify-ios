@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class URLSessionHTTPClient: HTTPClient {
+public final class URLSessionHTTPClient: HTTPClient {
     
     private let session: URLSession
     
@@ -26,7 +26,7 @@ final class URLSessionHTTPClient: HTTPClient {
     }
 
     @discardableResult
-    func execute(_ request: URLRequest, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
+    public func execute(_ request: URLRequest, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
         let task = session.dataTask(with: request) { data, response, error in
             completion(Result {
                 if let error = error {

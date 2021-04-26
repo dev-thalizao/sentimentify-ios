@@ -78,7 +78,9 @@ final class SearchViewControllerTests: XCTestCase {
         onSearch: @escaping SearchViewController.OnSearch = { _ in },
         onSelection: @escaping SearchViewController.OnSelection = { _ in }
     ) -> SearchViewController {
-        let sut = SearchViewController(onSearch: onSearch, onSelection: onSelection)
+        let sut = SearchViewController()
+        sut.onSearch = onSearch
+        sut.onSelection = onSelection
         trackForMemoryLeaks(sut)
         return sut
     }

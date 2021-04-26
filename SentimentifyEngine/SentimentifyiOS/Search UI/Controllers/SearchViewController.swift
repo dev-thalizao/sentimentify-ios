@@ -13,18 +13,17 @@ public final class SearchViewController: UIViewController {
     public typealias OnSearch = (String) -> Void
     public typealias OnSelection = (SearchResultViewModel) -> Void
     
-    public let onSearch: OnSearch
-    public let onSelection: OnSelection
+    public var onSearch: OnSearch?
+    public var onSelection: OnSelection?
     
+    private lazy var searchController = UISearchController(searchResultsController: nil)
     private lazy var loadingViewController = LoadingViewController()
-    private lazy var errorViewController = ErrorViewController()
+    private lazy var emptyViewController = EmptyViewController()
     private lazy var resultsViewController = DiffableTableViewController()
     
-    private lazy var results = [SearchResultViewModel]()
+    private lazy var currentResults = [SearchResultViewModel: SectionController]()
     
-    public init(onSearch: @escaping OnSearch, onSelection: @escaping OnSelection) {
-        self.onSearch = onSearch
-        self.onSelection = onSelection
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,20 +31,56 @@ public final class SearchViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        add(resultsViewController)
+        configureSearchController()
+        configureInitialState()
+    }
+    
+    private func configureInitialState() {
+        add(emptyViewController)
+        emptyViewController.message = "Você está pronto para analisar os sentimentos dos tweets de seus amigos? Basta digitar o nome de usuário e selecionar um tweet!"
+    }
+    
+    private func configureSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Pesquisar"
+        searchController.searchBar.delegate = self
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.searchController = searchController
+        navigationItem.largeTitleDisplayMode = .always
+        navigationItem.title = "Sentimentify"
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
 }
 
 extension SearchViewController: UISearchResultsUpdating {
     
     public func updateSearchResults(for searchController: UISearchController) {
-        searchController.searchBar.text.flatMap(onSearch)
+        let text = searchController.searchBar.text ?? ""
+        if !text.isEmpty {
+            currentResults.removeAll()
+            resultsViewController.display([])
+            onSearch?(text)
+        } else {
+            resultsViewController.remove()
+            configureInitialState()
+        }
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+   
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 
 extension SearchViewController: LoadingView {
     
     public func display(viewModel: LoadingViewModel) {
+        emptyViewController.remove()
+        
         loadingViewController.isLoading = viewModel.isLoading
         if viewModel.isLoading {
             add(loadingViewController)
@@ -58,37 +93,46 @@ extension SearchViewController: LoadingView {
 extension SearchViewController: ErrorView {
     
     public func display(viewModel: ErrorViewModel) {
-        // TODO: - Clear the results
+        guard let message = viewModel.message else { return }
         
+        let alertVC = UIAlertController(title: "Ops", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default)
+        alertVC.addAction(action)
         
-        
-        errorViewController.onRetry = { errorVC in
-            errorVC.remove()
-            // TODO: - Call the same search here
-        }
-        errorViewController.errorMessage = viewModel.message
-        add(errorViewController)
+        present(alertVC, animated: true)
     }
 }
 
 extension SearchViewController: SearchView {
-    
+ 
     public func display(viewModel: SearchViewModel) {
-        results.append(contentsOf: viewModel.results)
+        guard !viewModel.results.isEmpty else {
+            resultsViewController.remove()
+            emptyViewController.message = "Nenhum resultado encontrado."
+            add(emptyViewController)
+            return
+        }
         
-        var sections = results.compactMap { [onSelection] result -> SectionController in
+        emptyViewController.remove()
+        add(resultsViewController)
+    
+        viewModel.results.forEach { [onSelection] (result) in
             let controller = SearchResultCellController(viewModel: result) { (viewModel) in
-                onSelection(viewModel)
+                onSelection?(viewModel)
             }
-            
-            return SectionController(id: result, dataSource: controller, delegate: controller)
+            currentResults[result] = SectionController(id: result, dataSource: controller, delegate: controller)
         }
         
-        if let nextResults = viewModel.nextResults {
-            let controller = NextResultsCellController(callback: nextResults)
-            sections.append(SectionController(id: UUID(), dataSource: controller, delegate: controller))
+        let results = currentResults.values.map({ $0 })
+        
+        guard let nextResults = viewModel.nextResults else {
+            resultsViewController.display(results)
+            return
         }
         
-        resultsViewController.display(sections)
+        let controller = NextResultsCellController(callback: nextResults)
+        let nextResultsSection = SectionController(id: UUID(), dataSource: controller, delegate: controller)
+    
+        resultsViewController.display(results + [nextResultsSection])
     }
 }
