@@ -15,9 +15,7 @@ final class AnalyzeViewControllerTests: XCTestCase {
     func testOnLoadIsCalledByAnalyzeController() {
         var calls = 0
         
-        let sut = makeSUT(onLoad: { calls += 1 })
-        
-        sut.loadViewIfNeeded()
+        _ = makeSUT(onLoad: { calls += 1 })
         
         XCTAssertEqual(calls, 1)
     }
@@ -26,8 +24,7 @@ final class AnalyzeViewControllerTests: XCTestCase {
         var calls = 0
         
         let sut = makeSUT(onClose: { _ in calls += 1 })
-        
-        sut.loadViewIfNeeded()
+
         let closeButton = sut.navigationItem.rightBarButtonItem!
         
         _ = closeButton.target?.perform(closeButton.action)
@@ -52,8 +49,6 @@ final class AnalyzeViewControllerTests: XCTestCase {
     
     func testErrorViewMethods() throws {
         let sut = makeSUT()
-        
-        _ = sut.view
         
         sut.display(viewModel: ErrorViewModel(message: "Não foi possível completar a operação."))
         
@@ -83,6 +78,7 @@ final class AnalyzeViewControllerTests: XCTestCase {
         let sut = AnalyzeViewController()
         sut.onLoad = onLoad
         sut.onClose = onClose
+        sut.loadViewIfNeeded()
         trackForMemoryLeaks(sut)
         return sut
     }
