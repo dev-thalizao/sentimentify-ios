@@ -11,9 +11,43 @@ import SentimentifyiOS
 import SentimentifyTestExtensions
 @testable import SentimentifyApp
 
-final class TwitterSearchAndGoogleAnalyzeAcceptanceTest: XCTestCase {
+final class SearchAnalyzeAcceptanceTest: XCTestCase {
     
-    func testTapOnTwitterSearchReachGoogleAnalyze() throws {
+    func testSearchPagination() throws {
+        let sut = launch(httpClient: success())
+        
+        sut.loadViewIfNeeded()
+        
+        let searchController = UISearchController()
+        searchController.searchBar.text = "thalesfrigo"
+        
+        let firstPageExp = XCTestExpectation(description: "Should load and display childs")
+        let secondPageExp  = XCTestExpectation(description: "Should load next page")
+        
+        sut.updateSearchResults(for: searchController)
+        
+        if XCTWaiter.wait(for: [firstPageExp], timeout: 1.5) == .timedOut {
+            let tableView = try XCTUnwrap(sut.tableView)
+            
+            tableView.select(indexPath: .init(row: 10, section: 0))
+            
+            RunLoop.current.run(until: Date())
+            
+            if XCTWaiter.wait(for: [secondPageExp], timeout: 1.5) == .timedOut {
+                XCTAssertEqual(tableView.numberOfRows(inSection: 0), 12)
+                
+                (0..<12).forEach { (row) in
+                    XCTAssertTrue(tableView.cell(indexPath: .init(row: row, section: 0)) is SearchResultCell)
+                }
+            } else {
+                XCTFail("Delay interrupted")
+            }
+        } else {
+            XCTFail("Delay interrupted")
+        }
+    }
+    
+    func testTapOnSearchTriggerAnalyze() throws {
         let sut = launch(httpClient: success())
         
         sut.loadViewIfNeeded()
@@ -25,22 +59,22 @@ final class TwitterSearchAndGoogleAnalyzeAcceptanceTest: XCTestCase {
         
         sut.updateSearchResults(for: searchController)
         
-        let result = XCTWaiter.wait(for: [exp], timeout: 1.5)
-        if result == XCTWaiter.Result.timedOut {
-            let resultsVC = try XCTUnwrap(sut.children.first(where: { $0 is UITableViewController }) as? UITableViewController)
+        if XCTWaiter.wait(for: [exp], timeout: 1.5) == .timedOut {
+            let tableView = try XCTUnwrap(sut.tableView)
             
             (0..<10).forEach { (row) in
-                XCTAssertTrue(resultsVC.tableView.cell(indexPath: .init(row: row, section: 0)) is SearchResultCell)
+                XCTAssertTrue(tableView.cell(indexPath: .init(row: row, section: 0)) is SearchResultCell)
             }
             
-            XCTAssertTrue(resultsVC.tableView.cell(indexPath: .init(row: 10, section: 0)) is NextResultsCell)
+            XCTAssertTrue(tableView.cell(indexPath: .init(row: 10, section: 0)) is NextResultsCell)
             
             sut.onSelection?(makeSearchResultViewModel())
             RunLoop.current.run(until: Date())
             
             let analyzeNC = sut.navigationController?.presentedViewController as? UINavigationController
-            
+
             XCTAssertTrue(analyzeNC?.topViewController is AnalyzeViewController)
+                
         } else {
             XCTFail("Delay interrupted")
         }
@@ -61,7 +95,11 @@ final class TwitterSearchAndGoogleAnalyzeAcceptanceTest: XCTestCase {
             case "/oauth2/token":
                 return .success((makeTwitterAuthorizationResponse(), .OK))
             case "/1.1/statuses/user_timeline.json":
-                return .success((makeTwitterTimelineResponse(), .OK))
+                if request.url?.query?.contains("max_id") ?? false {
+                    return .success((makeTwitterTimelineSecondPageResponse(), .OK))
+                } else {
+                    return .success((makeTwitterTimelineFirstPageResponse(), .OK))
+                }
             case "/v1/documents:analyzeSentiment":
                 return .success((makeAnalyzeSentimentResponse(), .OK))
             default:
@@ -101,7 +139,7 @@ private func makeSearchResultViewModel() -> SearchResultViewModel {
     )
 }
 
-private func makeTwitterTimelineResponse() -> Data {
+private func makeTwitterTimelineFirstPageResponse() -> Data {
     let json: [[String: Any]] = [
         [
             "id_str": "11322795108190707715",
@@ -205,4 +243,38 @@ private func makeTwitterTimelineResponse() -> Data {
         ]
     ]
     return try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+}
+
+private func makeTwitterTimelineSecondPageResponse() -> Data {
+    let json: [[String: Any]] = [
+        [
+            "id_str": "113227951081907077152X",
+            "text": "7 years ago yesterday, showed up to @Nov_Project_SF. Last year: https://t.co/vXjulwpf4R\n\nYesterday was a rest day,… https://t.co/fcQ6bTKiVA",
+            "created_at": "Sun Nov 01 06:58:24 +0000 2020",
+            "user": [
+                "name": "Sir @T",
+                "screen_name": "t",
+                "profile_image_url": "http://pbs.twimg.com/profile_images/423350922408767488/nlA_m2WH_normal.jpeg",
+            ]
+        ],
+        [
+            "id_str": "213227951081907077151Y",
+            "text": "7 years ago yesterday, showed up to @Nov_Project_SF. Last year: https://t.co/vXjulwpf4R\n\nYesterday was a rest day,… https://t.co/fcQ6bTKiVA",
+            "created_at": "Sun Nov 01 06:58:24 +0000 2020",
+            "user": [
+                "name": "Sir @T",
+                "screen_name": "t",
+                "profile_image_url": "http://pbs.twimg.com/profile_images/423350922408767488/nlA_m2WH_normal.jpeg",
+            ]
+        ]
+    ]
+    return try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+}
+
+private extension SearchViewController {
+    
+    var tableView: UITableView? {
+        let controller = children.first(where: { $0 is UITableViewController }) as? UITableViewController
+        return controller?.tableView
+    }
 }

@@ -39,6 +39,7 @@ final class NextResultsCellController: NSObject, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         reloadIfNeeded()
     }
     
