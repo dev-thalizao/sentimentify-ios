@@ -9,4 +9,8 @@ import Foundation
 
 public struct NaturalLanguageCredential {
     public let apiKey: String
+    
+    public init(apiKey: String) {
+        self.apiKey = apiKey
+    }
 }

@@ -12,7 +12,7 @@ public protocol AnalyzeView {
 }
 
 public struct AnalyzeViewModel: Equatable {
-    let emotion: String
+    public let emotion: String
 }
 
 public final class AnalyzePresenter: AnalyzeUseCaseOutput {

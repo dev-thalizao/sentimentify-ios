@@ -37,3 +37,10 @@ extension WeakRefVirtualProxy: SearchView where T: SearchView {
         object?.display(viewModel: viewModel)
     }
 }
+
+extension WeakRefVirtualProxy: AnalyzeView where T: AnalyzeView {
+    
+    func display(viewModel: AnalyzeViewModel) {
+        object?.display(viewModel: viewModel)
+    }
+}

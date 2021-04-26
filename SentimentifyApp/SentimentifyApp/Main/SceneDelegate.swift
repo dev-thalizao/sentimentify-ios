@@ -8,6 +8,7 @@
 import UIKit
 import SentimentifyEngine
 import TwitterSearchInfrastructure
+import GoogleAnalyzeInfrastructure
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -26,9 +27,26 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 consumerSecretKey: "m0P8jG6KzPuiXfqJ9vkRvavO1vR46bVsWd5J3bcQf8yDF8ugBL"
             )
         )
-        
-        return TwitterSearchLoader(client: authorizedClient)
+        let mainQueueDecorator = MainQueueDispatchHTTPClientDecorator(
+            decoratee: authorizedClient
+        )
+        return TwitterSearchLoader(client: mainQueueDecorator)
     }()
+    
+    private lazy var naturalLanguageSearchLoader: NaturalLanguageAnalyzeLoader = {
+        let loggedClient = LogHTTPClientDecorator(decoratee: httpClient)
+        let authorizedClient = NaturalLanguageAuthenticatedHTTPClientDecorator(
+            decoratee: loggedClient,
+            credential: .init(apiKey: "AIzaSyDN4IEqLBS0XK5r-oV9sosWXJfKHBGUP1Y")
+        )
+        let mainQueueDecorator = MainQueueDispatchHTTPClientDecorator(
+            decoratee: authorizedClient
+        )
+        
+        return NaturalLanguageAnalyzeLoader(client: mainQueueDecorator)
+    }()
+    
+    private lazy var naturalLanguageClassifier = NaturalLanguageAnalyzeClassifier()
     
     private lazy var navigationController = UINavigationController(
         rootViewController: SearchUIComposer.searchComposedWith(
@@ -48,7 +66,16 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func showAnalyze(_ content: String) {
-        print("showAnalyze with content: \(content)")
+        let analyzeVC = AnalyzeUIComposer.analyzeComposedWith(
+            content: content,
+            loader: naturalLanguageSearchLoader,
+            classifier: naturalLanguageClassifier
+        )
+
+        self.navigationController.present(
+            UINavigationController(rootViewController: analyzeVC),
+            animated: true
+        )
     }
 }
 

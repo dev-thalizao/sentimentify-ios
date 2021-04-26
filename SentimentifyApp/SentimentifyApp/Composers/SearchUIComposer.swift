@@ -23,15 +23,13 @@ public final class SearchUIComposer {
             errorView: WeakRefVirtualProxy(view),
             searchView: WeakRefVirtualProxy(view)
         )
+  
+        let useCase = SearchUseCase(output: presenter, loader: loader)
         
-        let useCase = SearchUseCase(
-            output: MainQueueSearchUseCaseOutputDecorator(decoratee: presenter),
-            loader: loader
-        )
-        
-        let adapter = SearchUseCaseDispatchAfterAdapter(adaptee: useCase)
+        let adapter = SearchUseCaseDispatchUniqueAfterAdapter(adaptee: useCase)
         
         view.onSearch = adapter.search(text:)
+        view.onSelection = selection
         
         return view
     }

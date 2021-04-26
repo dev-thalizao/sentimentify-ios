@@ -81,6 +81,8 @@ extension SearchViewController: LoadingView {
     public func display(viewModel: LoadingViewModel) {
         emptyViewController.remove()
         
+        guard currentResults.isEmpty else { return }
+        
         loadingViewController.isLoading = viewModel.isLoading
         if viewModel.isLoading {
             add(loadingViewController)

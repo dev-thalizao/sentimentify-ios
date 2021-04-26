@@ -25,33 +25,6 @@ final class MainQueueDispatchHTTPClientDecorator: HTTPClient {
     }
 }
 
-final class MainQueueSearchUseCaseOutputDecorator: SearchUseCaseOutput {
-    
-    private let decoratee: SearchUseCaseOutput
-    
-    init(decoratee: SearchUseCaseOutput) {
-        self.decoratee = decoratee
-    }
-    
-    func didStartSearching() {
-        DispatchQueue.main.async {
-            self.decoratee.didStartSearching()
-        }
-    }
-    
-    func didFinishSearch(with results: SearchResults) {
-        DispatchQueue.main.async {
-            self.decoratee.didFinishSearch(with: results)
-        }
-    }
-    
-    func didFinishSearch(with error: Error) {
-        DispatchQueue.main.async {
-            self.decoratee.didFinishSearch(with: error)
-        }
-    }
-}
-
 private func guaranteeMainThread(_ work: @escaping () -> Void) {
     if Thread.isMainThread {
         work()

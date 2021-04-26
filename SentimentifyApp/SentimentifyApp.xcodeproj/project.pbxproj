@@ -22,10 +22,10 @@
 		2B07B6742635F14D00F68276 /* LogHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */; };
 		2B07B6852635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */; };
 		2B07B6F326364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */; };
+		2B07B6F926364F0800F68276 /* AnalyzeUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6F826364F0800F68276 /* AnalyzeUIComposer.swift */; };
+		2B07B72C263654AF00F68276 /* AnalyzeUIComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B72B263654AF00F68276 /* AnalyzeUIComposerTests.swift */; };
 		2B467D732630B08B003849CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D722630B08B003849CB /* AppDelegate.swift */; };
 		2B467D752630B08B003849CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D742630B08B003849CB /* SceneDelegate.swift */; };
-		2B467D772630B08B003849CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D762630B08B003849CB /* ViewController.swift */; };
-		2B467D7A2630B08B003849CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D782630B08B003849CB /* Main.storyboard */; };
 		2B467D7C2630B08C003849CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D7B2630B08C003849CB /* Assets.xcassets */; };
 		2B467D7F2630B08C003849CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D7D2630B08C003849CB /* LaunchScreen.storyboard */; };
 		2B467D952630B08C003849CB /* SentimentifyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D942630B08C003849CB /* SentimentifyAppUITests.swift */; };
@@ -80,11 +80,11 @@
 		2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHTTPClientDecorator.swift; sourceTree = "<group>"; };
 		2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseDispatchAfterAdapter.swift; sourceTree = "<group>"; };
 		2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchHTTPClientDecorator.swift; sourceTree = "<group>"; };
+		2B07B6F826364F0800F68276 /* AnalyzeUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeUIComposer.swift; sourceTree = "<group>"; };
+		2B07B72B263654AF00F68276 /* AnalyzeUIComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeUIComposerTests.swift; sourceTree = "<group>"; };
 		2B467D6F2630B08B003849CB /* SentimentifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SentimentifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467D722630B08B003849CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B467D742630B08B003849CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B467D762630B08B003849CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2B467D792630B08B003849CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B467D7B2630B08C003849CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B467D7E2630B08C003849CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B467D802630B08C003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +140,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2B07B73126365A3300F68276 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2B467D722630B08B003849CB /* AppDelegate.swift */,
+				2B467D742630B08B003849CB /* SceneDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2B07B73226365A3A00F68276 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B467D7B2630B08C003849CB /* Assets.xcassets */,
+				2B467D7D2630B08C003849CB /* LaunchScreen.storyboard */,
+				2B467D802630B08C003849CB /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B07B73326365A4000F68276 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				2B07B64A2635E77100F68276 /* SearchUIComposer.swift */,
+				2B07B6F826364F0800F68276 /* AnalyzeUIComposer.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
+		2B07B73426365A6600F68276 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2B07B6682635EB7500F68276 /* WeakRefVirtualProxy.swift */,
+				2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */,
+				2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */,
+				2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2B07B73926365B6600F68276 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				2B07B6602635EA3800F68276 /* SearchUIComposerTests.swift */,
+				2B07B72B263654AF00F68276 /* AnalyzeUIComposerTests.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
 		2B467D662630B08B003849CB = {
 			isa = PBXGroup;
 			children = (
@@ -164,18 +212,10 @@
 		2B467D712630B08B003849CB /* SentimentifyApp */ = {
 			isa = PBXGroup;
 			children = (
-				2B467D722630B08B003849CB /* AppDelegate.swift */,
-				2B467D742630B08B003849CB /* SceneDelegate.swift */,
-				2B467D762630B08B003849CB /* ViewController.swift */,
-				2B467D782630B08B003849CB /* Main.storyboard */,
-				2B467D7B2630B08C003849CB /* Assets.xcassets */,
-				2B467D7D2630B08C003849CB /* LaunchScreen.storyboard */,
-				2B467D802630B08C003849CB /* Info.plist */,
-				2B07B64A2635E77100F68276 /* SearchUIComposer.swift */,
-				2B07B6682635EB7500F68276 /* WeakRefVirtualProxy.swift */,
-				2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */,
-				2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */,
-				2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */,
+				2B07B73126365A3300F68276 /* Main */,
+				2B07B73326365A4000F68276 /* Composers */,
+				2B07B73426365A6600F68276 /* Helpers */,
+				2B07B73226365A3A00F68276 /* Resources */,
 			);
 			path = SentimentifyApp;
 			sourceTree = "<group>";
@@ -184,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				2B467D8B2630B08C003849CB /* Info.plist */,
-				2B07B6602635EA3800F68276 /* SearchUIComposerTests.swift */,
+				2B07B73926365B6600F68276 /* Composers */,
 			);
 			path = SentimentifyAppTests;
 			sourceTree = "<group>";
@@ -305,7 +345,6 @@
 			files = (
 				2B467D7F2630B08C003849CB /* LaunchScreen.storyboard in Resources */,
 				2B467D7C2630B08C003849CB /* Assets.xcassets in Resources */,
-				2B467D7A2630B08B003849CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,9 +369,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B467D772630B08B003849CB /* ViewController.swift in Sources */,
 				2B07B64B2635E77100F68276 /* SearchUIComposer.swift in Sources */,
 				2B07B6692635EB7500F68276 /* WeakRefVirtualProxy.swift in Sources */,
+				2B07B6F926364F0800F68276 /* AnalyzeUIComposer.swift in Sources */,
 				2B467D732630B08B003849CB /* AppDelegate.swift in Sources */,
 				2B07B6852635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift in Sources */,
 				2B467D752630B08B003849CB /* SceneDelegate.swift in Sources */,
@@ -345,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B07B72C263654AF00F68276 /* AnalyzeUIComposerTests.swift in Sources */,
 				2B07B6612635EA3800F68276 /* SearchUIComposerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,14 +413,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2B467D782630B08B003849CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B467D792630B08B003849CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2B467D7D2630B08C003849CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -515,7 +547,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87NZGBKV4F;
-				INFOPLIST_FILE = SentimentifyApp/Info.plist;
+				INFOPLIST_FILE = SentimentifyApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -534,7 +566,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87NZGBKV4F;
-				INFOPLIST_FILE = SentimentifyApp/Info.plist;
+				INFOPLIST_FILE = SentimentifyApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

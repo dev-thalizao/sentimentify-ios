@@ -8,9 +8,11 @@
 import Foundation
 import SentimentifyEngine
 
-final class NaturalLanguageAnalyzeClassifier: AnalyzeClassifier {
+public final class NaturalLanguageAnalyzeClassifier: AnalyzeClassifier {
     
-    func classify(score: AnalyzeScore) -> AnalyzeResult {
+    public init() {}
+    
+    public func classify(score: AnalyzeScore) -> AnalyzeResult {
         switch score.value {
         case _ where score.value < -0.2:
             return .init(emotion: "😞")

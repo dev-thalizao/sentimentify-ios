@@ -36,4 +36,9 @@ final class LoadingViewController: UIViewController {
         
         return spinner
     }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+    }
 }

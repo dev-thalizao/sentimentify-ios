@@ -21,6 +21,9 @@
 		2B07B68C2636095800F68276 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2B07B68B2636095800F68276 /* Kingfisher */; };
 		2B07B69726360A9700F68276 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B07B69626360A9700F68276 /* SearchResultCell.xib */; };
 		2B07B6AB26360FAB00F68276 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6AA26360FAB00F68276 /* EmptyViewController.swift */; };
+		2B07B6FE26364FA900F68276 /* AnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6FD26364FA900F68276 /* AnalyzeViewController.swift */; };
+		2B07B7122636513800F68276 /* AnalyzeResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B7112636513800F68276 /* AnalyzeResultViewController.swift */; };
+		2B07B71D2636521400F68276 /* FloatingPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B71C2636521400F68276 /* FloatingPoint+Extensions.swift */; };
 		2B467DB92630B13D003849CB /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; };
 		2B51B12A26359C7100C0695F /* SentimentifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B51B12126359C7100C0695F /* SentimentifyiOS.framework */; };
 		2B51B15F26359CC600C0695F /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; platformFilter = ios; };
@@ -198,6 +201,9 @@
 		2B07B60B2635DA2000F68276 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		2B07B69626360A9700F68276 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		2B07B6AA26360FAB00F68276 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		2B07B6FD26364FA900F68276 /* AnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeViewController.swift; sourceTree = "<group>"; };
+		2B07B7112636513800F68276 /* AnalyzeResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeResultViewController.swift; sourceTree = "<group>"; };
+		2B07B71C2636521400F68276 /* FloatingPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Extensions.swift"; sourceTree = "<group>"; };
 		2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SentimentifyEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467DB32630B13D003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B467DB82630B13D003849CB /* SentimentifyEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -400,6 +406,15 @@
 			path = "Shared UI";
 			sourceTree = "<group>";
 		};
+		2B07B6FC26364F9400F68276 /* Analyze UI */ = {
+			isa = PBXGroup;
+			children = (
+				2B07B6FD26364FA900F68276 /* AnalyzeViewController.swift */,
+				2B07B7112636513800F68276 /* AnalyzeResultViewController.swift */,
+			);
+			path = "Analyze UI";
+			sourceTree = "<group>";
+		};
 		2B467DA52630B13D003849CB = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +483,7 @@
 				2B51B1C72635A67700C0695F /* Extensions */,
 				2B51B1C82635A68600C0695F /* Shared UI */,
 				2B51B16F26359D4800C0695F /* Search UI */,
+				2B07B6FC26364F9400F68276 /* Analyze UI */,
 			);
 			path = SentimentifyiOS;
 			sourceTree = "<group>";
@@ -515,6 +531,7 @@
 				2B51B1A92635A38F00C0695F /* UIRefreshControl+Extensions.swift */,
 				2B51B1BD2635A66700C0695F /* UIViewController+Extensions.swift */,
 				2B07B5D12635BB6500F68276 /* UITableView+Extensions.swift */,
+				2B07B71C2636521400F68276 /* FloatingPoint+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1126,16 +1143,19 @@
 			files = (
 				2B07B5D22635BB6500F68276 /* UITableView+Extensions.swift in Sources */,
 				2B07B5C82635BA7D00F68276 /* SearchResultCellController.swift in Sources */,
+				2B07B71D2636521400F68276 /* FloatingPoint+Extensions.swift in Sources */,
 				2B51B17926359D5F00C0695F /* SearchViewController.swift in Sources */,
 				2B07B5BD2635B7DB00F68276 /* DiffableTableViewController.swift in Sources */,
 				2B51B1B42635A5E700C0695F /* ErrorViewController.swift in Sources */,
 				2B07B5DC2635BC0000F68276 /* NextResultsCellController.swift in Sources */,
 				2B07B5972635B01600F68276 /* LoadingViewController.swift in Sources */,
+				2B07B6FE26364FA900F68276 /* AnalyzeViewController.swift in Sources */,
 				2B07B5AB2635B4F700F68276 /* SectionController.swift in Sources */,
 				2B51B1BE2635A66700C0695F /* UIViewController+Extensions.swift in Sources */,
 				2B07B5F12635D1F000F68276 /* NextResultsCell.swift in Sources */,
 				2B07B5E72635D1E600F68276 /* SearchResultCell.swift in Sources */,
 				2B07B6AB26360FAB00F68276 /* EmptyViewController.swift in Sources */,
+				2B07B7122636513800F68276 /* AnalyzeResultViewController.swift in Sources */,
 				2B51B1AA2635A38F00C0695F /* UIRefreshControl+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

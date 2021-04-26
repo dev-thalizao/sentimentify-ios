@@ -8,11 +8,12 @@
 import Foundation
 import SentimentifyEngine
 
-final class SearchUseCaseDispatchAfterAdapter {
+final class SearchUseCaseDispatchUniqueAfterAdapter {
     
     private let adaptee: SearchUseCase
     private let dispatchQueue: DispatchQueue
     private var workItem: DispatchWorkItem?
+    private var lastText: String?
     
     init(adaptee: SearchUseCase, dispatchQueue: DispatchQueue = .main) {
         self.adaptee = adaptee
@@ -20,6 +21,12 @@ final class SearchUseCaseDispatchAfterAdapter {
     }
     
     func search(text: String) {
+        guard text != lastText else {
+            return
+        }
+        
+        lastText = text
+        
         workItem?.cancel()
         
         let workItem = DispatchWorkItem { [adaptee] in

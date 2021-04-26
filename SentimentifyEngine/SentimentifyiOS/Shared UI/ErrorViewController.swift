@@ -55,4 +55,9 @@ final class ErrorViewController: UIViewController {
     @objc private func retryButtonDidTapped() {
         onRetry?(self)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+    }
 }
