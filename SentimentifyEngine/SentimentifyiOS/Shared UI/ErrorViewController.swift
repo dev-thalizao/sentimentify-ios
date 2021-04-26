@@ -10,27 +10,11 @@ import UIKit
 final class ErrorViewController: UIViewController {
     typealias OnRetry = (ErrorViewController) -> Void
     
-    var onRetry: OnRetry?
-    
-    var errorMessage: String? {
-        get { errorLabel.text }
-        set { errorLabel.text = newValue }
-    }
-    
     private lazy var errorLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.textAlignment = .center
-        view.addSubview(label)
-        
-        NSLayoutConstraint.activate([
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-        ])
-        
         return label
     }()
     
@@ -39,25 +23,46 @@ final class ErrorViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Tentar novamente", for: .normal)
         button.addTarget(self, action: #selector(retryButtonDidTapped), for: .touchUpInside)
-        
-        view.addSubview(button)
-        
-        NSLayoutConstraint.activate([
-            button.widthAnchor.constraint(equalToConstant: 200),
-            button.heightAnchor.constraint(equalToConstant: 50),
-            button.topAnchor.constraint(equalTo: errorLabel.bottomAnchor, constant: 20),
-            button.centerYAnchor.constraint(equalTo: errorLabel.centerYAnchor)
-        ])
-        
         return button
     }()
     
-    @objc private func retryButtonDidTapped() {
-        onRetry?(self)
+    var onRetry: OnRetry?
+    
+    var errorMessage: String? {
+        get { errorLabel.text }
+        set { errorLabel.text = newValue }
     }
     
-    override func viewDidLoad() {
+   override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        configureViewHierarchy()
+        setupConstraints()
+    }
+    
+    private func configureViewHierarchy() {
+        view.addSubview(errorLabel)
+        view.addSubview(retryButton)
+    }
+    
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            errorLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            errorLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            errorLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            errorLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+        ])
+        
+        NSLayoutConstraint.activate([
+            retryButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            retryButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            retryButton.heightAnchor.constraint(equalToConstant: 50),
+            retryButton.topAnchor.constraint(equalTo: errorLabel.bottomAnchor, constant: 20),
+            retryButton.centerXAnchor.constraint(equalTo: errorLabel.centerXAnchor)
+        ])
+    }
+    
+    @objc private func retryButtonDidTapped() {
+        onRetry?(self)
     }
 }

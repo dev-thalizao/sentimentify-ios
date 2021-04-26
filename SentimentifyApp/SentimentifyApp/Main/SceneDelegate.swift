@@ -15,7 +15,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     private lazy var httpClient: HTTPClient = {
-        URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+        let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+        return ValidationStatusCodeHTTPClientDecorator(decoratee: client)
     }()
     
     private lazy var twitterSearchLoader: TwitterSearchLoader = {

@@ -15,7 +15,7 @@ public final class URLSessionHTTPClient: HTTPClient {
         self.session = session
     }
     
-    private struct UnexpectedValuesRepresentation: Error {}
+    public struct UnexpectedValuesRepresentation: Error {}
     
     private struct URLSessionTaskWrapper: HTTPClientTask {
         let wrapped: URLSessionTask

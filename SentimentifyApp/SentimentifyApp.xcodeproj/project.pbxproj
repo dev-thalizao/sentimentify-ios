@@ -24,6 +24,8 @@
 		2B07B6F326364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */; };
 		2B07B6F926364F0800F68276 /* AnalyzeUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6F826364F0800F68276 /* AnalyzeUIComposer.swift */; };
 		2B07B72C263654AF00F68276 /* AnalyzeUIComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B72B263654AF00F68276 /* AnalyzeUIComposerTests.swift */; };
+		2B07B76A26370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B76926370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift */; };
+		2B07B77F2637111F00F68276 /* HumanReadableErrorViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B77E2637111F00F68276 /* HumanReadableErrorViewDecorator.swift */; };
 		2B467D732630B08B003849CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D722630B08B003849CB /* AppDelegate.swift */; };
 		2B467D752630B08B003849CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D742630B08B003849CB /* SceneDelegate.swift */; };
 		2B467D7C2630B08C003849CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D7B2630B08C003849CB /* Assets.xcassets */; };
@@ -32,13 +34,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		2B467D862630B08C003849CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2B467D672630B08B003849CB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2B467D6E2630B08B003849CB;
-			remoteInfo = SentimentifyApp;
-		};
-		2B467D912630B08C003849CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2B467D672630B08B003849CB /* Project object */;
 			proxyType = 1;
@@ -81,6 +76,8 @@
 		2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchHTTPClientDecorator.swift; sourceTree = "<group>"; };
 		2B07B6F826364F0800F68276 /* AnalyzeUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeUIComposer.swift; sourceTree = "<group>"; };
 		2B07B72B263654AF00F68276 /* AnalyzeUIComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeUIComposerTests.swift; sourceTree = "<group>"; };
+		2B07B76926370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationStatusCodeHTTPClientDecorator.swift; sourceTree = "<group>"; };
+		2B07B77E2637111F00F68276 /* HumanReadableErrorViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanReadableErrorViewDecorator.swift; sourceTree = "<group>"; };
 		2B467D6F2630B08B003849CB /* SentimentifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SentimentifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467D722630B08B003849CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B467D742630B08B003849CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,8 +86,6 @@
 		2B467D802630B08C003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B467D852630B08C003849CB /* SentimentifyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467D8B2630B08C003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B467D902630B08C003849CB /* SentimentifyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B467D962630B08C003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,13 +105,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B07B6652635EB3200F68276 /* libSentimentifyTestExtensions.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2B467D8D2630B08C003849CB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +161,8 @@
 				2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */,
 				2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */,
 				2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */,
+				2B07B76926370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift */,
+				2B07B77E2637111F00F68276 /* HumanReadableErrorViewDecorator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -191,7 +181,6 @@
 			children = (
 				2B467D712630B08B003849CB /* SentimentifyApp */,
 				2B467D882630B08C003849CB /* SentimentifyAppTests */,
-				2B467D932630B08C003849CB /* SentimentifyAppUITests */,
 				2B467D702630B08B003849CB /* Products */,
 				2B07B62B2635E71900F68276 /* Frameworks */,
 			);
@@ -202,7 +191,6 @@
 			children = (
 				2B467D6F2630B08B003849CB /* SentimentifyApp.app */,
 				2B467D852630B08C003849CB /* SentimentifyAppTests.xctest */,
-				2B467D902630B08C003849CB /* SentimentifyAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,14 +213,6 @@
 				2B07B73926365B6600F68276 /* Composers */,
 			);
 			path = SentimentifyAppTests;
-			sourceTree = "<group>";
-		};
-		2B467D932630B08C003849CB /* SentimentifyAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2B467D962630B08C003849CB /* Info.plist */,
-			);
-			path = SentimentifyAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,24 +254,6 @@
 			productReference = 2B467D852630B08C003849CB /* SentimentifyAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2B467D8F2630B08C003849CB /* SentimentifyAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2B467D9F2630B08C003849CB /* Build configuration list for PBXNativeTarget "SentimentifyAppUITests" */;
-			buildPhases = (
-				2B467D8C2630B08C003849CB /* Sources */,
-				2B467D8D2630B08C003849CB /* Frameworks */,
-				2B467D8E2630B08C003849CB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2B467D922630B08C003849CB /* PBXTargetDependency */,
-			);
-			name = SentimentifyAppUITests;
-			productName = SentimentifyAppUITests;
-			productReference = 2B467D902630B08C003849CB /* SentimentifyAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -307,10 +269,6 @@
 					2B467D842630B08C003849CB = {
 						CreatedOnToolsVersion = 12.4;
 						LastSwiftMigration = 1240;
-						TestTargetID = 2B467D6E2630B08B003849CB;
-					};
-					2B467D8F2630B08C003849CB = {
-						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 2B467D6E2630B08B003849CB;
 					};
 				};
@@ -330,7 +288,6 @@
 			targets = (
 				2B467D6E2630B08B003849CB /* SentimentifyApp */,
 				2B467D842630B08C003849CB /* SentimentifyAppTests */,
-				2B467D8F2630B08C003849CB /* SentimentifyAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -352,13 +309,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B467D8E2630B08C003849CB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -368,8 +318,10 @@
 			files = (
 				2B07B64B2635E77100F68276 /* SearchUIComposer.swift in Sources */,
 				2B07B6692635EB7500F68276 /* WeakRefVirtualProxy.swift in Sources */,
+				2B07B77F2637111F00F68276 /* HumanReadableErrorViewDecorator.swift in Sources */,
 				2B07B6F926364F0800F68276 /* AnalyzeUIComposer.swift in Sources */,
 				2B467D732630B08B003849CB /* AppDelegate.swift in Sources */,
+				2B07B76A26370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift in Sources */,
 				2B07B6852635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift in Sources */,
 				2B467D752630B08B003849CB /* SceneDelegate.swift in Sources */,
 				2B07B6742635F14D00F68276 /* LogHTTPClientDecorator.swift in Sources */,
@@ -386,13 +338,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B467D8C2630B08C003849CB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -400,11 +345,6 @@
 			isa = PBXTargetDependency;
 			target = 2B467D6E2630B08B003849CB /* SentimentifyApp */;
 			targetProxy = 2B467D862630B08C003849CB /* PBXContainerItemProxy */;
-		};
-		2B467D922630B08C003849CB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2B467D6E2630B08B003849CB /* SentimentifyApp */;
-			targetProxy = 2B467D912630B08C003849CB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -619,44 +559,6 @@
 			};
 			name = Release;
 		};
-		2B467DA02630B08C003849CB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SentimentifyAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SentimentifyApp;
-			};
-			name = Debug;
-		};
-		2B467DA12630B08C003849CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SentimentifyAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.SentimentifyAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SentimentifyApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -683,15 +585,6 @@
 			buildConfigurations = (
 				2B467D9D2630B08C003849CB /* Debug */,
 				2B467D9E2630B08C003849CB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2B467D9F2630B08C003849CB /* Build configuration list for PBXNativeTarget "SentimentifyAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2B467DA02630B08C003849CB /* Debug */,
-				2B467DA12630B08C003849CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

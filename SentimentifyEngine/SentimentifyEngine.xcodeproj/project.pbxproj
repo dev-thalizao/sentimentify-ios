@@ -24,6 +24,7 @@
 		2B07B6FE26364FA900F68276 /* AnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6FD26364FA900F68276 /* AnalyzeViewController.swift */; };
 		2B07B7122636513800F68276 /* AnalyzeResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B7112636513800F68276 /* AnalyzeResultViewController.swift */; };
 		2B07B71D2636521400F68276 /* FloatingPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B71C2636521400F68276 /* FloatingPoint+Extensions.swift */; };
+		2B07B74D2636F91C00F68276 /* AnalyzeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B74C2636F91C00F68276 /* AnalyzeViewControllerTests.swift */; };
 		2B467DB92630B13D003849CB /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; };
 		2B51B12A26359C7100C0695F /* SentimentifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B51B12126359C7100C0695F /* SentimentifyiOS.framework */; };
 		2B51B15F26359CC600C0695F /* SentimentifyEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */; platformFilter = ios; };
@@ -204,6 +205,7 @@
 		2B07B6FD26364FA900F68276 /* AnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeViewController.swift; sourceTree = "<group>"; };
 		2B07B7112636513800F68276 /* AnalyzeResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeResultViewController.swift; sourceTree = "<group>"; };
 		2B07B71C2636521400F68276 /* FloatingPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Extensions.swift"; sourceTree = "<group>"; };
+		2B07B74C2636F91C00F68276 /* AnalyzeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeViewControllerTests.swift; sourceTree = "<group>"; };
 		2B467DAF2630B13D003849CB /* SentimentifyEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SentimentifyEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467DB32630B13D003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B467DB82630B13D003849CB /* SentimentifyEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -415,6 +417,14 @@
 			path = "Analyze UI";
 			sourceTree = "<group>";
 		};
+		2B07B74B2636F90300F68276 /* Analyze UI */ = {
+			isa = PBXGroup;
+			children = (
+				2B07B74C2636F91C00F68276 /* AnalyzeViewControllerTests.swift */,
+			);
+			path = "Analyze UI";
+			sourceTree = "<group>";
+		};
 		2B467DA52630B13D003849CB = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +505,7 @@
 				2B07B57B2635AC7000F68276 /* Extensions */,
 				2B07B6022635D42800F68276 /* Shared UI */,
 				2B51B18226359DC800C0695F /* Search UI */,
+				2B07B74B2636F90300F68276 /* Analyze UI */,
 			);
 			path = SentimentifyiOSTests;
 			sourceTree = "<group>";
@@ -1164,6 +1175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B07B74D2636F91C00F68276 /* AnalyzeViewControllerTests.swift in Sources */,
 				2B07B60C2635DA2000F68276 /* UITableView+Extensions.swift in Sources */,
 				2B51B18C26359DDE00C0695F /* SearchViewControllerTests.swift in Sources */,
 				2B51B1CA2635A70800C0695F /* ErrorViewControllerTests.swift in Sources */,

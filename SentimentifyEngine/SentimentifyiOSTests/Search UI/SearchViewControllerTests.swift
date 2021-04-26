@@ -48,14 +48,28 @@ final class SearchViewControllerTests: XCTestCase {
     func testErrorViewMethods() throws {
         let sut = makeSUT()
         
-        _ = sut.view
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = sut
+        window.makeKeyAndVisible()
         
         sut.display(viewModel: ErrorViewModel(message: "Não foi possível completar a operação."))
+        
+        RunLoop.current.run(until: .init())
+        
+        let alertVC = try XCTUnwrap(sut.presentedViewController as? UIAlertController)
+        
+        XCTAssertEqual(alertVC.message, "Não foi possível completar a operação.")
+        
+        
+        alertVC.dismiss(animated: true, completion: nil)
+//        alertVC.tapButton(atIndex: 0)
+        
+        RunLoop.current.run(until: .init())
         
         let exp = expectation(description: "Test after 1.5 second wait")
         let result = XCTWaiter.wait(for: [exp], timeout: 1.5)
         if result == XCTWaiter.Result.timedOut {
-            XCTAssertNotNil(sut.presentedViewController is UIAlertController)
+            XCTAssertNil(sut.presentedViewController)
         } else {
             XCTFail("Delay interrupted")
         }
@@ -86,9 +100,20 @@ final class SearchViewControllerTests: XCTestCase {
         onSelection: @escaping SearchViewController.OnSelection = { _ in }
     ) -> SearchViewController {
         let sut = SearchViewController()
+        sut.loadViewIfNeeded()
         sut.onSearch = onSearch
         sut.onSelection = onSelection
-        trackForMemoryLeaks(sut)
+//        trackForMemoryLeaks(sut)
         return sut
+    }
+}
+
+private extension UIAlertController {
+    typealias AlertHandler = @convention(block) (UIAlertAction) -> Void
+
+    func tapButton(atIndex index: Int) {
+        guard let block = actions[index].value(forKey: "handler") else { return }
+        let handler = unsafeBitCast(block as AnyObject, to: AlertHandler.self)
+        handler(actions[index])
     }
 }

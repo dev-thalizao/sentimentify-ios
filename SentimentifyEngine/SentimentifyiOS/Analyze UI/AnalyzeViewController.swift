@@ -9,10 +9,10 @@ import UIKit
 import SentimentifyEngine
 
 public final class AnalyzeViewController: UIViewController {
-    public typealias OnProccess = () -> Void
+    public typealias OnLoad = () -> Void
     public typealias OnClose = (AnalyzeViewController) -> Void
     
-    public var onProccess: OnProccess?
+    public var onLoad: OnLoad?
     public var onClose: OnClose?
     
     private lazy var loadingViewController = LoadingViewController()
@@ -34,7 +34,7 @@ public final class AnalyzeViewController: UIViewController {
             target: self,
             action: #selector(didDismiss)
         )
-        onProccess?()
+        onLoad?()
     }
     
     @objc private func didDismiss() {
@@ -69,8 +69,9 @@ extension AnalyzeViewController: ErrorView {
         errorViewController.errorMessage = message
         errorViewController.onRetry = { [weak self] errorVC in
             errorVC.remove()
-            self?.onProccess?()
+            self?.onLoad?()
         }
+        add(errorViewController)
     }
 }
 

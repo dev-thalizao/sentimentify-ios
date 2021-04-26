@@ -19,6 +19,7 @@ public final class SearchViewController: UIViewController {
     private lazy var searchController = UISearchController(searchResultsController: nil)
     private lazy var loadingViewController = LoadingViewController()
     private lazy var emptyViewController = EmptyViewController()
+    private lazy var errorViewController = ErrorViewController()
     private lazy var resultsViewController = DiffableTableViewController()
     
     private lazy var currentResults = [SearchResultViewModel: SectionController]()
@@ -94,14 +95,26 @@ extension SearchViewController: LoadingView {
 
 extension SearchViewController: ErrorView {
     
-    public func display(viewModel: ErrorViewModel) {
-        guard let message = viewModel.message else { return }
+    public func display(viewModel: ErrorViewModel) {        
+        guard let message = viewModel.message else {
+            errorViewController.remove()
+            return
+        }
         
-        let alertVC = UIAlertController(title: "Ops", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default)
-        alertVC.addAction(action)
-        
-        present(alertVC, animated: true)
+        errorViewController.errorMessage = message
+        errorViewController.onRetry = { [weak self] errorVC in
+            errorVC.remove()
+            self?.resetState()
+            
+        }
+        add(errorViewController)
+    }
+    
+    private func resetState() {
+        searchController.searchBar.text = nil
+        searchController.searchBar.resignFirstResponder()
+        resultsViewController.remove()
+        configureInitialState()
     }
 }
 

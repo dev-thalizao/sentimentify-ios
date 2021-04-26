@@ -20,7 +20,7 @@ public final class SearchUIComposer {
         let view = SearchViewController()
         let presenter = SearchPresenter(
             loadingView: WeakRefVirtualProxy(view),
-            errorView: WeakRefVirtualProxy(view),
+            errorView: HumanReadableErrorViewDecorator(decoratee: WeakRefVirtualProxy(view)),
             searchView: WeakRefVirtualProxy(view)
         )
   

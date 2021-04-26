@@ -13,6 +13,10 @@ public protocol AnalyzeView {
 
 public struct AnalyzeViewModel: Equatable {
     public let emotion: String
+    
+    public init(emotion: String) {
+        self.emotion = emotion
+    }
 }
 
 public final class AnalyzePresenter: AnalyzeUseCaseOutput {

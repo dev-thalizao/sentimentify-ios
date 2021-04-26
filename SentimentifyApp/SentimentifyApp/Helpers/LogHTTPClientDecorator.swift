@@ -9,10 +9,8 @@ import Foundation
 import SentimentifyEngine
 
 public func SALog(_ items: Any..., separator: String = " ", terminator: String = "\n") {
-    #if targetEnvironment(simulator)
-        #if DEBUG
-            print(items, separator: separator, terminator: terminator)
-        #endif
+    #if targetEnvironment(simulator) && DEBUG
+        print(items, separator: separator, terminator: terminator)
     #endif
 }
 

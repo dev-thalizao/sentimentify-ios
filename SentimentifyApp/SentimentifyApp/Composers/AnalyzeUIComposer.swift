@@ -21,7 +21,7 @@ public final class AnalyzeUIComposer {
         let view = AnalyzeViewController()
         let presenter = AnalyzePresenter(
             loadingView: WeakRefVirtualProxy(view),
-            errorView: WeakRefVirtualProxy(view),
+            errorView: HumanReadableErrorViewDecorator(decoratee: WeakRefVirtualProxy(view)),
             analyzeView: WeakRefVirtualProxy(view)
         )
         
@@ -31,7 +31,7 @@ public final class AnalyzeUIComposer {
             classifier: classifier
         )
         
-        view.onProccess = { [useCase] in
+        view.onLoad = { [useCase] in
             useCase.analyze(using: .init(content: content))
         }
         
