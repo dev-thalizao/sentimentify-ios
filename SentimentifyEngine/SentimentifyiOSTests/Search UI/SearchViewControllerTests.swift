@@ -48,13 +48,17 @@ final class SearchViewControllerTests: XCTestCase {
     func testErrorViewMethods() throws {
         let sut = makeSUT()
         
+        _ = sut.view
+        
         sut.display(viewModel: ErrorViewModel(message: "Não foi possível completar a operação."))
         
-        let errorVC = try XCTUnwrap(sut.children.first as? ErrorViewController)
-        
-        errorVC.retryButton.simulate(event: .touchUpInside)
-        
-        XCTAssertNil(errorVC.parent)
+        let exp = expectation(description: "Test after 1.5 second wait")
+        let result = XCTWaiter.wait(for: [exp], timeout: 1.5)
+        if result == XCTWaiter.Result.timedOut {
+            XCTAssertNotNil(sut.presentedViewController is UIAlertController)
+        } else {
+            XCTFail("Delay interrupted")
+        }
     }
     
     func testSearchViewMethods() throws {
@@ -63,14 +67,17 @@ final class SearchViewControllerTests: XCTestCase {
         
         _ = sut.view
         
-        sut.display(viewModel: .map(anySearchResults(10, next: { calls += 1 })))
+        sut.display(viewModel: .map(anySearchResults(1, next: { calls += 1 })))
         
         let resultVC = try XCTUnwrap(sut.children.last as? DiffableTableViewController)
         
-        (0..<10).forEach { (row) in
-            XCTAssertTrue(resultVC.tableView.cell(indexPath: .init(row: row, section: 0)) is SearchResultCell)
-        }
-        XCTAssertTrue(resultVC.tableView.cell(indexPath: .init(row: 10, section: 0)) is NextResultsCell)
+        let dataSource = resultVC.tableView.dataSource as? UITableViewDiffableDataSource<Int, SectionController>
+        
+        XCTAssertTrue(dataSource?.itemIdentifier(for: .init(row: 0, section: 0))?.dataSource is SearchResultCellController)
+        XCTAssertTrue(dataSource?.itemIdentifier(for: .init(row: 1, section: 0))?.dataSource is NextResultsCellController)
+
+        resultVC.tableView.select(indexPath: .init(row: 1, section: 0))
+        
         XCTAssertEqual(calls, 1)
     }
     
