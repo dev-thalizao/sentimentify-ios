@@ -28,7 +28,6 @@
 		2B467D752630B08B003849CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D742630B08B003849CB /* SceneDelegate.swift */; };
 		2B467D7C2630B08C003849CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D7B2630B08C003849CB /* Assets.xcassets */; };
 		2B467D7F2630B08C003849CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D7D2630B08C003849CB /* LaunchScreen.storyboard */; };
-		2B467D952630B08C003849CB /* SentimentifyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D942630B08C003849CB /* SentimentifyAppUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +90,6 @@
 		2B467D852630B08C003849CB /* SentimentifyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467D8B2630B08C003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B467D902630B08C003849CB /* SentimentifyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B467D942630B08C003849CB /* SentimentifyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentifyAppUITests.swift; sourceTree = "<group>"; };
 		2B467D962630B08C003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,7 +230,6 @@
 		2B467D932630B08C003849CB /* SentimentifyAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2B467D942630B08C003849CB /* SentimentifyAppUITests.swift */,
 				2B467D962630B08C003849CB /* Info.plist */,
 			);
 			path = SentimentifyAppUITests;
@@ -393,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B467D952630B08C003849CB /* SentimentifyAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

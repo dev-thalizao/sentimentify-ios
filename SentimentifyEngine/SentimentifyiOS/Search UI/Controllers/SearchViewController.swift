@@ -124,8 +124,10 @@ extension SearchViewController: SearchView {
             }
             currentResults[result] = SectionController(id: result, dataSource: controller, delegate: controller)
         }
-        
-        let results = currentResults.values.map({ $0 })
+
+        let results = currentResults.sorted(by: { (lhs, rhs) -> Bool in
+            return lhs.key.createdAt > rhs.key.createdAt
+        }).map(\.value)
         
         guard let nextResults = viewModel.nextResults else {
             resultsViewController.display(results)

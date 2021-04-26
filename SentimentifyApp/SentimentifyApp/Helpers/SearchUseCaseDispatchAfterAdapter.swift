@@ -36,7 +36,7 @@ final class SearchUseCaseDispatchUniqueAfterAdapter {
         self.workItem = workItem
         
         dispatchQueue.asyncAfter(
-            deadline: .now() + .milliseconds(750),
+            deadline: .now() + .milliseconds(1250),
             execute: workItem
         )
     }

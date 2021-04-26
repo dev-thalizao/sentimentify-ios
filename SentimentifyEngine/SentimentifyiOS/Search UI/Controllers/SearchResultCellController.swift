@@ -37,7 +37,7 @@ extension SearchResultCellController: UITableViewDataSource, UITableViewDelegate
         cell?.userNameLabel.text = viewModel.title
         cell?.screenNameLabel.text = viewModel.subtitle
         cell?.contentLabel.text = viewModel.content
-        cell?.createdAtLabel.text = viewModel.createdAt
+        cell?.createdAtLabel.text = viewModel.createdAtReadable
         
         return cell!
     }

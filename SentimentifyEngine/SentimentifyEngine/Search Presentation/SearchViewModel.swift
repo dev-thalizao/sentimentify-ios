@@ -35,10 +35,11 @@ public struct SearchViewModel {
                     subtitle: result.author.username,
                     content: result.content.text,
                     image: result.author.photo,
-                    createdAt: formatter.localizedString(
+                    createdAtReadable: formatter.localizedString(
                         for: result.content.createdAt,
                         relativeTo: currentDate
-                    )
+                    ),
+                    createdAt: result.content.createdAt
                 )
             }),
             nextResults: search.nextResults
@@ -52,5 +53,6 @@ public struct SearchResultViewModel: Hashable {
     public let subtitle: String
     public let content: String
     public let image: URL?
-    public let createdAt: String
+    public let createdAtReadable: String
+    public let createdAt: Date
 }
