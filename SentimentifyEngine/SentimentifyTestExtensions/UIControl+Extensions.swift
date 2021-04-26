@@ -1,13 +1,13 @@
 //
 //  UIControl+Extensions.swift
-//  SentimentifyiOSTests
+//  SentimentifyTestExtensions
 //
-//  Created by Thales Frigo on 25/04/21.
+//  Created by Thales Frigo on 26/04/21.
 //
 
 import UIKit
 
-extension UIControl {
+public extension UIControl {
     
     func simulate(event: UIControl.Event) {
         allTargets.forEach { target in
@@ -17,3 +17,4 @@ extension UIControl {
         }
     }
 }
+

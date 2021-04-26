@@ -26,6 +26,7 @@
 		2B07B72C263654AF00F68276 /* AnalyzeUIComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B72B263654AF00F68276 /* AnalyzeUIComposerTests.swift */; };
 		2B07B76A26370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B76926370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift */; };
 		2B07B77F2637111F00F68276 /* HumanReadableErrorViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B77E2637111F00F68276 /* HumanReadableErrorViewDecorator.swift */; };
+		2B07B7CF263746CD00F68276 /* TwitterSearchAndGoogleAnalyzeAcceptanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B79A26373F7900F68276 /* TwitterSearchAndGoogleAnalyzeAcceptanceTest.swift */; };
 		2B467D732630B08B003849CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D722630B08B003849CB /* AppDelegate.swift */; };
 		2B467D752630B08B003849CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D742630B08B003849CB /* SceneDelegate.swift */; };
 		2B467D7C2630B08C003849CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D7B2630B08C003849CB /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		2B07B72B263654AF00F68276 /* AnalyzeUIComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeUIComposerTests.swift; sourceTree = "<group>"; };
 		2B07B76926370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationStatusCodeHTTPClientDecorator.swift; sourceTree = "<group>"; };
 		2B07B77E2637111F00F68276 /* HumanReadableErrorViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanReadableErrorViewDecorator.swift; sourceTree = "<group>"; };
+		2B07B79A26373F7900F68276 /* TwitterSearchAndGoogleAnalyzeAcceptanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterSearchAndGoogleAnalyzeAcceptanceTest.swift; sourceTree = "<group>"; };
 		2B467D6F2630B08B003849CB /* SentimentifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SentimentifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467D722630B08B003849CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B467D742630B08B003849CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				2B467D8B2630B08C003849CB /* Info.plist */,
 				2B07B73926365B6600F68276 /* Composers */,
+				2B07B79A26373F7900F68276 /* TwitterSearchAndGoogleAnalyzeAcceptanceTest.swift */,
 			);
 			path = SentimentifyAppTests;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B07B7CF263746CD00F68276 /* TwitterSearchAndGoogleAnalyzeAcceptanceTest.swift in Sources */,
 				2B07B72C263654AF00F68276 /* AnalyzeUIComposerTests.swift in Sources */,
 				2B07B6612635EA3800F68276 /* SearchUIComposerTests.swift in Sources */,
 			);

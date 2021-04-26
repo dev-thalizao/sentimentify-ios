@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class NextResultsCell: UITableViewCell {
+public final class NextResultsCell: UITableViewCell {
     
     private lazy var spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .medium)

@@ -52,23 +52,30 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private lazy var navigationController = UINavigationController(
         rootViewController: SearchUIComposer.searchComposedWith(
             loader: twitterSearchLoader,
-            selection: { [weak self] (viewModel) in
-                self?.showAnalyze(viewModel.content)
-            }
+            selection: showAnalyze
         )
     )
+    
+    convenience init(httpClient: HTTPClient) {
+        self.init()
+        self.httpClient = httpClient
+    }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: scene)
+        configureWindow()
+    }
+    
+    func configureWindow() {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
     
-    private func showAnalyze(_ content: String) {
+    private func showAnalyze(_ search: SearchResultViewModel) {
         let analyzeVC = AnalyzeUIComposer.analyzeComposedWith(
-            content: content,
+            content: search.content,
             loader: naturalLanguageSearchLoader,
             classifier: naturalLanguageClassifier
         )

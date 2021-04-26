@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-final class SearchResultCell: UITableViewCell {
+public final class SearchResultCell: UITableViewCell {
     
     class var nib: UINib {
         return UINib(nibName: "SearchResultCell", bundle: bundle)
@@ -28,12 +28,12 @@ final class SearchResultCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var createdAtLabel: UILabel!
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         clearContent()
     }
     
-    override func prepareForReuse() {
+    public override func prepareForReuse() {
         super.prepareForReuse()
         clearContent()
     }

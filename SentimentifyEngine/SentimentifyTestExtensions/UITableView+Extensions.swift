@@ -1,13 +1,13 @@
 //
 //  UITableView+Extensions.swift
-//  SentimentifyiOSTests
+//  SentimentifyTestExtensions
 //
-//  Created by Thales Frigo on 25/04/21.
+//  Created by Thales Frigo on 26/04/21.
 //
 
 import UIKit
 
-extension UITableView {
+public extension UITableView {
     
     func cell(indexPath: IndexPath) -> UITableViewCell? {
         return dataSource?.tableView(self, cellForRowAt: indexPath)

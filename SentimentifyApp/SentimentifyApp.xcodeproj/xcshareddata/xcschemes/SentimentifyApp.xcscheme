@@ -29,22 +29,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2B467D842630B08C003849CB"
                BuildableName = "SentimentifyAppTests.xctest"
                BlueprintName = "SentimentifyAppTests"
-               ReferencedContainer = "container:SentimentifyApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2B467D8F2630B08C003849CB"
-               BuildableName = "SentimentifyAppUITests.xctest"
-               BlueprintName = "SentimentifyAppUITests"
                ReferencedContainer = "container:SentimentifyApp.xcodeproj">
             </BuildableReference>
          </TestableReference>

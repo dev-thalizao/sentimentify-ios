@@ -55,4 +55,14 @@ public struct SearchResultViewModel: Hashable {
     public let image: URL?
     public let createdAtReadable: String
     public let createdAt: Date
+    
+    public init(id: String, title: String, subtitle: String, content: String, image: URL?, createdAtReadable: String, createdAt: Date) {
+        self.id = id
+        self.title = title
+        self.subtitle = subtitle
+        self.content = content
+        self.image = image
+        self.createdAtReadable = createdAtReadable
+        self.createdAt = createdAt
+    }
 }
