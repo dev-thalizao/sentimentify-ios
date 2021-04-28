@@ -16,35 +16,28 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private lazy var httpClient: HTTPClient = {
         let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
-        return ValidationStatusCodeHTTPClientDecorator(decoratee: client)
+        let loggedClient = LogHTTPClientDecorator(decoratee: client)
+        return ValidationStatusCodeHTTPClientDecorator(decoratee: loggedClient)
     }()
     
     private lazy var twitterSearchLoader: TwitterSearchLoader = {
-        let loggedClient = LogHTTPClientDecorator(decoratee: httpClient)
         let authorizedClient = TwitterAuthenticatedHTTPClientDecorator(
-            decoratee: loggedClient,
+            decoratee: httpClient,
             credential: .init(
                 consumerKey: "UQvX4lOtRRpDu3vmuVgoaNQmS",
                 consumerSecretKey: "m0P8jG6KzPuiXfqJ9vkRvavO1vR46bVsWd5J3bcQf8yDF8ugBL"
             )
         )
-        let mainQueueDecorator = MainQueueDispatchHTTPClientDecorator(
-            decoratee: authorizedClient
-        )
-        return TwitterSearchLoader(client: mainQueueDecorator)
+        return TwitterSearchLoader(client: authorizedClient)
     }()
     
     private lazy var naturalLanguageSearchLoader: NaturalLanguageAnalyzeLoader = {
-        let loggedClient = LogHTTPClientDecorator(decoratee: httpClient)
         let authorizedClient = NaturalLanguageAuthenticatedHTTPClientDecorator(
-            decoratee: loggedClient,
+            decoratee: httpClient,
             credential: .init(apiKey: "AIzaSyDN4IEqLBS0XK5r-oV9sosWXJfKHBGUP1Y")
         )
-        let mainQueueDecorator = MainQueueDispatchHTTPClientDecorator(
-            decoratee: authorizedClient
-        )
         
-        return NaturalLanguageAnalyzeLoader(client: mainQueueDecorator)
+        return NaturalLanguageAnalyzeLoader(client: authorizedClient)
     }()
     
     private lazy var naturalLanguageClassifier = NaturalLanguageAnalyzeClassifier()
@@ -77,7 +70,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let analyzeVC = AnalyzeUIComposer.analyzeComposedWith(
             content: search.content,
             loader: naturalLanguageSearchLoader,
-            classifier: naturalLanguageClassifier
+            classifier: naturalLanguageClassifier,
+            onClose: { $0.dismiss(animated: true) }
         )
 
         self.navigationController.present(

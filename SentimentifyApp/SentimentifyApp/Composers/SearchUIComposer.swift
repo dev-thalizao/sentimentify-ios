@@ -24,7 +24,10 @@ public final class SearchUIComposer {
             searchView: WeakRefVirtualProxy(view)
         )
   
-        let useCase = SearchUseCase(output: presenter, loader: loader)
+        let useCase = SearchUseCase(
+            output: presenter,
+            loader: MainQueueDispatchDecorator(loader)
+        )
         
         let adapter = SearchUseCaseDispatchUniqueAfterAdapter(adaptee: useCase)
         

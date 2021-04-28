@@ -16,7 +16,8 @@ public final class AnalyzeUIComposer {
     public static func analyzeComposedWith(
         content: String,
         loader: AnalyzeLoader,
-        classifier: AnalyzeClassifier
+        classifier: AnalyzeClassifier,
+        onClose: @escaping (UIViewController) -> Void = { _ in }
     ) -> UIViewController {
         let view = AnalyzeViewController()
         let presenter = AnalyzePresenter(
@@ -27,7 +28,7 @@ public final class AnalyzeUIComposer {
         
         let useCase = AnalyzeUseCase(
             output: presenter,
-            loader: loader,
+            loader: MainQueueDispatchDecorator(loader),
             classifier: classifier
         )
         
@@ -35,7 +36,7 @@ public final class AnalyzeUIComposer {
             useCase.analyze(using: .init(content: content))
         }
         
-        view.onClose = { $0.dismiss(animated: true) }
+        view.onClose = onClose
         
         return view
     }

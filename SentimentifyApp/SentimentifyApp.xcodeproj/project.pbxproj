@@ -21,7 +21,6 @@
 		2B07B6692635EB7500F68276 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6682635EB7500F68276 /* WeakRefVirtualProxy.swift */; };
 		2B07B6742635F14D00F68276 /* LogHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */; };
 		2B07B6852635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */; };
-		2B07B6F326364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */; };
 		2B07B6F926364F0800F68276 /* AnalyzeUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6F826364F0800F68276 /* AnalyzeUIComposer.swift */; };
 		2B07B72C263654AF00F68276 /* AnalyzeUIComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B72B263654AF00F68276 /* AnalyzeUIComposerTests.swift */; };
 		2B07B76A26370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B76926370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift */; };
@@ -31,6 +30,7 @@
 		2B467D752630B08B003849CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B467D742630B08B003849CB /* SceneDelegate.swift */; };
 		2B467D7C2630B08C003849CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D7B2630B08C003849CB /* Assets.xcassets */; };
 		2B467D7F2630B08C003849CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B467D7D2630B08C003849CB /* LaunchScreen.storyboard */; };
+		2B867D892639C6640088163D /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B867D882639C6640088163D /* MainQueueDispatchDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,6 @@
 		2B07B6682635EB7500F68276 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 		2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHTTPClientDecorator.swift; sourceTree = "<group>"; };
 		2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseDispatchAfterAdapter.swift; sourceTree = "<group>"; };
-		2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchHTTPClientDecorator.swift; sourceTree = "<group>"; };
 		2B07B6F826364F0800F68276 /* AnalyzeUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeUIComposer.swift; sourceTree = "<group>"; };
 		2B07B72B263654AF00F68276 /* AnalyzeUIComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeUIComposerTests.swift; sourceTree = "<group>"; };
 		2B07B76926370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationStatusCodeHTTPClientDecorator.swift; sourceTree = "<group>"; };
@@ -88,6 +87,7 @@
 		2B467D802630B08C003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B467D852630B08C003849CB /* SentimentifyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentifyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B467D8B2630B08C003849CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B867D882639C6640088163D /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,11 +160,11 @@
 			isa = PBXGroup;
 			children = (
 				2B07B6682635EB7500F68276 /* WeakRefVirtualProxy.swift */,
-				2B07B6F226364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift */,
+				2B867D882639C6640088163D /* MainQueueDispatchDecorator.swift */,
 				2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */,
+				2B07B77E2637111F00F68276 /* HumanReadableErrorViewDecorator.swift */,
 				2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */,
 				2B07B76926370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift */,
-				2B07B77E2637111F00F68276 /* HumanReadableErrorViewDecorator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -327,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B867D892639C6640088163D /* MainQueueDispatchDecorator.swift in Sources */,
 				2B07B64B2635E77100F68276 /* SearchUIComposer.swift in Sources */,
 				2B07B6692635EB7500F68276 /* WeakRefVirtualProxy.swift in Sources */,
 				2B07B77F2637111F00F68276 /* HumanReadableErrorViewDecorator.swift in Sources */,
@@ -336,7 +337,6 @@
 				2B07B6852635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift in Sources */,
 				2B467D752630B08B003849CB /* SceneDelegate.swift in Sources */,
 				2B07B6742635F14D00F68276 /* LogHTTPClientDecorator.swift in Sources */,
-				2B07B6F326364DC200F68276 /* MainQueueDispatchHTTPClientDecorator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
