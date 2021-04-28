@@ -19,7 +19,7 @@
 		2B07B6612635EA3800F68276 /* SearchUIComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6602635EA3800F68276 /* SearchUIComposerTests.swift */; };
 		2B07B6652635EB3200F68276 /* libSentimentifyTestExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B07B6642635EB3200F68276 /* libSentimentifyTestExtensions.a */; };
 		2B07B6692635EB7500F68276 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6682635EB7500F68276 /* WeakRefVirtualProxy.swift */; };
-		2B07B6742635F14D00F68276 /* LogHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */; };
+		2B07B6742635F14D00F68276 /* LogDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6732635F14D00F68276 /* LogDecorator.swift */; };
 		2B07B6852635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */; };
 		2B07B6F926364F0800F68276 /* AnalyzeUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B6F826364F0800F68276 /* AnalyzeUIComposer.swift */; };
 		2B07B72C263654AF00F68276 /* AnalyzeUIComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07B72B263654AF00F68276 /* AnalyzeUIComposerTests.swift */; };
@@ -72,7 +72,7 @@
 		2B07B6602635EA3800F68276 /* SearchUIComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIComposerTests.swift; sourceTree = "<group>"; };
 		2B07B6642635EB3200F68276 /* libSentimentifyTestExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSentimentifyTestExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B07B6682635EB7500F68276 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
-		2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHTTPClientDecorator.swift; sourceTree = "<group>"; };
+		2B07B6732635F14D00F68276 /* LogDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDecorator.swift; sourceTree = "<group>"; };
 		2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseDispatchAfterAdapter.swift; sourceTree = "<group>"; };
 		2B07B6F826364F0800F68276 /* AnalyzeUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeUIComposer.swift; sourceTree = "<group>"; };
 		2B07B72B263654AF00F68276 /* AnalyzeUIComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeUIComposerTests.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 			children = (
 				2B07B6682635EB7500F68276 /* WeakRefVirtualProxy.swift */,
 				2B867D882639C6640088163D /* MainQueueDispatchDecorator.swift */,
-				2B07B6732635F14D00F68276 /* LogHTTPClientDecorator.swift */,
+				2B07B6732635F14D00F68276 /* LogDecorator.swift */,
 				2B07B77E2637111F00F68276 /* HumanReadableErrorViewDecorator.swift */,
 				2B07B6842635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift */,
 				2B07B76926370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift */,
@@ -336,7 +336,7 @@
 				2B07B76A26370D0300F68276 /* ValidationStatusCodeHTTPClientDecorator.swift in Sources */,
 				2B07B6852635F9A200F68276 /* SearchUseCaseDispatchAfterAdapter.swift in Sources */,
 				2B467D752630B08B003849CB /* SceneDelegate.swift in Sources */,
-				2B07B6742635F14D00F68276 /* LogHTTPClientDecorator.swift in Sources */,
+				2B07B6742635F14D00F68276 /* LogDecorator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

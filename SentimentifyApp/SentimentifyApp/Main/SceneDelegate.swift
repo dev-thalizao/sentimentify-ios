@@ -16,7 +16,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private lazy var httpClient: HTTPClient = {
         let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
-        let loggedClient = LogHTTPClientDecorator(decoratee: client)
+        let loggedClient = LogDecorator(client)
         return ValidationStatusCodeHTTPClientDecorator(decoratee: loggedClient)
     }()
     
